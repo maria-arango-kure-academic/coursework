@@ -1,0 +1,1379 @@
+{
+  "version": "fairpass.story.1",
+  "notice": "Fictional VFI simulation case material. Audio uses synthetic narration.",
+  "assets": {
+    "b1": {
+      "id": "b1",
+      "kind": "email",
+      "sender": "Lina · organiser of the company’s first festival",
+      "title": "We still need people to be able to buy tickets",
+      "body": [
+        "When we first called you, we needed ticketing that our festival could afford. We still sell to people who book on an old phone or ask somebody else to buy for them.",
+        "The five-ticket limit sounds useful. Before you choose how to check buyers, I want to know what happens to somebody who cannot complete the check.",
+        "Value has two sides here: can your team run a verification service it can correct when things go wrong, and can fans buy tickets without handing over more identity information than the purchase requires?"
+      ]
+    },
+    "b2-build": {
+      "id": "b2-build",
+      "kind": "memo",
+      "sender": "Engineering team",
+      "title": "Our prototype needs a test event",
+      "body": [
+        "The internal build has given us code that we can change ourselves. We need to find out how it behaves when a purchase fails, a connection drops or a customer needs help.",
+        "The promoter’s event could give us that opportunity. We need time from support staff as well as engineers."
+      ]
+    },
+    "b2-buy": {
+      "id": "b2-buy",
+      "kind": "email",
+      "sender": "Verity account manager",
+      "title": "Your demonstration slot",
+      "body": [
+        "The licensed prototype is available for a demonstration. Our earlier demonstration used a different ticketing system, so we still need to establish how the connection to yours behaves.",
+        "Please confirm which customers and failure conditions you want included. Your staff will handle customer appeals during the event."
+      ]
+    },
+    "b2-hybrid": {
+      "id": "b2-hybrid",
+      "kind": "chat",
+      "sender": "Sam · customer support lead",
+      "title": "Who takes over when a check fails?",
+      "body": [
+        "Sam: Your team controls the connection and Verity controls the identity check. During the demonstration, who do we contact when the ticket purchase stops between those two systems?",
+        "Engineering: We can investigate our integration. We also need to agree what evidence Verity will provide when the failure is on its side."
+      ]
+    },
+    "b2-none": {
+      "id": "b2-none",
+      "kind": "email",
+      "sender": "European tour promoter",
+      "title": "Can you show us a working service?",
+      "body": [
+        "You kept conventional ticket sales last year. We can still offer a small event for a demonstration, but your company does not yet have a verification prototype.",
+        "You can investigate the current service or acquire technology now. Acquisition alone will miss our investment deadline."
+      ]
+    },
+    "b3-tested": {
+      "id": "b3-tested",
+      "kind": "test-log",
+      "sender": "Sam · customer support lead",
+      "title": "The pilot included people who needed help",
+      "body": [
+        "The pilot covered different customers, devices and failed checks. Staff also examined recovery and support, so the launch discussion can use more than successful purchases.",
+        "The next question is how many customers we can support at once. A tested prototype still needs staff when it goes live."
+      ],
+      "rows": [
+        [
+          "Evidence",
+          "Broad customer and failure testing"
+        ],
+        [
+          "Next decision",
+          "Scale and support for launch"
+        ]
+      ]
+    },
+    "b3-focused": {
+      "id": "b3-focused",
+      "kind": "test-log",
+      "sender": "Engineering team",
+      "title": "Access and integration checked; other conditions remain open",
+      "body": [
+        "The investigation examined accessibility and the connection between systems. It did not test every customer or busy-event condition.",
+        "We can explain what this work established. A wider launch would also expose the company to situations outside that investigation."
+      ]
+    },
+    "b3-thin": {
+      "id": "b3-thin",
+      "kind": "test-log",
+      "sender": "Sam · customer support lead",
+      "title": "Before we announce a launch date",
+      "body": [
+        "The team has demonstrations and existing records, with limited evidence from customers using this prototype. We have not established how support will cope with a wider release.",
+        "If the company launches broadly, customers will be the first people to encounter some of those unresolved failures."
+      ]
+    },
+    "b3-none": {
+      "id": "b3-none",
+      "kind": "email",
+      "sender": "European tour promoter",
+      "title": "We still need a delivery answer",
+      "body": [
+        "The tour needs a ticketing arrangement. Your company has not acquired a verification prototype, so a live verification launch is not available yet.",
+        "You can keep conventional sales or acquire technology for a later launch. We need an answer that reflects what you can deliver."
+      ]
+    },
+    "b4-live": {
+      "id": "b4-live",
+      "kind": "support-ticket",
+      "sender": "Customer support · purchase recovery",
+      "title": "A purchase is only finished when the customer has a ticket",
+      "body": [
+        "Buyer verification is now part of the service. Alongside normal ticket questions, staff handle failed checks, account recovery and requests to transfer a ticket.",
+        "Fans also ask to reserve until payday, while regular attendees want rewards. Each improvement would change what our team has to support."
+      ]
+    },
+    "b4-conventional": {
+      "id": "b4-conventional",
+      "kind": "support-ticket",
+      "sender": "Sam · customer support lead",
+      "title": "The existing queue of requests",
+      "body": [
+        "Customers are still using conventional ticket sales. Staff handle resale disputes, lost account access and transfers manually, whether or not a verification prototype is waiting for launch.",
+        "The requests for reservations, rewards and better recovery concern this service too. We need to choose which work to prioritise."
+      ]
+    },
+    "b5-loyalty": {
+      "id": "b5-loyalty",
+      "kind": "email",
+      "sender": "Commercial team",
+      "title": "Who pays for the rewards?",
+      "body": [
+        "The company introduced rewards for repeat customers. Staff now maintain those benefits and answer questions about them while the board considers how to fund the service.",
+        "Higher fees, subscriptions, sponsorship and venue reports each bring income on different terms. Sponsors also want information about customer engagement."
+      ]
+    },
+    "b5-reservations": {
+      "id": "b5-reservations",
+      "kind": "chat",
+      "sender": "Sam · customer support lead",
+      "title": "Reserved does not always mean paid",
+      "body": [
+        "Sam: Fans can reserve until payday and transfer tickets. We also have to resolve unpaid reservations and disputed transfers.",
+        "Finance: Those benefits need funding even when a ticket has not been paid for. The next agreement has to cover the work as well as the sales."
+      ]
+    },
+    "b5-support": {
+      "id": "b5-support",
+      "kind": "email",
+      "sender": "Lina · organiser of the company’s first festival",
+      "title": "Please keep funding the help people can reach",
+      "body": [
+        "You invested in booking, account recovery and staffed alternatives. Those are part of the service that customers now expect when they get stuck.",
+        "As you consider a different way to fund it, please explain who will pay and whether some fans will get a better chance to buy tickets than others."
+      ]
+    },
+    "b5-basic": {
+      "id": "b5-basic",
+      "kind": "memo",
+      "sender": "Finance team",
+      "title": "The current service still has running costs",
+      "body": [
+        "The company kept its existing features. That avoided a new product commitment, while staff continued ticketing, maintenance and support.",
+        "The board can keep current prices and terms or adopt a new funding offer. Existing responsibilities continue whichever source of income it chooses."
+      ]
+    },
+    "b6-fees": {
+      "id": "b6-fees",
+      "kind": "email",
+      "sender": "Venue operations manager",
+      "title": "A new entrance after a difficult sales year",
+      "body": [
+        "Fans cut back on entertainment after your company raised fees. We now want shorter queues and better security, but the entry proposal adds another cost to a service under commercial pressure.",
+        "Our preferred package uses facial recognition, movement tracking and temperature checks. We will consider optional facial entry or codes and staffed gates."
+      ]
+    },
+    "b6-sponsors": {
+      "id": "b6-sponsors",
+      "kind": "contract",
+      "sender": "Venue operations manager",
+      "title": "Entry equipment and access to records",
+      "body": [
+        "Your company already uses personalised sponsored rewards. Our new entry proposal would create another set of records about people attending events.",
+        "The full package keeps identifiable attendance for a year. Optional facial entry keeps staffed alternatives and records for 30 days. Buyer verification alone provides neither arrangement."
+      ]
+    },
+    "b6-other": {
+      "id": "b6-other",
+      "kind": "email",
+      "sender": "Venue operations manager",
+      "title": "What would you need to change at our entrances?",
+      "body": [
+        "We want shorter queues and better security. The preferred package adds facial recognition, movement tracking and temperature checks to the ticketing service that you already run.",
+        "We can discuss optional facial entry or an approach using offline codes, accessible gates and staff. Please explain what each would require from us."
+      ]
+    },
+    "b7-full": {
+      "id": "b7-full",
+      "kind": "letter",
+      "sender": "European tour promoter",
+      "title": "From a ticket check to a live identity feed",
+      "body": [
+        "The promoter wants Palantir to process the venue’s live face matches and make them available to law enforcement. Officers could see who entered and when. The venues host concerts, political talks, union meetings and LGBTQ+ community events.",
+        "The separate request concerns existing records for a named investigation. It would give officers neither a live feed nor general access to event records."
+      ]
+    },
+    "b7-selective": {
+      "id": "b7-selective",
+      "kind": "letter",
+      "sender": "European tour promoter",
+      "title": "The request reaches beyond optional entry",
+      "body": [
+        "The promoter wants Palantir to give law enforcement live identity matches from the optional facial entry lane. Fans who used the staffed lane have no face match from that lane to share.",
+        "The separate request concerns existing records for a named investigation. It does not open the entry system to police."
+      ]
+    },
+    "b7-lowdata": {
+      "id": "b7-lowdata",
+      "kind": "letter",
+      "sender": "European tour promoter",
+      "title": "The promoter wants an identification system you do not have",
+      "body": [
+        "The promoter wants Palantir to connect event watchlists to police access. Your current entry service does not produce live face matches. The broad proposal could still identify named ticket holders where records allow it.",
+        "The separate request concerns existing records for a named investigation and would not create a live feed."
+      ]
+    },
+    "b8-screening": {
+      "id": "b8-screening",
+      "kind": "email",
+      "sender": "Artist’s manager",
+      "title": "What can we tell people at the door?",
+      "body": [
+        "Organisers across the venues ask who receives an attendee’s identity and whether people can come without being screened. Some regulars are already staying home.",
+        "Ending the feed would stop new disclosures. The organiser also wants to know what happens to records already shared."
+      ]
+    },
+    "b8-tracking": {
+      "id": "b8-tracking",
+      "kind": "email",
+      "sender": "Artist’s manager",
+      "title": "Your sponsorship arrangements are part of our concern",
+      "body": [
+        "We understand that your company is not using broad watchlist screening. Its personalised sponsorship still gives commercial partners identifiable engagement data, and fans are asking what happens to that information.",
+        "Before confirming the tour, we want to know which practices will continue and which terms our audience can choose."
+      ]
+    },
+    "b8-lowdata": {
+      "id": "b8-lowdata",
+      "kind": "email",
+      "sender": "Artist’s manager",
+      "title": "Can we put your current practices in the tour agreement?",
+      "body": [
+        "Your current service uses neither broad screening nor personalised sponsored rewards. Fans want those limits explained clearly before our tour is confirmed.",
+        "We still need agreement on access, prices and how existing ticket holders will be treated. Keeping your current arrangements is one of the responses available."
+      ]
+    },
+    "b9-revised": {
+      "id": "b9-revised",
+      "kind": "memo",
+      "sender": "Board papers",
+      "title": "Paying for the changes already agreed",
+      "body": [
+        "The company revised access and data practices, including ending personalised sponsorship and broad screening. Partners have now responded to the offer.",
+        "The board must decide how to fund the business that remains: expand, rebuild, specialise, accept a controlling investor or continue. Earlier agreements still need to be delivered."
+      ]
+    },
+    "b9-separate": {
+      "id": "b9-separate",
+      "kind": "chat",
+      "sender": "Sam · customer support lead",
+      "title": "We are running two services",
+      "body": [
+        "Sam: Customers who chose the low-data service need different arrangements from customers on the original terms. Our staff maintain both.",
+        "Board secretary: The next strategy has to account for that work, as well as what an investor or a smaller specialist business would keep."
+      ]
+    },
+    "b9-maintain": {
+      "id": "b9-maintain",
+      "kind": "memo",
+      "sender": "Board papers",
+      "title": "A strategy for the company you kept",
+      "body": [
+        "The company kept its service and terms. Partners have made renewal decisions based on their experience of access, reliability and trust.",
+        "The next proposal will act on that company, including the customers, systems and responsibilities already in place. A change of strategy does not cancel them."
+      ]
+    },
+    "b9-targeted": {
+      "id": "b9-targeted",
+      "kind": "email",
+      "sender": "Engineering team",
+      "title": "Delivering the targeted agreement",
+      "body": [
+        "The company agreed targeted changes to screening and attendance records. Other commercial arrangements may still be running.",
+        "Before choosing expansion, rebuilding or a new owner, we need to account for the work that those agreements still require and who will maintain it."
+      ]
+    },
+    "b10-jobs": {
+      "id": "b10-jobs",
+      "kind": "memo",
+      "sender": "Staff submission to the review",
+      "title": "The staffing total leaves people out",
+      "body": [
+        "The company made people redundant during the exercise. Hiring later does not describe what happened to those employees or remove the job losses from the record.",
+        "The final report needs to account for those decisions alongside service improvements, commercial results and the company’s public commitments."
+      ]
+    },
+    "b10-penalty": {
+      "id": "b10-penalty",
+      "kind": "letter",
+      "sender": "Association review team",
+      "title": "The screening finding belongs in the final account",
+      "body": [
+        "The review upheld an unresolved screening complaint. The resulting penalty is part of the company’s history.",
+        "Your final publication can explain the decision and any work to address its consequences. It cannot remove the penalty or substitute a favourable result from another part of the business."
+      ]
+    },
+    "b10-clean": {
+      "id": "b10-clean",
+      "kind": "letter",
+      "sender": "Association review team",
+      "title": "Please account for the past decade",
+      "body": [
+        "We are comparing company records with accounts from customers, staff and partners. Your response needs to explain results on access, employment, resource use, data and business performance.",
+        "Readers will need to distinguish measured results from estimates, unfinished work and claims that your records cannot establish."
+      ]
+    },
+    "a1-build": {
+      "id": "a1-build",
+      "kind": "voice",
+      "sender": "Lina · organiser of the company’s first festival",
+      "title": "A question for your new engineers",
+      "body": [
+        "I heard you are building the checks yourselves and hiring four people. I am glad we will be able to speak to the team making changes. Please keep somebody available for the ticketing service we use now. We still need help while the new system is being built."
+      ],
+      "audio": "/media/story/a1-build.mp3",
+      "voice": "Zira"
+    },
+    "a1-buy": {
+      "id": "a1-buy",
+      "kind": "contract",
+      "sender": "Verity · contract extract",
+      "title": "Verification supplied; appeals remain with you",
+      "body": [
+        "The first-year system costs €800k under a three-year minimum contract. Verity maintains verification, with €280k annual fees afterwards. Your company handles customer support and appeals.",
+        "The tour promoter has brought forward its plans. Before offering a demonstration, your team needs to establish how the licensed system connects to your ticketing software."
+      ],
+      "audio": "/media/story/a1-buy.mp3",
+      "voice": "David"
+    },
+    "a1-hybrid": {
+      "id": "a1-hybrid",
+      "kind": "chat",
+      "sender": "Sam · customer support lead",
+      "title": "Two teams, one failed purchase",
+      "body": [
+        "Sam: We are hiring two people to connect Verity to our software. When a customer asks why a check failed, we will need answers from both teams.",
+        "Engineering: We control our integration. Verity still controls verification under the three-year minimum contract. We need that division understood before the promoter’s demonstration."
+      ],
+      "audio": "/media/story/a1-hybrid.mp3",
+      "voice": "David"
+    },
+    "a1-wait": {
+      "id": "a1-wait",
+      "kind": "voice",
+      "sender": "Lina · organiser of the company’s first festival",
+      "title": "What happens while we wait?",
+      "body": [
+        "We are continuing with the ticketing system we know. Your staff will still be handling fraud and disputes manually. The promoter’s demonstration offer may bring more requests about verification, so please tell us what you can provide before we promise it to an artist."
+      ],
+      "audio": "/media/story/a1-wait.mp3",
+      "voice": "Zira"
+    },
+    "a2-broad": {
+      "id": "a2-broad",
+      "kind": "test-log",
+      "sender": "European tour promoter",
+      "title": "A working demonstration earns the investment",
+      "body": [
+        "The prototype was tested with varied customers, devices and failures. It met the demonstration condition for €150k investment.",
+        "Finance also reports that a customer has delayed a €220k payment until Year 4. The investment helps, while the company still needs cash for launch preparation and support."
+      ],
+      "audio": "/media/story/a2-broad.mp3",
+      "voice": "David"
+    },
+    "a2-focused": {
+      "id": "a2-focused",
+      "kind": "test-log",
+      "sender": "Engineering team",
+      "title": "The evidence covers access and integration",
+      "body": [
+        "The team has investigated accessibility and how the systems connect. The work leaves other customers and failure conditions untested, and does not earn the broad-demonstration investment.",
+        "A customer’s €220k payment is delayed until Year 4. The next launch discussion has to account for the evidence and the cash available."
+      ],
+      "audio": "/media/story/a2-focused.mp3",
+      "voice": "David"
+    },
+    "a2-existing": {
+      "id": "a2-existing",
+      "kind": "email",
+      "sender": "Sam · customer support lead",
+      "title": "The demonstration is still our main evidence",
+      "body": [
+        "We are proceeding with supplier demonstrations and existing records. We have not added testing evidence or earned the demonstration investment.",
+        "A customer’s €220k payment will arrive in Year 4. Before a launch announcement, we need to know how much support the company can fund if the assumptions prove wrong."
+      ],
+      "audio": "/media/story/a2-existing.mp3",
+      "voice": "David"
+    },
+    "a2-explore": {
+      "id": "a2-explore",
+      "kind": "memo",
+      "sender": "Engineering team",
+      "title": "We know more about switching suppliers",
+      "body": [
+        "The team compared designs and exit terms and documented connections that would make switching easier. This improves technical control, while leaving the promoter’s demonstration condition unmet.",
+        "Finance reports a €220k payment delayed until Year 4. We need to use the work already done when deciding whether and how to launch."
+      ],
+      "audio": "/media/story/a2-explore.mp3",
+      "voice": "David"
+    },
+    "a2-late_build": {
+      "id": "a2-late_build",
+      "kind": "memo",
+      "sender": "Engineering team",
+      "title": "Technology acquired; the service is not live",
+      "body": [
+        "The company has acquired an internal prototype. Customers still buy tickets through the existing service. A launch can be considered in Year 3 or Year 6.",
+        "The demonstration investment deadline has passed. The team now needs to prepare the technology and arrange support before asking customers to use it."
+      ],
+      "audio": "/media/story/a2-late_build.mp3",
+      "voice": "David"
+    },
+    "a2-late_buy": {
+      "id": "a2-late_buy",
+      "kind": "memo",
+      "sender": "Engineering team",
+      "title": "Technology acquired; the service is not live",
+      "body": [
+        "The company has acquired a Verity licence. Customers still buy tickets through the existing service. A launch can be considered in Year 3 or Year 6.",
+        "The demonstration investment deadline has passed. The team now needs to prepare the technology and arrange support before asking customers to use it."
+      ],
+      "audio": "/media/story/a2-late_buy.mp3",
+      "voice": "David"
+    },
+    "a2-late_hybrid": {
+      "id": "a2-late_hybrid",
+      "kind": "memo",
+      "sender": "Engineering team",
+      "title": "Technology acquired; the service is not live",
+      "body": [
+        "The company has acquired an integration with Verity. Customers still buy tickets through the existing service. A launch can be considered in Year 3 or Year 6.",
+        "The demonstration investment deadline has passed. The team now needs to prepare the technology and arrange support before asking customers to use it."
+      ],
+      "audio": "/media/story/a2-late_hybrid.mp3",
+      "voice": "David"
+    },
+    "a3-late_build": {
+      "id": "a3-late_build",
+      "kind": "memo",
+      "sender": "Engineering team",
+      "title": "Technology acquired; the service is not live",
+      "body": [
+        "The company has acquired an internal prototype. Customers still buy tickets through the existing service. A launch can be considered in Year 6.",
+        "The demonstration investment deadline has passed. The team now needs to prepare the technology and arrange support before asking customers to use it."
+      ],
+      "audio": "/media/story/a3-late_build.mp3",
+      "voice": "David"
+    },
+    "a3-late_buy": {
+      "id": "a3-late_buy",
+      "kind": "memo",
+      "sender": "Engineering team",
+      "title": "Technology acquired; the service is not live",
+      "body": [
+        "The company has acquired a Verity licence. Customers still buy tickets through the existing service. A launch can be considered in Year 6.",
+        "The demonstration investment deadline has passed. The team now needs to prepare the technology and arrange support before asking customers to use it."
+      ],
+      "audio": "/media/story/a3-late_buy.mp3",
+      "voice": "David"
+    },
+    "a3-late_hybrid": {
+      "id": "a3-late_hybrid",
+      "kind": "memo",
+      "sender": "Engineering team",
+      "title": "Technology acquired; the service is not live",
+      "body": [
+        "The company has acquired an integration with Verity. Customers still buy tickets through the existing service. A launch can be considered in Year 6.",
+        "The demonstration investment deadline has passed. The team now needs to prepare the technology and arrange support before asking customers to use it."
+      ],
+      "audio": "/media/story/a3-late_hybrid.mp3",
+      "voice": "David"
+    },
+    "a3-broad-tested": {
+      "id": "a3-broad-tested",
+      "kind": "bulletin",
+      "sender": "Consumer organisation · investigation extract",
+      "title": "The wider launch has evidence behind it",
+      "body": [
+        "The company introduced buyer verification across participating events. The wider release reduces resale abuse and reaches more customers, with evidence supporting the release arrangements.",
+        "Our investigation still asks who can buy successfully and who can get a mistake corrected. Support and recovery remain part of the service that venues are judging."
+      ],
+      "audio": "/media/story/a3-broad-tested.mp3",
+      "voice": "David"
+    },
+    "a3-broad-failed": {
+      "id": "a3-broad-failed",
+      "kind": "support-ticket",
+      "sender": "Customer account in the consumer investigation",
+      "title": "I followed the checks and still could not buy",
+      "body": [
+        "I wanted a ticket, completed the requested checks and still could not finish the purchase. Support needed time to work out what had gone wrong. I needed somebody who could correct the result while I still had a chance to buy.",
+        "The investigation confirmed failures after the broad launch. The company pays €180k in refunds, loses trust and loses one original venue customer."
+      ],
+      "audio": "/media/story/a3-broad-failed.mp3",
+      "voice": "Zira"
+    },
+    "a3-limited": {
+      "id": "a3-limited",
+      "kind": "email",
+      "sender": "Venue operations manager",
+      "title": "We are keeping the launch within the agreed venues",
+      "body": [
+        "The limited release gives customers buyer verification and staff to help with failed checks. It reduces resale abuse and grows the service more slowly than a broad launch.",
+        "We need the recovery arrangements maintained while you consider new features. Other venues will ask what this smaller release established before agreeing to use it."
+      ],
+      "audio": "/media/story/a3-limited.mp3",
+      "voice": "David"
+    },
+    "a3-delay": {
+      "id": "a3-delay",
+      "kind": "voice",
+      "sender": "European tour promoter",
+      "title": "We need to revise what we tell the tour",
+      "body": [
+        "You have kept conventional sales while spending more on the prototype. We can explain a delay, but we need the company to revise its delivery promises. The next launch opportunity is Year 6. Please account for the work and support still needed before naming another date."
+      ],
+      "audio": "/media/story/a3-delay.mp3",
+      "voice": "David"
+    },
+    "a3-conventional": {
+      "id": "a3-conventional",
+      "kind": "chat",
+      "sender": "Sam · customer support lead",
+      "title": "The fraud work continues",
+      "body": [
+        "Sam: We are continuing conventional sales. Manual fraud handling reduces some resale abuse, and any prototype remains available for a later launch.",
+        "Support team: Please include the disputes in our workload. Keeping the existing service also means continuing the work that comes with it."
+      ],
+      "audio": "/media/story/a3-conventional.mp3",
+      "voice": "David"
+    },
+    "a4-loyalty": {
+      "id": "a4-loyalty",
+      "kind": "support-ticket",
+      "sender": "Sam · customer support lead",
+      "title": "Questions about rewards have joined the queue",
+      "body": [
+        "The rewards are available to repeat customers. Staff now maintain benefits, answer reward queries and process the additional data alongside existing ticketing work.",
+        "The delayed €220k customer payment has arrived. Finance can use it, while the service team still needs time to deliver the offer."
+      ],
+      "audio": "/media/story/a4-loyalty.mp3",
+      "voice": "David"
+    },
+    "a4-reservations": {
+      "id": "a4-reservations",
+      "kind": "chat",
+      "sender": "Sam · customer support lead",
+      "title": "Who owns a ticket while the payment is disputed?",
+      "body": [
+        "Sam: Reservations and legitimate transfers give fans more flexibility. We also have to resolve unpaid reservations and cases where people dispute who holds a ticket.",
+        "Finance: The delayed €220k payment has arrived. We need to include the support time in the cost of this feature."
+      ],
+      "audio": "/media/story/a4-reservations.mp3",
+      "voice": "David"
+    },
+    "a4-support": {
+      "id": "a4-support",
+      "kind": "voice",
+      "sender": "Sam · customer support lead",
+      "title": "We have more time to resolve the difficult cases",
+      "body": [
+        "The booking and recovery improvements reduce repeated requests. Staff have more time for customers who need help, while access and reliability improve. The delayed customer payment has also arrived. As the company considers another income source, please keep the work of maintaining this support in the budget."
+      ],
+      "audio": "/media/story/a4-support.mp3",
+      "voice": "David"
+    },
+    "a4-basic": {
+      "id": "a4-basic",
+      "kind": "memo",
+      "sender": "Sam · customer support lead",
+      "title": "Time for the current service",
+      "body": [
+        "The company has kept its existing features, leaving staff more time for maintenance and customer support. Competitors are adding offers, and the company’s market presence falls slightly.",
+        "The delayed €220k payment has arrived. It provides cash, while the decision about how to fund the service remains."
+      ],
+      "audio": "/media/story/a4-basic.mp3",
+      "voice": "David"
+    },
+    "a4-overload": {
+      "id": "a4-overload",
+      "kind": "support-ticket",
+      "sender": "Sam · customer support lead",
+      "title": "We need temporary cover to handle the requests",
+      "body": [
+        "The work created by the current service has exceeded what staff can manage. The company needs €90k of temporary cover, and reliability and trust fall during the disruption.",
+        "The delayed €220k payment has arrived. Part of that money is now needed to handle problems arising from the service already promised."
+      ],
+      "audio": "/media/story/a4-overload.mp3",
+      "voice": "David"
+    },
+    "a5-fees": {
+      "id": "a5-fees",
+      "kind": "receipt",
+      "sender": "Ticketing fee notice",
+      "title": "The same ticketing access now costs more",
+      "body": [
+        "Ticketing fees have increased to fund the service. The company earns more per sale, while affordability and trust decline.",
+        "Fans are now cutting back on entertainment. Higher-fee companies lose more business in the downturn, so the extra income per sale comes with fewer customers."
+      ],
+      "audio": "/media/story/a5-fees.mp3",
+      "voice": "David",
+      "rows": [
+        [
+          "Change",
+          "Higher ticketing fees"
+        ],
+        [
+          "Customer receives",
+          "The existing ticketing access"
+        ]
+      ]
+    },
+    "a5-premium": {
+      "id": "a5-premium",
+      "kind": "subscription",
+      "sender": "Subscription terms",
+      "title": "Extra benefits for €4 a month",
+      "body": [
+        "The company has kept a basic service and introduced paid benefits. Subscription income helps fund operations, while customers question advantages reserved for people who can pay monthly.",
+        "As households cut entertainment spending, annual subscription income falls by €40k. The service still needs to provide the benefits already sold."
+      ],
+      "audio": "/media/story/a5-premium.mp3",
+      "voice": "David"
+    },
+    "a5-sponsors": {
+      "id": "a5-sponsors",
+      "kind": "contract",
+      "sender": "Sponsorship agreement · data terms",
+      "title": "Rewards funded through identifiable engagement",
+      "body": [
+        "Sponsors fund personalised rewards while ticket prices stay stable. The agreement gives sponsors identifiable customer engagement information for 180 days.",
+        "Entertainment spending has fallen. Annual sponsor income drops by €40k, while the company remains responsible for the information already shared."
+      ],
+      "audio": "/media/story/a5-sponsors.mp3",
+      "voice": "David",
+      "rows": [
+        [
+          "Information",
+          "Identifiable customer engagement"
+        ],
+        [
+          "Retention",
+          "180 days"
+        ],
+        [
+          "Funding",
+          "Personalised sponsored rewards"
+        ]
+      ]
+    },
+    "a5-analytics": {
+      "id": "a5-analytics",
+      "kind": "report",
+      "sender": "Venue audience report · cover note",
+      "title": "A report built from combined audience information",
+      "body": [
+        "The company now sells aggregated reports without individual attendance records. Preparing them creates work for staff and a more modest income source.",
+        "The fall in entertainment spending reduces the size of the ticketing business. The reporting agreement still needs staff to prepare and explain its findings."
+      ],
+      "audio": "/media/story/a5-analytics.mp3",
+      "voice": "David"
+    },
+    "a5-retain": {
+      "id": "a5-retain",
+      "kind": "email",
+      "sender": "Finance team",
+      "title": "Current prices, fewer ticket sales",
+      "body": [
+        "The company has kept its existing prices and commercial terms. The service continues to rely on the income it already earns.",
+        "Households are spending less on entertainment. Sales weaken while maintenance, customer support and existing agreements still need funding."
+      ],
+      "audio": "/media/story/a5-retain.mp3",
+      "voice": "David"
+    },
+    "a6-full-failed": {
+      "id": "a6-full-failed",
+      "kind": "incident",
+      "sender": "Venue operations manager",
+      "title": "Customers rejected during the busiest arrivals",
+      "body": [
+        "The full biometric entry package was introduced without broad testing. At the busy event, staff struggled to help people rejected by the checks.",
+        "The company needs €160k of corrections. Trust and access fall, while identifiable attendance is still being kept for a year. The next request to use attendee information concerns records created by this choice.",
+        "Full-name registration and facial entry link people to the events they attend. A union meeting organiser and an LGBTQ+ event organiser both hear from people who will stay home rather than create that record.",
+        "The venue must run and maintain the cameras, sensors and computing equipment and store identifiable records for a year."
+      ],
+      "audio": "/media/story/a6-full-failed.mp3",
+      "voice": "David"
+    },
+    "a6-full-tested": {
+      "id": "a6-full-tested",
+      "kind": "incident",
+      "sender": "Venue operations manager",
+      "title": "The full package coped with the busy event",
+      "body": [
+        "The full biometric entry package completed the busy event without a major correction programme. Earlier preparation provided evidence for planning the service.",
+        "The arrangement still creates a year of identifiable attendance records and places more barriers in some customers’ way. Those responsibilities continue when the promoter asks for further uses of the information.",
+        "Full-name registration and facial entry link people to the events they attend. A union meeting organiser and an LGBTQ+ event organiser both hear from people who will stay home rather than create that record.",
+        "The venue must run and maintain the cameras, sensors and computing equipment and store identifiable records for a year."
+      ],
+      "audio": "/media/story/a6-full-tested.mp3",
+      "voice": "David"
+    },
+    "a6-selective": {
+      "id": "a6-selective",
+      "kind": "voice",
+      "sender": "Venue operations manager",
+      "title": "Both entrances worked, with more staff needed",
+      "body": [
+        "People used optional facial entry and the staffed alternative. Keeping both working required extra staff when people switched between them, adding fifty thousand euros. We kept the alternative available and the thirty-day attendance limit. Any further request to use those records needs to start from that agreement."
+      ],
+      "audio": "/media/story/a6-selective.mp3",
+      "voice": "David"
+    },
+    "a6-alternative": {
+      "id": "a6-alternative",
+      "kind": "incident",
+      "sender": "Venue operations manager",
+      "title": "Codes and staffed gates at the busy event",
+      "body": [
+        "The company used offline codes, accessible gates and staffed checks. Lower-power equipment reduced resource use, while access and reliability improved.",
+        "A request for attendee information will still need to account for what this arrangement actually records. An accessible entrance does not create biometric attendance records.",
+        "Participating venues can admit attendees with a ticket code and a staffed check. The venue uses lower-power equipment and creates no face record at the gate."
+      ],
+      "audio": "/media/story/a6-alternative.mp3",
+      "voice": "David"
+    },
+    "a6-decline": {
+      "id": "a6-decline",
+      "kind": "email",
+      "sender": "Venue operations manager",
+      "title": "The existing entrance remains in use",
+      "body": [
+        "The company passed on the new entry contract. Current arrangements continued at the busy event, without adding cameras, sensors or another attendance service.",
+        "The promoter’s next information request will need to distinguish records that the company already has from records that the new package would have created."
+      ],
+      "audio": "/media/story/a6-decline.mp3",
+      "voice": "David"
+    },
+    "a6-disruption": {
+      "id": "a6-disruption",
+      "kind": "incident",
+      "sender": "Venue operations manager",
+      "title": "Existing entry arrangements were disrupted",
+      "body": [
+        "The busy event exposed a reliability problem in the entry arrangements still in use. Additional support cost €70k, and trust fell after customers experienced the disruption.",
+        "The company now needs to respond to the promoter’s safety request while accounting for what happened at this event."
+      ],
+      "audio": "/media/story/a6-disruption.mp3",
+      "voice": "David"
+    },
+    "a6-launch_broad": {
+      "id": "a6-launch_broad",
+      "kind": "bulletin",
+      "sender": "Consumer organisation · follow-up",
+      "title": "Buyer verification launches later in the decade",
+      "body": [
+        "The company launched its retained buyer-verification prototype across ticket sales, using this year for release instead of buying entry equipment. Resale abuse falls and the service reaches more customers.",
+        "The results still depend on testing before launch. The company has not added facial entry, movement tracking or temperature checks through this decision."
+      ],
+      "audio": "/media/story/a6-launch_broad.mp3",
+      "voice": "David"
+    },
+    "a6-launch-failed": {
+      "id": "a6-launch-failed",
+      "kind": "support-ticket",
+      "sender": "Sam · customer support lead",
+      "title": "The later launch still reached customers before testing was sufficient",
+      "body": [
+        "The retained prototype has now launched broadly. Customers encountered failures that limited testing had left unresolved, with refunds, lower access and reliability, and a lost original venue.",
+        "Launching later did not remove the need to test. Buyer verification also remains separate from equipment at venue entrances."
+      ],
+      "audio": "/media/story/a6-launch-failed.mp3",
+      "voice": "David"
+    },
+    "a6-launch_limited": {
+      "id": "a6-launch_limited",
+      "kind": "email",
+      "sender": "Venue operations manager",
+      "title": "The retained prototype is live at selected venues",
+      "body": [
+        "The company launched its buyer-verification prototype with selected venues and staff to help after failed checks. It used this year for that release instead of adding entry equipment.",
+        "The smaller launch reduces resale abuse and grows the business more slowly. Its staff support and existing data limits continue to apply."
+      ],
+      "audio": "/media/story/a6-launch_limited.mp3",
+      "voice": "David"
+    },
+    "a7-expanded": {
+      "id": "a7-expanded",
+      "kind": "complaint",
+      "sender": "Complaint sent to the company",
+      "title": "Some people are already staying home",
+      "body": [
+        "The agreement lets Palantir process attendee records for law enforcement screening. “People are asking if they can still come without giving their full names. A few have told me they’re staying home,” writes an organiser. Union and LGBTQ+ event organisers report similar concerns.",
+        "Attendees challenge the arrangement. A correct identification can still reveal someone’s whereabouts and associations to people they never chose to tell."
+      ],
+      "audio": "/media/story/a7-expanded.mp3",
+      "voice": "Zira"
+    },
+    "a7-narrow": {
+      "id": "a7-narrow",
+      "kind": "letter",
+      "sender": "Case review record",
+      "title": "The request is limited to the named investigation",
+      "body": [
+        "The company agreed to provide existing records under documented authority, with human checks and deletion. Staff spend time checking the request and the information available.",
+        "This agreement does not introduce broad watchlist screening. The artists’ campaign will also examine the company’s other data practices, including any personalised sponsorship already in use."
+      ],
+      "audio": "/media/story/a7-narrow.mp3",
+      "voice": "David"
+    },
+    "a7-other": {
+      "id": "a7-other",
+      "kind": "voice",
+      "sender": "Artist’s manager",
+      "title": "Our audience will ask what the safety work involves",
+      "body": [
+        "You chose safeguarding staff, incident reporting and crowd safety without identifying attendees. That means funding work at events and passing on the security-service contract. We will want to know how the venue and your staff are delivering it, alongside the company’s other promises about data and access."
+      ],
+      "audio": "/media/story/a7-other.mp3",
+      "voice": "Zira"
+    },
+    "a7-refuse": {
+      "id": "a7-refuse",
+      "kind": "email",
+      "sender": "European tour promoter",
+      "title": "We are considering another supplier for the additional work",
+      "body": [
+        "The company declined the expanded screening role and kept its existing lawful duties. A venue has favoured another supplier, reducing the company’s business.",
+        "Artists and fans still want an account of its current practices. The response needs to explain the service it actually runs, including any commercial tracking."
+      ],
+      "audio": "/media/story/a7-refuse.mp3",
+      "voice": "David"
+    },
+    "a8-negotiate": {
+      "id": "a8-negotiate",
+      "kind": "letter",
+      "sender": "Artist’s manager",
+      "title": "We have a targeted agreement to follow up",
+      "body": [
+        "The company has ended broad screening, resolved that complaint and set a 30-day limit on attendance records. Any personalised commercial tracking already in use continues.",
+        "Partners are deciding whether these changes meet their needs. Our agreement will be judged by what fans experience when they buy and enter, as well as the statement announcing it."
+      ],
+      "audio": "/media/story/a8-negotiate.mp3",
+      "voice": "Zira"
+    },
+    "a8-revise": {
+      "id": "a8-revise",
+      "kind": "email",
+      "sender": "Sam · customer support lead",
+      "title": "Please allow time to deliver the revised service",
+      "body": [
+        "The company agreed wider changes to access and data use, ended personalised sponsorship and broad screening, and adopted lower-power systems.",
+        "Staff now need to deliver those changes while serving existing ticket holders. Trust improves, while the transition costs money and gives up some business. Earlier fines and job losses remain in the record."
+      ],
+      "audio": "/media/story/a8-revise.mp3",
+      "voice": "David"
+    },
+    "a8-separate": {
+      "id": "a8-separate",
+      "kind": "chat",
+      "sender": "Sam · customer support lead",
+      "title": "Which service did this customer choose?",
+      "body": [
+        "Sam: The low-data service has its own terms. Customers on the original service keep their existing arrangements unless they switch.",
+        "Support team: We need to check which service each request concerns. Running both brings more business and more work; the original practices still need explaining."
+      ],
+      "audio": "/media/story/a8-separate.mp3",
+      "voice": "David"
+    },
+    "a8-maintain": {
+      "id": "a8-maintain",
+      "kind": "email",
+      "sender": "Lina · organiser of the company’s first festival",
+      "title": "We are reading the current terms again",
+      "body": [
+        "The company kept its service and terms. Some venues may value those arrangements, while others will decide that access or trust has fallen too far.",
+        "The renewals reflect the service that you delivered. Our audience needs to be able to buy tickets and enter reliably, and we will ask the company to explain how its current arrangements provide that."
+      ],
+      "audio": "/media/story/a8-maintain.mp3",
+      "voice": "Zira"
+    },
+    "a9-expand": {
+      "id": "a9-expand",
+      "kind": "voice",
+      "sender": "Sam · customer support lead",
+      "title": "Six new colleagues and a larger service",
+      "body": [
+        "The company has hired six people and committed money to expansion. A larger business brings more requests to handle and needs more resources to run the service. Please include the people and work that made that growth possible in the final account."
+      ],
+      "audio": "/media/story/a9-expand.mp3",
+      "voice": "David"
+    },
+    "a9-restructure": {
+      "id": "a9-restructure",
+      "kind": "memo",
+      "sender": "Staff record",
+      "title": "Six compulsory redundancies in the rebuilding plan",
+      "body": [
+        "The company has rebuilt operations to improve reliability, technical control and its annual finances. Six people lost their jobs through compulsory redundancies.",
+        "Those departures remain part of the company’s history. A better service or a larger final staffing total will not remove them from the report."
+      ],
+      "audio": "/media/story/a9-restructure.mp3",
+      "voice": "David"
+    },
+    "a9-specialise": {
+      "id": "a9-specialise",
+      "kind": "voice",
+      "sender": "Lina · organiser of the company’s first festival",
+      "title": "A service for smaller accessible venues",
+      "body": [
+        "You chose to serve smaller accessible venues using exchanges and manual checks. That is a smaller business, with simpler operations, lower resource use and less resale abuse. We still need the company to keep its agreements with the venues it serves, including any arrangements for customers leaving the wider service."
+      ],
+      "audio": "/media/story/a9-specialise.mp3",
+      "voice": "Zira"
+    },
+    "a9-merge": {
+      "id": "a9-merge",
+      "kind": "memo",
+      "sender": "Investor agreement · staffing notice",
+      "title": "New funding and control, with eight job losses",
+      "body": [
+        "A controlling investor has provided €600k and combined operations. The company gains financial resources while its team has less technical control.",
+        "Eight people lose their jobs. The final account needs to include those employees alongside the investment, the continuing service and any commitments that the new owner can revise."
+      ],
+      "audio": "/media/story/a9-merge.mp3",
+      "voice": "David"
+    },
+    "a9-continue": {
+      "id": "a9-continue",
+      "kind": "email",
+      "sender": "Engineering team",
+      "title": "The same systems still need maintaining",
+      "body": [
+        "The company has continued its operating model. This choice added no expansion investment, asset sale or new redundancies.",
+        "Existing customer promises, supplier dependencies and maintenance remain. The final report needs to describe the results of those arrangements over the decade."
+      ],
+      "audio": "/media/story/a9-continue.mp3",
+      "voice": "David"
+    },
+    "a10-full": {
+      "id": "a10-full",
+      "kind": "report",
+      "sender": "Published company account",
+      "title": "The full account is available",
+      "body": [
+        "The company has published findings, failures, supporting evidence and remedies, with confidential information protected. Readers can compare the account with their experience of the service.",
+        "Recorded fines, debt and job losses remain in the history. The report explains the company’s decisions and results; it does not change what happened."
+      ],
+      "audio": "/media/story/a10-full.mp3",
+      "voice": "David"
+    },
+    "a10-staged": {
+      "id": "a10-staged",
+      "kind": "report",
+      "sender": "Published findings and delivery dates",
+      "title": "Some work remains unfinished",
+      "body": [
+        "The company has published findings and named who will complete unresolved work and when. Customers, staff and partners can see which claims have evidence and which work remains open.",
+        "The delivery dates become further promises. Earlier outcomes stay in the company record while that work continues."
+      ],
+      "audio": "/media/story/a10-staged.mp3",
+      "voice": "David"
+    },
+    "a10-summary-clear": {
+      "id": "a10-summary-clear",
+      "kind": "bulletin",
+      "sender": "Association review team",
+      "title": "Selected results published",
+      "body": [
+        "The company published a short selection of results and shared fuller material privately. Its current record contains no serious complaint or major penalty concealed by this choice.",
+        "Readers still receive less of the evidence publicly. Staff and partners retain their own accounts of the past decade."
+      ],
+      "audio": "/media/story/a10-summary-clear.mp3",
+      "voice": "David"
+    },
+    "a10-summary-concealed": {
+      "id": "a10-summary-concealed",
+      "kind": "bulletin",
+      "sender": "Association review team",
+      "title": "The public summary leaves out a serious problem",
+      "body": [
+        "The company published selected results while its record included a serious complaint or major penalty. That omission damages trust in the account.",
+        "People affected by earlier decisions can compare the publication with what happened to them. The unresolved issue remains part of the history."
+      ],
+      "audio": "/media/story/a10-summary-concealed.mp3",
+      "voice": "David"
+    },
+    "a10-review": {
+      "id": "a10-review",
+      "kind": "report",
+      "sender": "Independent reviewer",
+      "title": "The review and its scope are published",
+      "body": [
+        "The independent review has examined the company’s records, and its scope and findings are published. Readers can see the basis for the conclusions.",
+        "The review documents the company’s past decisions, including failures and limits in the evidence. It leaves earlier fines, debt and redundancies on record."
+      ],
+      "audio": "/media/story/a10-review.mp3",
+      "voice": "David"
+    },
+    "a10-none": {
+      "id": "a10-none",
+      "kind": "voice",
+      "sender": "Lina · organiser of the company’s first festival",
+      "title": "We looked for an account of what changed",
+      "body": [
+        "The company has kept its existing reporting duties without publishing an additional account. We still have the promises made to our festival and the experience of the people buying tickets. We would need to ask the company directly for an explanation of what changed across the decade."
+      ],
+      "audio": "/media/story/a10-none.mp3",
+      "voice": "Zira"
+    },
+    "a1-passive": {
+      "id": "a1-passive",
+      "kind": "memo",
+      "sender": "Company record",
+      "title": "Existing arrangements continue",
+      "body": [
+        "No new action was agreed for this year. The company continues the service, contracts and duties already in place.",
+        "The update reflects those existing arrangements. Customers and partners still depend on the promises that the company made earlier."
+      ],
+      "audio": "/media/story/a1-passive.mp3",
+      "voice": "David"
+    },
+    "a2-passive": {
+      "id": "a2-passive",
+      "kind": "memo",
+      "sender": "Company record",
+      "title": "Existing arrangements continue",
+      "body": [
+        "No new action was agreed for this year. The company continues the service, contracts and duties already in place.",
+        "The update reflects those existing arrangements. Customers and partners still depend on the promises that the company made earlier."
+      ],
+      "audio": "/media/story/a2-passive.mp3",
+      "voice": "David"
+    },
+    "a3-passive": {
+      "id": "a3-passive",
+      "kind": "memo",
+      "sender": "Company record",
+      "title": "Existing arrangements continue",
+      "body": [
+        "No new action was agreed for this year. The company continues the service, contracts and duties already in place.",
+        "The update reflects those existing arrangements. Customers and partners still depend on the promises that the company made earlier."
+      ],
+      "audio": "/media/story/a3-passive.mp3",
+      "voice": "David"
+    },
+    "a4-passive": {
+      "id": "a4-passive",
+      "kind": "memo",
+      "sender": "Company record",
+      "title": "Existing arrangements continue",
+      "body": [
+        "No new action was agreed for this year. The company continues the service, contracts and duties already in place.",
+        "The update reflects those existing arrangements. Customers and partners still depend on the promises that the company made earlier."
+      ],
+      "audio": "/media/story/a4-passive.mp3",
+      "voice": "David"
+    },
+    "a5-passive": {
+      "id": "a5-passive",
+      "kind": "memo",
+      "sender": "Company record",
+      "title": "Existing arrangements continue",
+      "body": [
+        "No new action was agreed for this year. The company continues the service, contracts and duties already in place.",
+        "The update reflects those existing arrangements. Customers and partners still depend on the promises that the company made earlier."
+      ],
+      "audio": "/media/story/a5-passive.mp3",
+      "voice": "David"
+    },
+    "a6-passive": {
+      "id": "a6-passive",
+      "kind": "memo",
+      "sender": "Company record",
+      "title": "Existing arrangements continue",
+      "body": [
+        "No new action was agreed for this year. The company continues the service, contracts and duties already in place.",
+        "The update reflects those existing arrangements. Customers and partners still depend on the promises that the company made earlier."
+      ],
+      "audio": "/media/story/a6-passive.mp3",
+      "voice": "David"
+    },
+    "a7-passive": {
+      "id": "a7-passive",
+      "kind": "memo",
+      "sender": "Company record",
+      "title": "Existing arrangements continue",
+      "body": [
+        "No new action was agreed for this year. The company continues the service, contracts and duties already in place.",
+        "The update reflects those existing arrangements. Customers and partners still depend on the promises that the company made earlier."
+      ],
+      "audio": "/media/story/a7-passive.mp3",
+      "voice": "David"
+    },
+    "a8-passive": {
+      "id": "a8-passive",
+      "kind": "memo",
+      "sender": "Company record",
+      "title": "Existing arrangements continue",
+      "body": [
+        "No new action was agreed for this year. The company continues the service, contracts and duties already in place.",
+        "The update reflects those existing arrangements. Customers and partners still depend on the promises that the company made earlier."
+      ],
+      "audio": "/media/story/a8-passive.mp3",
+      "voice": "David"
+    },
+    "a9-passive": {
+      "id": "a9-passive",
+      "kind": "memo",
+      "sender": "Company record",
+      "title": "Existing arrangements continue",
+      "body": [
+        "No new action was agreed for this year. The company continues the service, contracts and duties already in place.",
+        "The update reflects those existing arrangements. Customers and partners still depend on the promises that the company made earlier."
+      ],
+      "audio": "/media/story/a9-passive.mp3",
+      "voice": "David"
+    },
+    "a10-passive": {
+      "id": "a10-passive",
+      "kind": "memo",
+      "sender": "Company record",
+      "title": "Existing arrangements continue",
+      "body": [
+        "No new action was agreed for this year. The company continues the service, contracts and duties already in place.",
+        "The update reflects those existing arrangements. Customers and partners still depend on the promises that the company made earlier."
+      ],
+      "audio": "/media/story/a10-passive.mp3",
+      "voice": "David"
+    },
+    "a8-negotiate-limits": {
+      "id": "a8-negotiate-limits",
+      "kind": "letter",
+      "sender": "Artist’s manager",
+      "title": "A targeted agreement on access and records",
+      "body": [
+        "The company agreed targeted changes to access and a 30-day limit on attendance records. It was not using broad screening, so this agreement does not close a screening operation or resolve a complaint about one.",
+        "Any existing personalised commercial tracking continues. Partners are now deciding whether the agreed service meets the needs of their audiences."
+      ],
+      "voice": "Zira",
+      "audio": "/media/story/a8-negotiate-limits.mp3"
+    },
+    "a8-revise-existing-limits": {
+      "id": "a8-revise-existing-limits",
+      "kind": "email",
+      "sender": "Sam · customer support lead",
+      "title": "Improving access while keeping existing data limits",
+      "body": [
+        "The company has funded wider changes to access, data use and lower-power systems. It already operated without broad screening or personalised sponsorship, and keeps those practices out of its service.",
+        "Staff still need to deliver the changes for existing ticket holders. The transition costs money and gives up some business, while trust improves."
+      ],
+      "voice": "David",
+      "audio": "/media/story/a8-revise-existing-limits.mp3"
+    },
+    "a8-revise-screening": {
+      "id": "a8-revise-screening",
+      "kind": "email",
+      "sender": "Sam · customer support lead",
+      "title": "The screening agreement has ended",
+      "body": [
+        "The company has ended broad screening, resolved the complaint and set a 30-day limit on attendance records. It also funded access improvements and lower-power systems.",
+        "It was not using personalised sponsorship. Staff need to deliver the revised service while supporting existing ticket holders; the transition costs money and gives up some business."
+      ],
+      "voice": "David",
+      "audio": "/media/story/a8-revise-screening.mp3"
+    },
+    "a8-revise-sponsorship": {
+      "id": "a8-revise-sponsorship",
+      "kind": "email",
+      "sender": "Sam · customer support lead",
+      "title": "Personalised sponsorship has ended",
+      "body": [
+        "The company has ended personalised sponsorship and funded wider access and data changes, including a 30-day attendance limit and lower-power systems. It was not using broad screening.",
+        "The sponsor income that depended on personalised engagement has ended too. Staff need to provide the revised service while the company funds the transition."
+      ],
+      "voice": "David",
+      "audio": "/media/story/a8-revise-sponsorship.mp3"
+    },
+    "b10-expand": {
+      "id": "b10-expand",
+      "kind": "memo",
+      "sender": "Sam · customer support lead",
+      "title": "Six new colleagues in the final account",
+      "body": [
+        "The company spent its last strategy year expanding and hiring six people. The larger service brings more support work and uses more resources.",
+        "The final account needs to explain the growth alongside what it required from staff, customers and partners. Earlier promises and outcomes are still part of that history."
+      ]
+    },
+    "b10-restructure": {
+      "id": "b10-restructure",
+      "kind": "letter",
+      "sender": "Staff submission to the review",
+      "title": "The rebuilding plan improved operations and cut six jobs",
+      "body": [
+        "The company rebuilt operations, improving reliability and technical control while making six people redundant. Those employees remain part of its history.",
+        "A report on the better service needs to explain what happened to them, alongside any earlier job losses. The final staffing total cannot supply that account on its own."
+      ]
+    },
+    "b10-specialise": {
+      "id": "b10-specialise",
+      "kind": "email",
+      "sender": "Lina · organiser of the company’s first festival",
+      "title": "Please explain what the smaller business provides",
+      "body": [
+        "You chose to focus on smaller accessible venues, using exchanges and manual checks. The business is smaller, with simpler operations and lower resource use.",
+        "When we read the final account, we will want to understand what that means for the people buying tickets, the venues that stayed and the customers who needed another arrangement."
+      ]
+    },
+    "b10-merge": {
+      "id": "b10-merge",
+      "kind": "letter",
+      "sender": "Staff submission to the review",
+      "title": "Eight departures in the investor agreement",
+      "body": [
+        "The controlling investor provided funding and combined operations. Eight people lost their jobs, and the company’s team has less technical control.",
+        "The final account needs to explain those departures and the continuing commitments after the deal. New funding does not remove the people affected by earlier decisions."
+      ]
+    },
+    "b10-continue": {
+      "id": "b10-continue",
+      "kind": "letter",
+      "sender": "Association review team",
+      "title": "An account of the service you continued",
+      "body": [
+        "The company kept its operating model in the final strategy year. Its existing systems, customer agreements and maintenance responsibilities continued.",
+        "Your report needs to explain what those arrangements produced over the decade, including decisions to keep a service as well as decisions to change it."
+      ]
+    }
+  },
+  "callbacks": {
+    "build": "Your engineers maintain the verification system that the company chose to own.",
+    "buy": "Verity still controls the verification service; customer appeals remain your company’s responsibility.",
+    "hybrid": "The split agreed with Verity continues: your team maintains the connection, while Verity controls verification.",
+    "none": "The company still handles conventional sales and fraud without an acquired verification prototype.",
+    "loyalty": "The rewards introduced in Year 4 still need maintenance and support.",
+    "reservations": "Fans still rely on the reservation and transfer arrangements introduced in Year 4.",
+    "support": "The recovery and staffed alternatives funded in Year 4 are now part of the service that customers expect.",
+    "basic": "Customers continue using the feature set that the company kept in Year 4.",
+    "fees": "The higher fees agreed in Year 5 remain part of what customers pay.",
+    "premium": "Subscribers still expect the benefits sold under the Year 5 subscription.",
+    "sponsors": "The personalised sponsorship introduced in Year 5 remains part of the company’s data responsibilities.",
+    "analytics": "Staff still prepare the aggregated reports sold under the Year 5 agreement.",
+    "retain": "The company kept its existing income sources and prices in Year 5.",
+    "full": "The full entry package introduced a year of identifiable attendance records.",
+    "selective": "Optional facial entry still requires a working staffed alternative.",
+    "alternative": "The company chose codes, accessible gates and staff for its entry service.",
+    "expanded": "The broad screening agreement produced a rights complaint that needs to be addressed.",
+    "narrow": "The company’s current limits on data sharing still need to be reflected in its agreements and practice.",
+    "other": "The company funded safety staff and procedures instead of an identification service.",
+    "refuse": "The company declined the expanded screening role and continued its existing duties."
+  },
+  "role_senders": {
+    "ceo": "Board secretary",
+    "cfo": "Finance team",
+    "cto": "Engineering team",
+    "marketing": "Customer research team",
+    "legal": "Contract review team",
+    "employee": "Sam · customer support lead",
+    "sustainability": "Operations analyst",
+    "relations": "Artist and venue liaison"
+  },
+  "role_subjects": {
+    "ceo": [
+      "The investment deadline",
+      "What the demonstration promises",
+      "Conditions for release",
+      "Earlier customer promises",
+      "Who funds the service",
+      "One company accountable",
+      "The renewal discussion",
+      "What the board can authorise",
+      "Commitments after a deal",
+      "Claims in the final report"
+    ],
+    "cfo": [
+      "A payment may be late",
+      "What the pilot estimate leaves out",
+      "Refunds and launch income",
+      "Costs before payment",
+      "What happens after the sponsor’s offer",
+      "The cost of rejected checks",
+      "Disputes after a contract ends",
+      "Transition charges",
+      "Cash through the transition",
+      "Costs excluded from the draft"
+    ],
+    "cto": [
+      "Compatibility still untested",
+      "Recovery and interruptions",
+      "Monitoring and response time",
+      "Older customer accounts",
+      "Reports without a single customer profile",
+      "Additional entry equipment",
+      "A correct match can carry a wrong record",
+      "Connections between the two services",
+      "Staff knowledge and transfer terms",
+      "What operational records can establish"
+    ],
+    "marketing": [
+      "Fans want a limit and question the checks",
+      "Who took part in the research",
+      "The launch announcement",
+      "Which customers receive the benefit",
+      "Who pays and who gets access",
+      "Speed and attendance records",
+      "Who decides an exclusion",
+      "Different expectations of change",
+      "What customers trust in the service",
+      "The headline and the findings"
+    ],
+    "legal": [
+      "Responsibility for failed checks",
+      "An appeal is missing from the pilot form",
+      "Who can reverse a rejection",
+      "Who holds a disputed ticket",
+      "An undefined future use",
+      "Later uses of entry information",
+      "Authority for each exclusion",
+      "Contracts have different dates",
+      "Obligations through restructuring",
+      "Protecting evidence before publication"
+    ],
+    "employee": [
+      "Work already promised",
+      "Support staff absent from the timetable",
+      "Permission to resolve cases",
+      "Extra queries alongside existing work",
+      "Reporting work without more staff",
+      "New responsibilities without retraining",
+      "Explaining exclusions to customers",
+      "Staff want a role in planning",
+      "Jobs in the proposed deal",
+      "What the final headcount leaves out"
+    ],
+    "sustainability": [
+      "A subcontractor is missing from the figures",
+      "What the pilot does not measure",
+      "Running both services",
+      "What the reward would use",
+      "More reports, more processing",
+      "Replacing working equipment",
+      "Another system to run",
+      "Equipment through the transition",
+      "What would be replaced",
+      "Measurements and estimates combined"
+    ],
+    "relations": [
+      "A trial needs a credible date",
+      "Who the volunteers represent",
+      "Different expectations of release",
+      "Promoters want different terms",
+      "What existing partners would fund",
+      "An artist asks for another entrance",
+      "Partners disagree over safety",
+      "A private offer to prevent withdrawal",
+      "Who will stay after a sale",
+      "An old testimonial in a new report"
+    ]
+  }
+}

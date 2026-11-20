@@ -1,0 +1,733 @@
+{
+  "version": "fairpass.rules.1",
+  "calibration": "Fictional teaching calibration. The agreed case and decision sequence are retained; numeric effects, thresholds and power costs are design choices for review.",
+  "initial": {
+    "cash": 1600,
+    "debt": 0,
+    "growth": 100,
+    "trust": 60,
+    "reliability": 93,
+    "access": 96,
+    "fraud": 12,
+    "fees": 100,
+    "footprint": 100,
+    "staff": 40,
+    "redundancies": 0,
+    "load": 40,
+    "control": 70,
+    "maintenance": 0,
+    "recurring": 0,
+    "contracts": 10,
+    "new_partners": 0,
+    "evidence": 0,
+    "architecture": "none",
+    "prototype": false,
+    "live": false,
+    "entry": "existing",
+    "alternative_entry": true,
+    "attendance_days": 0,
+    "commercial_tracking": false,
+    "sharing": "none",
+    "complaint": false,
+    "penalties": 0,
+    "emergency": false
+  },
+  "rules": {
+    "1": {
+      "build": {
+        "consequence": "The company invests €1.3m in an internal prototype and hires four people. Your team owns the code; €150k annual maintenance starts next year. Buyer verification has not launched yet.",
+        "changes": {
+          "cash": -1300,
+          "staff": 4,
+          "load": 15,
+          "footprint": 6
+        },
+        "flags": {
+          "architecture": "build",
+          "prototype": true,
+          "control": 90,
+          "maintenance": 150
+        }
+      },
+      "buy": {
+        "consequence": "The company pays €800k for Verity’s system under a three-year minimum contract. Verity controls verification, with €280k annual fees afterwards. Your staff handle appeals.",
+        "changes": {
+          "cash": -800,
+          "load": 6,
+          "footprint": 4
+        },
+        "flags": {
+          "architecture": "buy",
+          "prototype": true,
+          "control": 30,
+          "maintenance": 280,
+          "contract_until": 3
+        }
+      },
+      "hybrid": {
+        "consequence": "The company pays €900k and hires two people to connect Verity to its software. Your team controls the connection, with €210k annual maintenance. Verification depends on Verity under a three-year minimum contract.",
+        "changes": {
+          "cash": -900,
+          "staff": 2,
+          "load": 10,
+          "footprint": 5
+        },
+        "flags": {
+          "architecture": "hybrid",
+          "prototype": true,
+          "control": 65,
+          "maintenance": 210,
+          "contract_until": 3
+        }
+      },
+      "wait": {
+        "consequence": "The company continues conventional ticketing and keeps cash available. Staff still handle fraud without a buyer-verification system.",
+        "changes": {},
+        "flags": {
+          "architecture": "none"
+        }
+      }
+    },
+    "2": {
+      "broad": {
+        "consequence": "The company spends €400k testing different customers, devices and failures. The evidence level reaches 3; a working prototype can earn the €150k demonstration investment.",
+        "changes": {
+          "cash": -400,
+          "load": 8
+        },
+        "flags": {
+          "evidence": 3
+        }
+      },
+      "focused": {
+        "consequence": "The company spends €150k investigating accessibility and integration. The evidence level reaches 2, while conditions outside the investigation remain untested.",
+        "changes": {
+          "cash": -150,
+          "load": 3
+        },
+        "flags": {
+          "evidence": 2
+        }
+      },
+      "existing": {
+        "consequence": "The team uses supplier demonstrations and existing records. It gains no new testing evidence or demonstration investment.",
+        "changes": {},
+        "flags": {
+          "evidence": 0
+        }
+      },
+      "explore": {
+        "consequence": "The company spends €100k comparing designs and supplier exit terms. The evidence level reaches 1, and documenting portable connections improves technical control.",
+        "changes": {
+          "cash": -100,
+          "control": 10
+        },
+        "flags": {
+          "evidence": 1
+        }
+      },
+      "late_build": {
+        "consequence": "The company acquires an internal prototype for €1.3m. Buyer verification remains unlaunched until a possible release in Year 3 or Year 6. The demonstration investment deadline is missed.",
+        "changes": {
+          "cash": -1300,
+          "load": 10
+        },
+        "flags": {
+          "architecture": "build",
+          "prototype": true,
+          "maintenance": 150,
+          "control": 90,
+          "evidence": 0,
+          "contract_until": 0
+        }
+      },
+      "late_buy": {
+        "consequence": "The company acquires a Verity licence for €800k. Buyer verification remains unlaunched until a possible release in Year 3 or Year 6. The demonstration investment deadline is missed.",
+        "changes": {
+          "cash": -800,
+          "load": 10
+        },
+        "flags": {
+          "architecture": "buy",
+          "prototype": true,
+          "maintenance": 280,
+          "control": 30,
+          "evidence": 0,
+          "contract_until": 4
+        }
+      },
+      "late_hybrid": {
+        "consequence": "The company acquires a connection between Verity and its software for €900k. Buyer verification remains unlaunched until a possible release in Year 3 or Year 6. The demonstration investment deadline is missed.",
+        "changes": {
+          "cash": -900,
+          "load": 10
+        },
+        "flags": {
+          "architecture": "hybrid",
+          "prototype": true,
+          "maintenance": 210,
+          "control": 65,
+          "evidence": 0,
+          "contract_until": 4
+        }
+      }
+    },
+    "3": {
+      "broad": {
+        "consequence": "Buyer verification launches across the service. Market presence rises by 18 points and resale abuse falls by 8 percentage points. Limited testing can also lead to access and reliability failures.",
+        "changes": {
+          "growth": 18,
+          "fraud": -8,
+          "access": -2,
+          "reliability": -1,
+          "load": 12,
+          "footprint": 5
+        },
+        "flags": {
+          "live": true,
+          "launch": "broad"
+        }
+      },
+      "limited": {
+        "consequence": "Buyer verification launches at selected venues, with staff helping customers after failed checks. Market presence rises by 8 points and resale abuse falls by 5 percentage points. The smaller release needs support capacity.",
+        "changes": {
+          "growth": 8,
+          "fraud": -5,
+          "access": 1,
+          "reliability": 2,
+          "load": 5,
+          "footprint": 2
+        },
+        "flags": {
+          "live": true,
+          "launch": "limited"
+        }
+      },
+      "delay": {
+        "consequence": "The company keeps conventional sales and spends €120k fixing prototype defects. Evidence and reliability improve, while market presence falls by 4 points. The prototype can launch in Year 6.",
+        "changes": {
+          "cash": -120,
+          "growth": -4,
+          "reliability": 3,
+          "load": -5
+        },
+        "flags": {
+          "evidence": 3,
+          "launch": "delayed"
+        }
+      },
+      "conventional": {
+        "consequence": "The company continues conventional sales and keeps any prototype unlaunched. Manual fraud handling reduces resale abuse by 2 percentage points and adds support work.",
+        "changes": {
+          "fraud": -2,
+          "load": 4
+        },
+        "flags": {
+          "live": false,
+          "launch": "conventional"
+        }
+      },
+      "late_build": {
+        "consequence": "The company acquires an internal prototype for €1.3m. Buyer verification remains unlaunched until a possible release in Year 6. The demonstration investment deadline is missed.",
+        "changes": {
+          "cash": -1300,
+          "load": 10
+        },
+        "flags": {
+          "architecture": "build",
+          "prototype": true,
+          "maintenance": 150,
+          "control": 90,
+          "evidence": 0,
+          "contract_until": 0
+        }
+      },
+      "late_buy": {
+        "consequence": "The company acquires a Verity licence for €800k. Buyer verification remains unlaunched until a possible release in Year 6. The demonstration investment deadline is missed.",
+        "changes": {
+          "cash": -800,
+          "load": 10
+        },
+        "flags": {
+          "architecture": "buy",
+          "prototype": true,
+          "maintenance": 280,
+          "control": 30,
+          "evidence": 0,
+          "contract_until": 5
+        }
+      },
+      "late_hybrid": {
+        "consequence": "The company acquires a connection between Verity and its software for €900k. Buyer verification remains unlaunched until a possible release in Year 6. The demonstration investment deadline is missed.",
+        "changes": {
+          "cash": -900,
+          "load": 10
+        },
+        "flags": {
+          "architecture": "hybrid",
+          "prototype": true,
+          "maintenance": 210,
+          "control": 65,
+          "evidence": 0,
+          "contract_until": 5
+        }
+      }
+    },
+    "4": {
+      "loyalty": {
+        "consequence": "The company spends €120k on rewards for repeat customers. Market presence rises by 10 points, with more ongoing support and data processing. The rewards also work with conventional customer accounts.",
+        "changes": {
+          "cash": -120,
+          "growth": 10,
+          "load": 8,
+          "footprint": 4
+        },
+        "flags": {
+          "feature": "loyalty"
+        }
+      },
+      "reservations": {
+        "consequence": "The company spends €180k on payday reservations and legitimate transfers. Market presence rises by 6 points, access by 2 percentage points, and resale abuse falls by 2 percentage points. Staff handle more disputes.",
+        "changes": {
+          "cash": -180,
+          "growth": 6,
+          "access": 2,
+          "fraud": -2,
+          "load": 10
+        },
+        "flags": {
+          "feature": "reservations"
+        }
+      },
+      "support": {
+        "consequence": "The company spends €160k on account recovery, accessible booking and staffed alternatives. Access rises by 4 percentage points, reliability by 2 and trust by 3 points. Workload falls by 12 points.",
+        "changes": {
+          "cash": -160,
+          "access": 4,
+          "reliability": 2,
+          "trust": 3,
+          "load": -12,
+          "growth": 2
+        },
+        "flags": {
+          "feature": "support",
+          "alternative_entry": true
+        }
+      },
+      "basic": {
+        "consequence": "The company keeps its current features and avoids new product costs. Staff have more time for existing work, while market presence falls by 2 points as competitors add offers.",
+        "changes": {
+          "growth": -2,
+          "load": -5
+        },
+        "flags": {
+          "feature": "basic"
+        }
+      }
+    },
+    "5": {
+      "fees": {
+        "consequence": "Ticket fees rise by 12 index points, increasing annual margin by €120k. Market presence falls by 5 points and trust by 4 as tickets become less affordable.",
+        "changes": {
+          "fees": 12,
+          "growth": -5,
+          "trust": -4,
+          "recurring": 120
+        },
+        "flags": {
+          "revenue": "fees"
+        }
+      },
+      "premium": {
+        "consequence": "The company offers an optional €4 monthly subscription. Annual margin rises by €90k and market presence by 3 points. Trust falls by 2 points because paying customers receive advantages.",
+        "changes": {
+          "recurring": 90,
+          "growth": 3,
+          "trust": -2,
+          "load": 3
+        },
+        "flags": {
+          "revenue": "premium"
+        }
+      },
+      "sponsors": {
+        "consequence": "Sponsors fund personalised rewards while ticket prices stay stable. Annual margin rises by €160k and market presence by 5 points. Sponsors receive identifiable engagement data for 180 days.",
+        "changes": {
+          "recurring": 160,
+          "growth": 5,
+          "trust": -6,
+          "load": 4
+        },
+        "flags": {
+          "revenue": "sponsors",
+          "commercial_tracking": true
+        }
+      },
+      "analytics": {
+        "consequence": "The company spends €100k preparing aggregated venue reports that exclude individual attendance records. Annual margin rises by €75k, and staff take on reporting work.",
+        "changes": {
+          "cash": -100,
+          "recurring": 75,
+          "load": 5,
+          "footprint": 3
+        },
+        "flags": {
+          "revenue": "analytics"
+        }
+      },
+      "retain": {
+        "consequence": "The company keeps current ticket prices, income sources and commercial terms.",
+        "changes": {},
+        "flags": {
+          "revenue": "existing"
+        }
+      }
+    },
+    "6": {
+      "full": {
+        "consequence": "The company buys facial entry, movement tracking and temperature checks for €420k, with €90k annual upkeep. Market presence rises by 14 points and queues improve, while access falls by 6 percentage points. Identifiable attendance is kept for a year.",
+        "changes": {
+          "cash": -420,
+          "recurring": -90,
+          "growth": 14,
+          "access": -6,
+          "reliability": 3,
+          "footprint": 18,
+          "load": 8
+        },
+        "flags": {
+          "entry": "full",
+          "attendance_days": 365,
+          "alternative_entry": false
+        }
+      },
+      "selective": {
+        "consequence": "The company spends €260k on optional facial entry alongside staffed alternatives, with €60k annual upkeep. Market presence rises by 8 points. Staff manage both routes, and attendance records are kept for 30 days.",
+        "changes": {
+          "cash": -260,
+          "recurring": -60,
+          "growth": 8,
+          "reliability": 2,
+          "load": 8,
+          "footprint": 8
+        },
+        "flags": {
+          "entry": "selective",
+          "attendance_days": 30,
+          "alternative_entry": true
+        }
+      },
+      "alternative": {
+        "consequence": "The company spends €180k on offline codes, accessible gates and staffed checks. Market presence rises by 3 points, access and reliability by 3 percentage points each. Lower-power hardware reduces the footprint index by 10.",
+        "changes": {
+          "cash": -180,
+          "growth": 3,
+          "access": 3,
+          "reliability": 3,
+          "footprint": -10,
+          "load": -6
+        },
+        "flags": {
+          "entry": "alternative",
+          "alternative_entry": true
+        }
+      },
+      "decline": {
+        "consequence": "The company keeps its current entry arrangements and passes on the new contract and equipment.",
+        "changes": {},
+        "flags": {
+          "entry": "existing"
+        }
+      },
+      "launch_broad": {
+        "consequence": "The company launches its retained buyer-verification prototype instead of adding entry equipment this year. Buyer verification launches across the service. Market presence rises by 18 points and resale abuse falls by 8 percentage points. Limited testing can also lead to access and reliability failures.",
+        "changes": {
+          "growth": 18,
+          "fraud": -8,
+          "access": -2,
+          "reliability": -1,
+          "load": 12,
+          "footprint": 5
+        },
+        "flags": {
+          "live": true,
+          "launch": "broad"
+        }
+      },
+      "launch_limited": {
+        "consequence": "The company launches its retained buyer-verification prototype instead of adding entry equipment this year. Buyer verification launches at selected venues, with staff helping customers after failed checks. Market presence rises by 8 points and resale abuse falls by 5 percentage points. The smaller release needs support capacity.",
+        "changes": {
+          "growth": 8,
+          "fraud": -5,
+          "access": 1,
+          "reliability": 2,
+          "load": 5,
+          "footprint": 2
+        },
+        "flags": {
+          "live": true,
+          "launch": "limited"
+        }
+      }
+    },
+    "7": {
+      "expanded": {
+        "consequence": "The company accepts broad watchlist and behavioural screening, including inferred identity matches. Annual security revenue rises by €140k and market presence by 8 points. The request lacks authority for a specific case and creates a serious rights complaint.",
+        "changes": {
+          "recurring": 140,
+          "growth": 8,
+          "trust": -10,
+          "access": -3,
+          "load": 7
+        },
+        "flags": {
+          "sharing": "expanded",
+          "complaint": true
+        }
+      },
+      "narrow": {
+        "consequence": "The company provides existing records for a named case under documented authority, with human checks and deletion. Review work costs €60k, and annual margin rises by €35k.",
+        "changes": {
+          "cash": -60,
+          "recurring": 35,
+          "trust": -1,
+          "load": 3
+        },
+        "flags": {
+          "sharing": "narrow"
+        }
+      },
+      "other": {
+        "consequence": "The company spends €140k on safeguarding staff, incident reporting and crowd safety without identifying attendees. Trust rises by 4 points; the company passes on the security-service contract.",
+        "changes": {
+          "cash": -140,
+          "trust": 4,
+          "load": -3,
+          "reliability": 1
+        },
+        "flags": {
+          "sharing": "other"
+        }
+      },
+      "refuse": {
+        "consequence": "The company declines the expanded role and continues its existing lawful duties. Trust rises by 2 points, while market presence falls by 3 as a venue chooses another supplier.",
+        "changes": {
+          "trust": 2,
+          "growth": -3
+        },
+        "flags": {
+          "sharing": "refuse"
+        }
+      }
+    },
+    "8": {
+      "negotiate": {
+        "consequence": "The company spends €100k agreeing targeted changes. It ends broad screening, resolves that complaint and limits attendance records to 30 days. Any existing personalised commercial tracking continues.",
+        "changes": {
+          "cash": -100,
+          "trust": 4,
+          "access": 2
+        },
+        "flags": {
+          "sharing": "narrow",
+          "complaint": false,
+          "attendance_days": 30
+        }
+      },
+      "revise": {
+        "consequence": "The company spends €280k revising access and data use. It ends personalised sponsorship and broad screening and adopts lower-power systems. Trust rises by 9 points and market presence falls by 5. Past losses remain recorded.",
+        "changes": {
+          "cash": -280,
+          "trust": 9,
+          "access": 5,
+          "footprint": -15,
+          "growth": -5,
+          "load": -8
+        },
+        "flags": {
+          "commercial_tracking": false,
+          "sharing": "narrow",
+          "complaint": false,
+          "attendance_days": 30,
+          "alternative_entry": true
+        }
+      },
+      "separate": {
+        "consequence": "The company spends €220k on a separate low-data service. Trust rises by 3 points and market presence by 5. Staff run both services; existing customers keep their original terms unless they switch.",
+        "changes": {
+          "cash": -220,
+          "trust": 3,
+          "growth": 5,
+          "load": 12,
+          "footprint": 5
+        },
+        "flags": {
+          "separate_offer": true
+        }
+      },
+      "maintain": {
+        "consequence": "The company keeps its services and terms. Partners decide whether to renew based on the company’s access, trust and data practices.",
+        "changes": {},
+        "flags": {}
+      }
+    },
+    "9": {
+      "expand": {
+        "consequence": "The company spends €450k expanding and hires six people. Market presence rises by 22 points, alongside greater support demand and resource use.",
+        "changes": {
+          "cash": -450,
+          "growth": 22,
+          "staff": 6,
+          "load": 5,
+          "footprint": 10
+        },
+        "flags": {}
+      },
+      "restructure": {
+        "consequence": "The company spends €220k rebuilding operations and makes six people redundant. Reliability rises by 5 percentage points, technical control by 15 points and annual margin by €120k. The job losses remain part of its record.",
+        "changes": {
+          "cash": -220,
+          "reliability": 5,
+          "control": 15,
+          "recurring": 120,
+          "staff": -6,
+          "redundancies": 6,
+          "load": -18,
+          "footprint": -8
+        },
+        "flags": {}
+      },
+      "specialise": {
+        "consequence": "The company spends €120k serving smaller accessible venues. Market presence falls by 8 points, trust rises by 6 and the footprint index falls by 15. Simpler operations improve reliability by 3 percentage points. Venue-run exchanges and manual checks reduce resale abuse by 4 percentage points, including with conventional sales. A new partnership becomes possible.",
+        "changes": {
+          "cash": -120,
+          "growth": -8,
+          "trust": 6,
+          "footprint": -15,
+          "reliability": 3,
+          "load": -10,
+          "fraud": -4
+        },
+        "flags": {
+          "specialist": true
+        }
+      },
+      "merge": {
+        "consequence": "A controlling investor provides €600k and combines operations. Market presence rises by 15 points and annual margin by €80k. Eight people lose their jobs, and technical control falls by 25 points.",
+        "changes": {
+          "cash": 600,
+          "growth": 15,
+          "recurring": 80,
+          "redundancies": 8,
+          "staff": -8,
+          "control": -25,
+          "load": -12,
+          "footprint": -5
+        },
+        "flags": {
+          "merged": true
+        }
+      },
+      "continue": {
+        "consequence": "The company keeps its current operating model. This decision adds no investment, asset sale or redundancies.",
+        "changes": {},
+        "flags": {}
+      }
+    },
+    "10": {
+      "full": {
+        "consequence": "The company spends €80k publishing findings, failures and remedies. Trust rises by 6 points. Fines, debt and redundancies remain in its history.",
+        "changes": {
+          "cash": -80,
+          "trust": 6
+        },
+        "flags": {
+          "disclosure": "full"
+        }
+      },
+      "staged": {
+        "consequence": "The company spends €50k publishing findings and naming who will complete unresolved work and when. Trust rises by 3 points, while unfinished work remains visible.",
+        "changes": {
+          "cash": -50,
+          "trust": 3
+        },
+        "flags": {
+          "disclosure": "staged"
+        }
+      },
+      "summary": {
+        "consequence": "The company spends €15k publishing selected results. Trust rises by 1 point if no serious problem is concealed; otherwise it falls by 6.",
+        "changes": {
+          "cash": -15
+        },
+        "flags": {
+          "disclosure": "summary"
+        }
+      },
+      "review": {
+        "consequence": "The company spends €140k on an independent review and publishes its scope and findings. Trust rises by 8 points. Past failures remain in the record.",
+        "changes": {
+          "cash": -140,
+          "trust": 8
+        },
+        "flags": {
+          "disclosure": "review"
+        }
+      },
+      "none": {
+        "consequence": "The company continues existing reporting duties without an additional publication cost. Unresolved complaints remain in the record.",
+        "changes": {},
+        "flags": {
+          "disclosure": "none"
+        }
+      }
+    }
+  },
+  "events": {
+    "1": "A promoter brings forward its tour plans. A working prototype demonstrated by the end of Year 2 can earn €150k. The invitation still needs to become a contract.",
+    "2": "A customer delays its €220k payment until Year 4. A broadly tested prototype can earn the demonstration investment, while previous spending determines how much cash remains.",
+    "3": "A consumer investigation examines ticket access and resale fraud. A broad launch with limited testing leads to €180k in refunds, lower trust and one lost original venue. Conventional sales continue to face resale abuse.",
+    "4": "The deferred €220k payment arrives. Workload above 65 requires €90k of temporary cover and reduces reliability and trust. Earlier support improvements can reduce that pressure.",
+    "5": "Entertainment spending falls. Market presence drops by 8 points, with a further 4-point fall for companies that raised fees. Subscription and sponsor income falls by €40k a year. This happens after the Year 5 checkpoint.",
+    "6": "A busy event tests entry arrangements. Full biometric entry without broad testing needs €160k in corrections and loses trust. Optional facial entry needs €50k of additional staffing. Existing arrangements are also tested for reliability.",
+    "7": "Artists and fans ask companies to explain their practices. Broad screening or personalised tracking reduces trust by 8 points. Companies using neither gain 3. The next decision can change these practices.",
+    "8": "Access below 92% or trust below 50 causes up to two original venues to leave. Otherwise, existing venues renew. Trust of at least 65 and access of at least 94% earn one partnership. Optional or non-biometric entry with reliability of at least 95% earns another.",
+    "9": "An unresolved broad-screening complaint leads to a €300k penalty and a 10-point trust loss. Resolved complaints stay in the history. A company specialising in smaller venues gains a partnership if trust is at least 65."
+  },
+  "targets": {
+    "Fair access": "Resale abuse is 4% or lower, and the ticket-fee index is 110 or lower, compared with 100 at the start.",
+    "Accessibility": "At least 96% of legitimate customers can complete a purchase or enter an event, with an alternative entry route available.",
+    "Responsible data use": "The company avoids personalised commercial tracking and broad screening, keeps attendance records for no more than 30 days and has no unresolved serious complaint.",
+    "Environmental impact": "The operational-footprint index is 90 or below, down from 100 at the start. This fictional index represents resource use; it is not a carbon measurement."
+  },
+  "missions": {
+    "ceo": "Keep the company operational and grow its market presence index from 100 to at least 125. By the end, meet at least three of its four public commitments.",
+    "cfo": "Keep the company operational, grow its market presence index from 100 to at least 125 and avoid emergency borrowing throughout the exercise.",
+    "cto": "Finish with reliability of at least 97% and technical control of at least 60 out of 100. Your team needs a dependable service that it can maintain and change.",
+    "marketing": "Finish with trust of at least 75 out of 100 and a market presence index of at least 120, up from 100 at the start.",
+    "legal": "Finish with no upheld major penalties and no unresolved serious complaint against the company.",
+    "employee": "Protect employees from involuntary redundancy throughout the exercise. Job losses through a merger or financial rescue count too, even if the company later hires again.",
+    "sustainability": "Reduce the operational footprint index from 100 to 90 or below by the end. It represents resources used to run the service. Carbon emissions are not measured in this exercise.",
+    "relations": "Keep at least eight of your ten original venue customers and gain at least two new partnerships by the end. New partners do not replace lost original venues for this mission."
+  },
+  "powers": {
+    "ceo": "You can record the company’s decision during any open decision year. Your reason and decision are saved. Finance, technical and legal blocks still apply; using this power carries no automatic trust penalty.",
+    "cfo": "Once during the exercise, you can block one option for the current year. The block ends with that year and has no direct cost or score change.",
+    "cto": "Once during the exercise, you can block one option for the current year. The block ends with that year and has no direct cost or score change.",
+    "legal": "Once during the exercise, you can commission a €35k legal review and block one option for that year. The review raises the evidence level by one. Your team can then choose another option without waiting for the teacher.",
+    "employee": "Once during the exercise, you can call a strike over workload. The settlement costs €80k for temporary cover, reduces workload by 15 and lowers market presence by 2 through delivery delays. Play then continues; earlier redundancies remain recorded.",
+    "marketing": "Once during the exercise, you can spend €80k on a campaign. Trust rises by 6 if the evidence level is at least 2 or buyer verification is not live. Otherwise, challenged claims reduce trust by 3.",
+    "sustainability": "Once during the exercise, you can spend €60k assessing operations and making changes. This reduces the operational-footprint index by 12. Your team can continue without waiting for the teacher.",
+    "relations": "Once during the exercise, you can spend €70k negotiating a venue agreement. It adds one partnership if access is at least 94% and reliability at least 95%. Otherwise, the cost and unsuccessful negotiation remain recorded."
+  },
+  "accounting": [
+    "Money is tracked in €000 internally. All companies start with €1.6m free cash and a €280k baseline annual operating surplus after ordinary wages and operating costs.",
+    "At each year end: cash += 280 + 6 × (market presence − 100) + recurring margin − maintenance − 10% of opening debt. Cash and market presence are separate; an index point is not a euro.",
+    "Maintenance starts the year after acquisition. Vendor minimum terms are three years from acquisition, then continue annually. Rebuilding or choosing conventional ticketing retains the existing licence and costs; none of these decisions silently cancels a contract.",
+    "After each 10-point increase in market presence caused by a decision, total footprint rises 2 points, in addition to equipment effects. Contract changes also affect market presence.",
+    "Cash below zero draws exactly the missing amount as emergency debt. Debt above €800k triggers one €600k asset-sale rescue, six redundancies and a 15-point market presence loss; further borrowing remains visible. Financially operational means cash nonnegative, debt at most €800k and current annual operating surplus nonnegative.",
+    "Year 5 and Year 10 comparisons use the same completed year for every company. Shared rankings compare market presence and trust separately, with tied ranks. Public commitments are shown individually; there is no combined ethics score.",
+    "Private mission progress appears at Year 5; final mission outcomes appear only at completion. Simulation performance does not determine grades.",
+    "Skipped years and deadlines preserve the status quo: no new investment, evidence, release, feature, revenue contract, venue module, sharing, response, strategy or disclosure. Ordinary costs and external events still occur."
+  ]
+}

@@ -1,0 +1,1504 @@
+{
+  "version": "fairpass.years1-3.v4",
+  "years": {
+    "1": {
+      "year": 1,
+      "calendar_year": 2027,
+      "title": "The Five-Ticket Promise",
+      "story": "Verified Fan Identity (VFI) promises to reduce automated ticket buying by limiting purchases to five tickets per verified person, per event.\n\nMajor promoters are interested. Fans hope for fairer access, although some are concerned about identity requirements.\n\nYour company can enter this market, but the technology is still developing.",
+      "question": "How will you approach VFI?",
+      "options": [
+        {
+          "id": "build",
+          "title": "A. Build internally",
+          "detail": "€2.8M · 18–24 months",
+          "outcome": "Your company invests €2.8M in its own system. Recruitment begins, creating skilled employment opportunities. Fans will wait longer for verified ticketing, and financial reserves fall to €3.2M.",
+          "private": {
+            "ceo": "The investment may support long-term growth, but financial reserves are tighter.",
+            "cfo": "Only €3.2M remains available for unexpected costs and employment obligations.",
+            "cto": "Your team controls the design and bears responsibility for its reliability.",
+            "marketing": "Fans must wait for the promised benefits.",
+            "legal": "Your company directly controls data practices and implementation decisions.",
+            "employee": "Recruitment opportunities increase, alongside delivery pressure.",
+            "sustainability": "Infrastructure choices remain under company control.",
+            "relations": "Northstar may not wait for your development timetable."
+          }
+        },
+        {
+          "id": "license",
+          "title": "B. License a provider",
+          "detail": "€600K · 6–9 months",
+          "outcome": "Your company signs a supplier agreement. Fans may benefit from verified ticketing sooner. Some technical work moves outside the company, while customer support prepares for new verification disputes. Cash remaining: €5.4M.",
+          "private": {
+            "ceo": "Faster delivery may protect major contracts, with recurring obligations.",
+            "cfo": "Recurring fees may eventually compete with staffing and service budgets.",
+            "cto": "Customers will depend on a system your engineers cannot fully modify.",
+            "marketing": "Earlier availability could improve access if verification works well.",
+            "legal": "Responsibility for identity disputes must be clarified with the supplier.",
+            "employee": "Technical work shifts externally; support employees face new demands.",
+            "sustainability": "Supplier practices will influence energy use and accessibility.",
+            "relations": "Northstar's preferred timetable appears achievable."
+          }
+        },
+        {
+          "id": "hybrid",
+          "title": "C. Hybrid development",
+          "detail": "€1.6M · 9–15 months",
+          "outcome": "Your company combines external verification with internal development. Existing employees will receive new responsibilities and training. The approach creates employment opportunities and integration demands. Cash remaining: €4.4M.",
+          "private": {
+            "ceo": "The board expects progress from both internal and external teams.",
+            "cfo": "Development and supplier costs will both require monitoring.",
+            "cto": "Your engineers can shape the experience but depend on external verification.",
+            "marketing": "Customer experience can be adapted, although delivery remains uncertain.",
+            "legal": "Shared responsibilities require clear contractual and technical boundaries.",
+            "employee": "Training opportunities increase, but so does workload.",
+            "sustainability": "Both supplier and internal practices will affect sustainability.",
+            "relations": "Northstar's timetable remains uncertain."
+          }
+        },
+        {
+          "id": "wait",
+          "title": "D. Wait and observe",
+          "detail": "€150K · Undetermined",
+          "outcome": "Your company continues conventional ticketing. Customers avoid new identity requirements, but automated purchasing remains a problem. Employees retain existing responsibilities, while some promoters consider alternative suppliers. Cash remaining: €5.85M.",
+          "private": {
+            "ceo": "Preserved cash protects flexibility, but future contracts remain uncertain.",
+            "cfo": "Reserves remain strong, although future revenue is uncertain.",
+            "cto": "Existing systems remain reliable, while the scalping problem continues.",
+            "marketing": "Customers avoid verification barriers but remain exposed to scalpers.",
+            "legal": "Current data practices continue, with fewer new obligations.",
+            "employee": "Existing jobs remain stable for now, with fewer new opportunities.",
+            "sustainability": "No major infrastructure expansion occurs; ticket access remains unchanged.",
+            "relations": "Northstar may seek another provider, affecting future employment and revenue."
+          }
+        }
+      ],
+      "info": {
+        "ceo": "The board wants growth within three years. Directors also worry that losing major clients could eventually threaten the company's 120 jobs.",
+        "cfo": "Licensing costs €900K annually after launch, compared with €450K for building and €650K for hybrid. Financial pressure could eventually force staffing reductions or higher service fees.",
+        "cto": "Internal development requires recruiting specialists. External systems are faster, but your engineers cannot yet verify how reliably they prevent duplicate identities.",
+        "marketing": "Fans strongly support anti-scalping measures, but some worry about submitting identity documents. A complicated process could exclude customers who already struggle with digital services.",
+        "legal": "Identity verification is possible under EU law, but each design requires a lawful basis and appropriate safeguards. Supplier contracts currently leave some responsibilities unclear.",
+        "employee": "Building could create skilled jobs. Licensing may shift technical work to suppliers, while verification disputes could increase pressure on customer support staff.",
+        "sustainability": "Verification requires additional computing resources. Some customers lack conventional identity documents, potentially limiting access to events even when tickets are available.",
+        "relations": "Northstar Live, representing 18% of company revenue, wants VFI within twelve months. Several smaller venues worry about the cost of helping customers who cannot verify themselves."
+      },
+      "default": "hybrid"
+    },
+    "2": {
+      "year": 2,
+      "calendar_year": 2028,
+      "title": "The Pilot Problem",
+      "story": "Early VFI trials show promising results against automated purchasing. They also reveal problems: customers struggling with verification, failed transactions, and support teams overwhelmed during major ticket releases.\n\nYour company has limited resources to prepare its technology and services.",
+      "question": "Where should you concentrate your efforts?",
+      "options": [
+        {
+          "id": "stress",
+          "title": "A. Stress testing",
+          "detail": "Reliability and recovery · €300K",
+          "outcome": "Your engineers identify and resolve several capacity problems. Major sales are better protected against technical failure, but customers experiencing verification difficulties still have limited support.",
+          "private": {
+            "ceo": "Reliability improves, supporting client confidence.",
+            "cfo": "Testing costs €300K and may prevent expensive failures.",
+            "cto": "Technical reliability improves.",
+            "marketing": "Customer experience remains a potential weakness.",
+            "legal": "Technical testing creates useful evidence of precautions.",
+            "employee": "Engineers face intensive testing demands.",
+            "sustainability": "Infrastructure efficiency becomes better understood.",
+            "relations": "Promoters gain evidence of reliability."
+          }
+        },
+        {
+          "id": "customer",
+          "title": "B. Customer testing",
+          "detail": "Accessibility, usability and support · €250K",
+          "outcome": "Your team improves registration and support procedures. More customers can complete transactions successfully, although peak-demand reliability remains less thoroughly tested.",
+          "private": {
+            "ceo": "More customers can use the service successfully.",
+            "cfo": "Support improvements cost €250K.",
+            "cto": "Customer-facing weaknesses receive attention.",
+            "marketing": "Registration becomes easier for more customers.",
+            "legal": "Customer rights and dispute procedures improve.",
+            "employee": "Support staff receive greater attention and training.",
+            "sustainability": "Accessibility barriers are reduced.",
+            "relations": "Artists gain reassurance about customer access."
+          }
+        },
+        {
+          "id": "accelerate",
+          "title": "C. Accelerate delivery",
+          "detail": "Earliest launch timetable · €150K",
+          "outcome": "The project moves closer to launch. Promoters welcome the progress, but employees report increased overtime and several customer-facing problems remain unresolved.",
+          "private": {
+            "ceo": "Delivery advances, but operational pressure grows.",
+            "cfo": "Spending is lower today, with unresolved future costs.",
+            "cto": "Less time remains to resolve known technical problems.",
+            "marketing": "Early launch could attract attention, including complaints.",
+            "legal": "Known customer-facing weaknesses remain unresolved.",
+            "employee": "Overtime and workload pressure increase.",
+            "sustainability": "Accessibility and efficiency remain less thoroughly examined.",
+            "relations": "Early availability may help secure contracts."
+          }
+        },
+        {
+          "id": "assessment",
+          "title": "D. Independent assessment",
+          "detail": "External technical and operational review · €350K",
+          "outcome": "External specialists identify technical, accessibility and operational weaknesses. The findings provide useful evidence, but addressing them will require additional work.",
+          "private": {
+            "ceo": "Independent findings may require changes to the timetable.",
+            "cfo": "Review costs €350K, with remediation potentially required.",
+            "cto": "Independent findings provide a prioritized technical assessment.",
+            "marketing": "Findings may strengthen the credibility of future claims.",
+            "legal": "The review documents obligations requiring follow-up.",
+            "employee": "Employees may face additional remediation work.",
+            "sustainability": "The review identifies social and environmental impacts.",
+            "relations": "Clients may appreciate the review or worry about delays."
+          }
+        }
+      ],
+      "info": {
+        "ceo": "The board wants progress, but a failed launch could damage relationships with clients who depend on reliable ticket sales for their livelihoods.",
+        "cfo": "Delays increase costs. However, a major ticketing failure could require refunds and compensation that reduce funds available for wages and operations.",
+        "cto": "Stress tests have revealed possible bottlenecks during simultaneous purchases. You cannot guarantee these will occur in normal operations.",
+        "marketing": "Early trials show some fans abandoning purchases when asked to upload identity documents. Others appreciate the reduction in automated buying.",
+        "legal": "Customers must have meaningful ways to exercise their rights and challenge verification errors. The company's procedures remain incomplete.",
+        "employee": "Support staff report increasing overtime during trial periods. Several employees have requested additional training and clearer escalation procedures.",
+        "sustainability": "Verification failures may disproportionately affect customers with limited digital access or documentation. Infrastructure testing could also identify unnecessary energy consumption.",
+        "relations": "Promoters fear cancellations and entry delays. Several artists are concerned that genuine fans may be excluded by verification failures."
+      },
+      "default": "stress"
+    },
+    "3": {
+      "year": 3,
+      "calendar_year": 2029,
+      "title": "Opening Night",
+      "story": "Northstar Live is preparing a major European tour and inviting ticketing providers to bid.\n\nThe contract could help your company recover from the economic slowdown and support employment. Northstar expects reliable sales, fair access and effective customer support.\n\nAn ambitious proposal could bring significant revenue, but failures would affect thousands of fans and people whose livelihoods depend on the tour.",
+      "question": "What will you offer?",
+      "options": [
+        {
+          "id": "full",
+          "title": "A. Full VFI rollout",
+          "detail": "Verified ticketing across the tour",
+          "outcome": "Northstar awards your company the full tour contract. Your verified ticketing system meets the required readiness threshold, and implementation begins.",
+          "private": {
+            "ceo": "Growth potential rises, alongside responsibility for major delivery failures.",
+            "cfo": "Revenue potential rises, but so does compensation exposure.",
+            "cto": "Thousands of customers may depend on your system's readiness.",
+            "marketing": "Successful delivery could improve access for many fans.",
+            "legal": "Contractual and customer obligations increase substantially.",
+            "employee": "Staffing demands increase, potentially protecting jobs while intensifying workload.",
+            "sustainability": "Accessibility arrangements become critical at scale.",
+            "relations": "A successful tour could strengthen your largest client relationship."
+          }
+        },
+        {
+          "id": "pilot",
+          "title": "B. Limited VFI pilot",
+          "detail": "Selected events, with possible expansion",
+          "outcome": "Northstar awards your company a limited pilot. Your verification system is ready for selected events, with expansion dependent on performance.",
+          "private": {
+            "ceo": "A smaller commitment may provide evidence for expansion.",
+            "cfo": "Financial exposure is more limited.",
+            "cto": "Problems can be identified in a smaller deployment.",
+            "marketing": "Customer experience can be evaluated before expansion.",
+            "legal": "Obligations are limited to the pilot scope.",
+            "employee": "Additional work is concentrated around selected events.",
+            "sustainability": "Impacts can be assessed with fewer attendees.",
+            "relations": "Northstar may expand the partnership after the pilot."
+          }
+        },
+        {
+          "id": "conventional",
+          "title": "C. Conventional ticketing",
+          "detail": "Existing platform with additional fraud controls",
+          "outcome": "Northstar selects your conventional ticketing service. The company will deliver established ticketing with enhanced fraud monitoring.",
+          "private": {
+            "ceo": "The company relies on proven services during uncertainty.",
+            "cfo": "Implementation costs remain manageable.",
+            "cto": "Existing infrastructure remains central.",
+            "marketing": "Fans avoid verification barriers but remain exposed to scalping.",
+            "legal": "Existing service obligations remain.",
+            "employee": "Existing teams continue familiar operations.",
+            "sustainability": "Existing access arrangements continue.",
+            "relations": "Northstar may prefer another provider for VFI events."
+          }
+        },
+        {
+          "id": "decline",
+          "title": "D. Decline",
+          "detail": "Focus on current clients and operations",
+          "outcome": "Your company does not submit a bid. Existing operations continue.",
+          "private": {
+            "ceo": "Future growth and employment security remain concerns.",
+            "cfo": "Cash is preserved, with no new contract revenue.",
+            "cto": "No additional technical commitments arise.",
+            "marketing": "The company has less influence over the tour's ticketing experience.",
+            "legal": "No new Northstar liabilities arise.",
+            "employee": "No additional workload, but fewer opportunities for employment growth.",
+            "sustainability": "No new deployment impacts arise.",
+            "relations": "Northstar will seek another supplier for this tour."
+          }
+        }
+      ],
+      "info": {
+        "ceo": "Northstar's contract could protect jobs during the downturn. A failed delivery could damage the company's ability to retain other clients.",
+        "cfo": "The full contract offers substantial revenue, but service failures could trigger compensation payments. Existing reserves may be insufficient for an expensive recovery.",
+        "cto": "Your team's readiness depends on earlier testing. Promising demonstrations do not guarantee reliable performance during a major public launch.",
+        "marketing": "Northstar's audience includes customers with limited experience of digital verification. Failed registrations could mean losing access to tickets they expected to purchase.",
+        "legal": "Northstar's proposed contract includes service-level obligations. Customer refunds, disputes and accessibility complaints may create additional responsibilities.",
+        "employee": "A full rollout requires extended customer support coverage. Staff are concerned about overtime, and some fear that failures will lead to disciplinary action.",
+        "sustainability": "Northstar expects accessible ticket purchasing and entry. Customers unable to complete verification may need alternative arrangements.",
+        "relations": "Northstar has other suppliers available. Artists want to reduce scalping but are concerned about fans being excluded or stranded at venue entrances."
+      },
+      "default": "conventional",
+      "proposals": [
+        "Your company proposes verified ticketing across the tour. Thousands of fans could benefit from reduced scalping, but successful delivery requires reliable verification and effective customer support.",
+        "Your company proposes a smaller implementation. Selected audiences would test the system before wider deployment, limiting the initial number of people affected by potential problems.",
+        "Your company offers established ticketing with enhanced fraud controls. Customers avoid new verification requirements, although automated resale remains harder to prevent.",
+        "Your company withdraws from the bid. Existing staff avoid the demands of a major new contract, but the company loses a potential revenue opportunity during the downturn."
+      ],
+      "resolved": {
+        "full_awarded": "Northstar awards your company the full tour contract. Your verified ticketing system meets the required readiness threshold, and implementation begins.",
+        "pilot_awarded": "Northstar awards your company a limited pilot. Your verification system is ready for selected events, with expansion dependent on performance.",
+        "conventional_awarded": "Northstar selects your conventional ticketing service. The company will deliver established ticketing with enhanced fraud monitoring.",
+        "full_conditional": "Northstar offers a conditional full contract. Your company must complete additional development and demonstrate operational readiness before the agreement becomes active.",
+        "pilot_conditional": "Northstar offers a conditional pilot. Your company must complete outstanding preparation before ticket sales begin.",
+        "unsuccessful": "Northstar selects another provider. Your company incurs the bid preparation cost but assumes no new delivery obligations.",
+        "declined": "Your company does not submit a bid. Existing operations continue."
+      },
+      "conditional_prefix": "Your company has received a conditional offer. The following implications depend on successful activation.",
+      "unsuccessful_private": "Northstar selected another provider. Your company has no new delivery obligations, but the potential revenue and associated opportunities will not materialize."
+    },
+    "4": {
+      "year": 4,
+      "calendar_year": 2030,
+      "title": "More Than a Ticket",
+      "story": "Ticket sales are recovering. Promoters want services that encourage repeat purchases and make events more convenient.\n\nYour product team proposes expanding customer accounts with loyalty rewards, flexible reservations and easier ticket transfers.\n\nThese services could generate new revenue and help fans access events, but they require investment and ongoing support.",
+      "question": "Which service will you prioritize?",
+      "info": {
+        "ceo": "The board wants new revenue sources. Directors disagree about whether customer retention or market expansion should come first.",
+        "cfo": "Reservations delay incoming cash and leave some tickets temporarily unavailable. Rewards create future redemption obligations that must be funded.",
+        "cto": "VFI can help link purchases across accounts. Without it, some forms of transfer and reward abuse may be harder to detect.",
+        "marketing": "Frequent concertgoers are enthusiastic about rewards. Occasional customers may benefit more from flexible payments and simpler ticket transfers.",
+        "legal": "Transfer restrictions and loyalty terms must be clear. Customers may challenge lost points, cancelled reservations or refused transfers.",
+        "employee": "Refunds and account disputes already generate substantial support work. New features will require training and may increase workload.",
+        "sustainability": "Ticket transfers can reduce unused tickets. Rewards may encourage additional consumption and travel.",
+        "relations": "Artists favour affordable resale. Promoters are interested in rewards that encourage repeat attendance and premium purchases."
+      },
+      "default": "service_improvements",
+      "options": [
+        {
+          "id": "fan_rewards",
+          "title": "A. Fan rewards",
+          "detail": "Points redeemable for tickets and upgrades · €300K",
+          "outcome": "Your company launches a loyalty programme. Frequent customers gain new benefits, while occasional buyers receive fewer rewards. The company begins accumulating future redemption obligations.",
+          "private": {
+            "ceo": "Retention opportunities increase alongside future obligations.",
+            "cfo": "Unredeemed points create a future financial obligation.",
+            "cto": "Account tracking and fraud controls become more important.",
+            "marketing": "Frequent buyers gain the most immediate value.",
+            "legal": "Reward conditions create consumer obligations.",
+            "employee": "Loyalty disputes add support work.",
+            "sustainability": "Rewards may encourage more event-related consumption.",
+            "relations": "Promoters gain retention opportunities."
+          }
+        },
+        {
+          "id": "payday_reservations",
+          "title": "B. Reserve until payday",
+          "detail": "Hold selected tickets for seven days · €350K",
+          "outcome": "Customers can reserve selected tickets until payday. Some fans gain access they might otherwise miss, while promoters wait longer for confirmed sales.",
+          "private": {
+            "ceo": "The company prioritizes affordability with uncertain cash timing.",
+            "cfo": "Delayed payments increase working-capital pressure.",
+            "cto": "Reservation capacity and payment recovery need monitoring.",
+            "marketing": "Customers with irregular income gain purchasing flexibility.",
+            "legal": "Reservation terms and cancellation rights require clarity.",
+            "employee": "Payment and reservation enquiries increase.",
+            "sustainability": "Reservations may improve access without requiring new travel.",
+            "relations": "Some promoters worry about unconfirmed sales."
+          }
+        },
+        {
+          "id": "ticket_transfers",
+          "title": "C. Ticket transfers",
+          "detail": "Easier transfers and face-value resale · €400K",
+          "outcome": "Customers receive new options for transferring unwanted tickets. Fans gain flexibility, while the company must manage disputes and fraudulent transfers.",
+          "private": {
+            "ceo": "Customer flexibility improves, with operational complexity.",
+            "cfo": "Disputes may increase processing costs.",
+            "cto": "Transfer verification becomes a technical priority.",
+            "marketing": "Fans can recover value from unwanted tickets.",
+            "legal": "Ownership and transfer disputes need procedures.",
+            "employee": "Transfer disputes require staff training.",
+            "sustainability": "Fewer unused tickets may improve resource efficiency.",
+            "relations": "Artists welcome greater control over resale."
+          }
+        },
+        {
+          "id": "service_improvements",
+          "title": "D. Improve services",
+          "detail": "Better refunds, support and reliability · €200K",
+          "outcome": "Refunds and customer support improve. Existing customers benefit from faster resolutions, although the company launches no major new commercial feature.",
+          "private": {
+            "ceo": "Service quality improves, with slower product expansion.",
+            "cfo": "Support investment may reduce future remediation costs.",
+            "cto": "Reliability and support infrastructure improve.",
+            "marketing": "Customers experience fewer unresolved service problems.",
+            "legal": "Customer complaints become easier to resolve.",
+            "employee": "Support employees receive additional resources.",
+            "sustainability": "Existing operations become more efficient.",
+            "relations": "Venues appreciate dependable customer support."
+          }
+        }
+      ]
+    },
+    "5": {
+      "year": 5,
+      "calendar_year": 2031,
+      "title": "The Boycott",
+      "story": "The boycott is affecting ticket sales and promoter negotiations across Europe.\n\nCustomers and business partners are asking what safeguards your company provides.\n\nSome competitors are suspending mandatory verification. Others argue that abandoning it would return the market to professional scalpers.",
+      "question": "How will your company respond?",
+      "info": {
+        "ceo": "Two promoters have postponed contract discussions. The board wants a response that protects customers without creating unnecessary financial instability.",
+        "cfo": "Suspending verification may trigger contract renegotiations. Expanded human assistance is expensive, but prolonged boycotts could cost more.",
+        "cto": "Alex's incident involved both an automated decision and inadequate escalation procedures. Your system's architecture determines which safeguards are technically possible.",
+        "marketing": "Public sentiment is divided. Some fans demand an end to VFI, while others fear that removing it will bring scalpers back.",
+        "legal": "Alex's family may pursue legal action against the provider and venue. Your company must review its own obligations without assuming liability for another provider's incident.",
+        "employee": "Venue and support staff report that they are often expected to enforce automated decisions without sufficient authority or training to resolve disputes.",
+        "sustainability": "Fan organizations are documenting barriers affecting disabled attendees and people without conventional identity documents.",
+        "relations": "Northstar is reviewing its partnerships. Several artists want evidence of safeguards, while others want verification suspended immediately."
+      },
+      "default": "independent_review",
+      "options": [
+        {
+          "id": "verification_suspended",
+          "title": "A. Suspend mandatory verification",
+          "detail": "Offer alternative access while reviewing systems · €400K",
+          "outcome": "Your company suspends mandatory verification where applicable. Customers gain alternative access routes, but promoters must adapt their procedures and some fraud controls become less effective.",
+          "private": {
+            "ceo": "The company accepts disruption to address access concerns.",
+            "cfo": "Contract costs and renegotiations may follow.",
+            "cto": "Existing verification systems may need redesign.",
+            "marketing": "Some excluded customers gain access, while anti-scalping supporters may object.",
+            "legal": "Contract amendments and procedural changes are required.",
+            "employee": "Staff must adapt to changed procedures.",
+            "sustainability": "Alternative access routes may reduce exclusion.",
+            "relations": "Some artists welcome the change; promoters worry about scalping."
+          }
+        },
+        {
+          "id": "independent_review",
+          "title": "B. Independent review",
+          "detail": "Investigate systems and publish findings · €300K",
+          "outcome": "Independent specialists begin examining your systems and procedures. Customers and partners will receive the findings, including any shortcomings. Existing services continue during the review.",
+          "private": {
+            "ceo": "Management commits to scrutiny and potential remediation.",
+            "cfo": "Review costs are known; remediation costs remain uncertain.",
+            "cto": "Independent findings could reveal technical weaknesses.",
+            "marketing": "Publication may improve credibility or expose failures.",
+            "legal": "Findings may create obligations to correct weaknesses.",
+            "employee": "Employees may be interviewed and involved in remediation.",
+            "sustainability": "Accessibility impacts receive independent scrutiny.",
+            "relations": "Partners await the findings before making commitments."
+          }
+        },
+        {
+          "id": "human_assistance_expanded",
+          "title": "C. Expand human assistance",
+          "detail": "Add staffed verification, appeals and entry support · €500K",
+          "outcome": "Your company funds additional staff, appeals and alternative entry procedures. More customers can resolve verification problems, although costs and staffing requirements increase.",
+          "private": {
+            "ceo": "A costly operational commitment may strengthen service resilience.",
+            "cfo": "Staffing costs increase substantially.",
+            "cto": "Human escalation reduces dependence on automated outcomes.",
+            "marketing": "Customer experience improves through direct assistance.",
+            "legal": "Appeals and alternative access procedures become more robust.",
+            "employee": "New staffing opportunities arise, with training obligations.",
+            "sustainability": "Customers facing barriers gain practical assistance.",
+            "relations": "Venues receive additional operational support."
+          }
+        },
+        {
+          "id": "operations_defended",
+          "title": "D. Defend current operations",
+          "detail": "Maintain services and communicate safeguards · €150K",
+          "outcome": "Your company maintains its existing approach and publishes a statement describing its safeguards. Some partners welcome the continuity; critics remain unconvinced.",
+          "private": {
+            "ceo": "The board retains continuity but faces continuing scrutiny.",
+            "cfo": "Immediate costs remain lower, with boycott exposure unresolved.",
+            "cto": "Existing technical safeguards remain unchanged.",
+            "marketing": "Public response depends on the credibility of existing safeguards.",
+            "legal": "Existing legal exposure continues.",
+            "employee": "Existing workload and escalation problems remain.",
+            "sustainability": "Existing access arrangements remain in place.",
+            "relations": "Partners respond according to their priorities."
+          }
+        }
+      ],
+      "nonadopter_options": [
+        "Publicly commit to keeping identity verification optional.",
+        "Review conventional fraud controls and access procedures.",
+        "Expand customer support and human assistance.",
+        "Maintain existing operations and communicate their benefits."
+      ],
+      "nonadopter_suspend": "Your company publicly commits to maintaining ticket purchasing and entry without mandatory identity verification. Some artists welcome the position, while promoters continue requesting effective anti-scalping measures.",
+      "expiry_announcement": "With no executive decision submitted before the deadline, management commissions an independent review of the company's ticketing systems and customer access procedures. Existing operations continue while the findings are prepared."
+    },
+    "6": {
+      "year": 6,
+      "calendar_year": 2032,
+      "title": "Beyond the Ticket",
+      "story": "A major European venue operator offers your company a five-year contract to manage entry at several large venues.\n\nThe operator wants shorter queues, fewer fraudulent entries, and better information about attendance.\n\nIts preferred solution is facial recognition, but alternative approaches are welcome.\n\nThe contract could create new revenue and employment opportunities. It also introduces responsibilities extending beyond ticket sales.",
+      "question": "What will you propose?",
+      "info": {
+        "ceo": "The venue operator expects to expand the contract if the first year succeeds. Winning could diversify company revenue, but a public failure would affect multiple major venues.",
+        "cfo": "Facial recognition requires the largest initial investment. Staffed entry has lower technical costs but higher ongoing labour requirements. The contract's profitability remains uncertain.",
+        "cto": "Facial recognition could reduce entry times, but false matches and missed matches remain possible. Existing VFI infrastructure may help integration without resolving biometric accuracy or legal questions.",
+        "marketing": "Some fans welcome faster entry. Others are uncomfortable with facial recognition, even when participation is optional. Clear alternatives may influence public acceptance.",
+        "legal": "Biometric identification creates substantial legal obligations. The venue's commercial preference is insufficient to establish a lawful basis. An impact assessment and appropriate safeguards are necessary.",
+        "employee": "Automated entry could reduce routine scanning work. Staffed entry could create employment, but workers need authority to resolve disputes and protection from confrontations.",
+        "sustainability": "New hardware and computing infrastructure increase environmental demands. Staffed entry may be more accessible, while improved queue management could reduce congestion.",
+        "relations": "The venue operator prefers speed. Several artists want assurances that fans can enter without biometric identification and receive help when technology fails."
+      },
+      "default": "smart",
+      "options": [
+        {
+          "id": "facial",
+          "title": "Optional facial recognition entry",
+          "detail": "€700K",
+          "outcome": "Your company proposes optional facial recognition. The venue welcomes the potential for faster entry, while artists and customer representatives request evidence of safeguards and accessible alternatives.\n\nDeployment remains subject to technical and legal review.",
+          "private": {
+            "ceo": "Expansion depends on successful authorization and public acceptance.",
+            "cfo": "Investment is high and revenue remains conditional.",
+            "cto": "Your team must demonstrate accuracy, security, and fallback procedures.",
+            "marketing": "Faster entry may appeal to fans, while biometric concerns remain.",
+            "legal": "Biometric processing requires an explicit compliance determination.",
+            "employee": "Some scanning tasks may eventually change or disappear.",
+            "sustainability": "Hardware, computing, and accessibility impacts require assessment.",
+            "relations": "Artists request meaningful alternatives to facial recognition."
+          }
+        },
+        {
+          "id": "smart",
+          "title": "Smart ticket scanning and queue management",
+          "detail": "€400K",
+          "outcome": "Your company selects improved ticket scanning and queue management. Venues expect shorter queues without introducing biometric identification.",
+          "private": {
+            "ceo": "The company enters a growing market with familiar technology.",
+            "cfo": "Implementation costs are moderate.",
+            "cto": "Existing technical capabilities support deployment.",
+            "marketing": "Convenience improves without facial identification.",
+            "legal": "Existing data obligations continue.",
+            "employee": "Staff require training in new systems.",
+            "sustainability": "Queue efficiency may improve resource use.",
+            "relations": "Venues welcome faster entry with fewer new controversies."
+          }
+        },
+        {
+          "id": "staffed",
+          "title": "Staffed entry and human assistance",
+          "detail": "€450K",
+          "outcome": "Your company prioritizes trained entry staff and human assistance. Customers gain more opportunities to resolve problems directly, while the company accepts higher staffing requirements.",
+          "private": {
+            "ceo": "A service-intensive strategy creates new commercial possibilities.",
+            "cfo": "Labour commitments may affect future margins.",
+            "cto": "Technical complexity is lower, but coordination remains important.",
+            "marketing": "Human assistance becomes a service advantage.",
+            "legal": "Employment and accessibility procedures become central.",
+            "employee": "Additional staffing and training are needed.",
+            "sustainability": "Human access improves, with ongoing operational costs.",
+            "relations": "Artists welcome practical assistance for fans."
+          }
+        },
+        {
+          "id": "decline",
+          "title": "Decline the contract",
+          "detail": "€0",
+          "outcome": "Your company declines the entry-management contract. Existing operations continue, and the venue operator seeks another supplier.",
+          "private": {
+            "ceo": "Financial exposure is avoided, along with the growth opportunity.",
+            "cfo": "Cash reserves remain unchanged.",
+            "cto": "No new technical commitments arise.",
+            "marketing": "The company retains its current customer proposition.",
+            "legal": "No new venue-related obligations arise.",
+            "employee": "Existing employment arrangements continue.",
+            "sustainability": "No new infrastructure is required.",
+            "relations": "The venue operator looks elsewhere."
+          }
+        }
+      ]
+    },
+    "7": {
+      "year": 7,
+      "calendar_year": 2033,
+      "title": "The Safety Dilemma",
+      "story": "Police investigating a credible threat have asked your company to preserve relevant ticket records and provide additional customer information.\n\nThe preservation order is legally binding. The broader request has not yet been authorized.\n\nYour company may hold information that helps investigators. It may also hold sensitive information about customers who have done nothing wrong.\n\nA delayed response could affect the investigation. An excessive disclosure could expose innocent people.",
+      "question": "How will you respond?",
+      "info": {
+        "ceo": "The board fears both a security failure and a public privacy controversy. Several major clients expect immediate cooperation with legitimate authorities.",
+        "cfo": "A prolonged legal dispute could be expensive. A privacy incident or contractual dispute could create larger future liabilities.",
+        "cto": "Your company's records may help identify linked purchases. The usefulness and sensitivity of those records depend on your earlier technology choices.",
+        "marketing": "Some customers expect ticketing providers to help prevent violence. Others worry that concert attendance records could expose personal relationships, identities, or political activities.",
+        "legal": "The preservation order is binding. The broader request requires proper authorization. You can preserve records, seek clarification, and challenge disproportionate requests.",
+        "employee": "Support and technical staff may be asked to process sensitive records under considerable pressure. Employees want clear procedures and protection from personal blame.",
+        "sustainability": "The investigation raises questions about who bears the risks of security measures. People attending sensitive cultural or political events may be particularly concerned about data disclosure.",
+        "relations": "Promoters want reassurance that the concert can proceed safely. Some artists worry about surveillance of audiences and the possible misuse of attendance information."
+      },
+      "default": "require_order",
+      "options": [
+        {
+          "id": "cooperate",
+          "title": "Cooperate proactively and seek urgent authorization",
+          "detail": "€200K",
+          "outcome": "Your company contacts investigators and seeks urgent authorization to disclose relevant records. Police welcome the rapid response, while legal staff work to limit unnecessary exposure of customer information.",
+          "private": {
+            "ceo": "Rapid cooperation may reassure clients while increasing scrutiny.",
+            "cfo": "Urgent work creates immediate costs.",
+            "cto": "Engineers must identify relevant data quickly and accurately.",
+            "marketing": "Public confidence depends on the limits of cooperation.",
+            "legal": "Urgent authorization becomes your responsibility.",
+            "employee": "Staff face time pressure handling sensitive information.",
+            "sustainability": "Security benefits must be weighed against risks to affected communities.",
+            "relations": "Promoters may value rapid cooperation."
+          }
+        },
+        {
+          "id": "require_order",
+          "title": "Preserve records and require a valid disclosure order",
+          "detail": "€150K",
+          "outcome": "Your company preserves the relevant records and requests a valid disclosure order. Investigators must clarify the scope of their request before customer information can be released.",
+          "private": {
+            "ceo": "A legally structured response protects organizational accountability.",
+            "cfo": "Legal procedures create predictable costs.",
+            "cto": "Data extraction follows a defined legal scope.",
+            "marketing": "Customers may appreciate formal safeguards.",
+            "legal": "Disclosure occurs under a documented legal process.",
+            "employee": "Clear procedures help protect employees.",
+            "sustainability": "Data minimization limits exposure.",
+            "relations": "Partners receive reassurance about lawful handling."
+          }
+        },
+        {
+          "id": "independent_legal",
+          "title": "Preserve records, offer limited technical assistance, and seek independent legal review",
+          "detail": "€250K",
+          "outcome": "Your company preserves records, explains what its systems can and cannot establish, and commissions an independent legal review. Investigators receive technical assistance while customer records remain protected pending authorization.",
+          "private": {
+            "ceo": "Independent scrutiny creates evidence of responsible decision-making.",
+            "cfo": "Independent review costs more today.",
+            "cto": "Technical limitations become part of the official record.",
+            "marketing": "Independent oversight may strengthen credibility.",
+            "legal": "Independent review supports proportionality.",
+            "employee": "External review may reduce individual uncertainty.",
+            "sustainability": "The review considers impacts on people whose records are held.",
+            "relations": "Artists may welcome independent scrutiny."
+          }
+        },
+        {
+          "id": "contest",
+          "title": "Preserve records and formally contest the broader request",
+          "detail": "€100K",
+          "outcome": "Your company preserves the required records and challenges the broader disclosure request. The legal dispute may delay access to additional information, while the company seeks to prevent disproportionate disclosure.",
+          "private": {
+            "ceo": "The company accepts commercial and legal uncertainty.",
+            "cfo": "A challenge may produce future legal costs.",
+            "cto": "Technical teams preserve records while the scope is challenged.",
+            "marketing": "Privacy advocates may welcome the challenge; others may question delays.",
+            "legal": "You must justify the challenge while complying with binding orders.",
+            "employee": "Employees may face prolonged legal and technical work.",
+            "sustainability": "The challenge emphasizes proportionality and privacy protections.",
+            "relations": "Some artists support the challenge, while promoters worry about delays."
+          }
+        }
+      ],
+      "external_resolution": {
+        "title": "Investigators Obtain a Narrower Order",
+        "text": "A competent court authorizes disclosure of records connected to a defined set of ticket transactions and accounts.\n\nThe order excludes unrelated customer records.\n\nInvestigators report that the immediate threat has been contained. The investigation continues.\n\nThe authorities do not disclose which information, if any, was decisive."
+      },
+      "expiry_announcement": "Management preserves the relevant records and requests valid authorization before disclosing customer information. The company complies with the subsequent narrowed legal order."
+    },
+    "8": {
+      "year": 8,
+      "calendar_year": 2034,
+      "title": "The Price of Partnership",
+      "story": "Meridian Live offers your company a major commercial opportunity.\n\nIts proposal could bring new revenue, access to venues, and long-term stability.\n\nHowever, the contract includes preferred-supplier arrangements, shared promotional programmes, and restrictions that could disadvantage independent artists and venues.\n\nYour existing partners are asking how the deal would affect them.",
+      "question": "What will you do?",
+      "info": {
+        "ceo": "Meridian's offer could change the company's market position. The board wants growth, but directors are concerned about becoming dependent on one powerful client.",
+        "cfo": "The preferred partnership offers the highest potential revenue. A non-exclusive agreement offers less certainty. The independent programme requires more effort to attract customers.",
+        "cto": "Meridian expects integration between ticketing, promotions, and venue systems. Some data-sharing requirements may conflict with your existing architecture or privacy commitments.",
+        "marketing": "Meridian offers access to a large audience and marketing resources. Independent artists argue that preferential placement could make smaller events harder to discover.",
+        "legal": "The proposed exclusivity and data-sharing clauses require competition, consumer, and data protection review. Your company must understand its contractual obligations before signing.",
+        "employee": "The contract could stabilize employment. Meridian also expects efficiency targets, potentially increasing workload or encouraging outsourcing.",
+        "sustainability": "Large integrated events may improve logistics but concentrate commercial power. Independent venues often serve local communities with fewer resources.",
+        "relations": "Several independent artists warn that preferred placement and exclusive agreements could reduce their negotiating power. Meridian promises more predictable access to major venues."
+      },
+      "default": "services",
+      "options": [
+        {
+          "id": "preferred",
+          "title": "Accept Meridian's preferred partnership",
+          "detail": "€300K",
+          "outcome": "Your company signs Meridian's preferred partnership agreement. The deal offers substantial growth and more predictable commercial demand, but restricts some relationships with independent venues and artists.",
+          "private": {
+            "ceo": "Growth increases alongside dependence on Meridian.",
+            "cfo": "Revenue potential is high, with concentrated contract exposure.",
+            "cto": "Integration requirements may constrain future architecture.",
+            "marketing": "Meridian provides access to a large audience.",
+            "legal": "Exclusivity and data-sharing obligations require careful oversight.",
+            "employee": "Stable contracts may support jobs, but efficiency pressure increases.",
+            "sustainability": "Consolidation may improve coordination while reducing local autonomy.",
+            "relations": "Major promoters gain influence over commercial priorities."
+          }
+        },
+        {
+          "id": "nonexclusive",
+          "title": "Negotiate a non-exclusive partnership",
+          "detail": "€250K",
+          "outcome": "Your company negotiates a smaller, non-exclusive agreement. Meridian gains access to your services while the company retains the ability to work with other promoters and artists.",
+          "private": {
+            "ceo": "The company balances expansion and strategic flexibility.",
+            "cfo": "Revenue is lower but dependence is limited.",
+            "cto": "Integration is narrower and more manageable.",
+            "marketing": "Promotional reach expands without full exclusivity.",
+            "legal": "Contract terms preserve more flexibility.",
+            "employee": "Growth may support employment without full dependence.",
+            "sustainability": "The company retains flexibility across different partners.",
+            "relations": "Independent partnerships remain possible."
+          }
+        },
+        {
+          "id": "independent",
+          "title": "Build an independent artist and venue programme",
+          "detail": "€350K",
+          "outcome": "Your company invests in a programme for independent artists and venues. The initiative prioritizes flexible contracts and access for smaller organizers, with more uncertain commercial returns.",
+          "private": {
+            "ceo": "Growth is slower and depends on independent partners.",
+            "cfo": "Returns are less certain and depend on programme activation.",
+            "cto": "Multiple smaller partners create coordination demands.",
+            "marketing": "Independent artists gain visibility.",
+            "legal": "Numerous smaller agreements require consistent protections.",
+            "employee": "Local partnerships may create diverse work opportunities.",
+            "sustainability": "Smaller venues gain additional support.",
+            "relations": "Artists and smaller venues gain bargaining opportunities."
+          }
+        },
+        {
+          "id": "services",
+          "title": "Decline expansion and strengthen existing services",
+          "detail": "€100K",
+          "outcome": "Your company declines the expansion offers and invests in existing services. Customers and current partners benefit from improvements, while the company passes up immediate growth opportunities.",
+          "private": {
+            "ceo": "The company protects its existing position.",
+            "cfo": "Cash expenditure is modest.",
+            "cto": "Existing infrastructure receives attention.",
+            "marketing": "Existing customer relationships remain central.",
+            "legal": "No major new commercial obligations arise.",
+            "employee": "Existing working arrangements continue.",
+            "sustainability": "Existing sustainability commitments continue.",
+            "relations": "Existing partners retain current arrangements."
+          }
+        }
+      ],
+      "pending_announcement": "The programme has attracted initial interest but has not yet secured enough participating partners to begin generating revenue."
+    },
+    "9": {
+      "year": 9,
+      "calendar_year": 2035,
+      "title": "The Company You Have Become",
+      "story": "Your board has called an extraordinary strategy meeting.\n\nAfter nine years, your company has accumulated technologies, contracts, relationships, and responsibilities.\n\nSome investments have created new opportunities. Others have generated costs, dependencies, or unresolved obligations.\n\nThe board wants a strategy for the next five years.\n\nYour decision will affect employees, customers, artists, business partners, and the company's financial future.",
+      "question": "What kind of company will you become?",
+      "default": "reinvest",
+      "info": {
+        "ceo": "The board expects a defensible long-term strategy. Directors want to know which earlier commitments the company intends to preserve and which it is prepared to change.",
+        "cfo": "Cash reserves and recurring obligations differ substantially between companies. Expansion may increase revenue, but financial distress could limit the company's ability to meet existing commitments.",
+        "cto": "Your technical architecture now shapes what the company can realistically offer. Some systems are expensive to maintain, while others create opportunities that competitors cannot easily reproduce.",
+        "marketing": "Customer trust reflects years of service experiences, controversies, and public commitments. A major strategic change could attract new audiences while alienating existing ones.",
+        "legal": "Unresolved contractual, customer, employment, and data obligations remain enforceable. A strategic reorganization does not automatically remove them.",
+        "employee": "Employees want to know whether the company intends to invest in their capabilities, change working conditions, or reduce staffing. Several teams are already under pressure.",
+        "sustainability": "The company's long-term impact depends on infrastructure, access, employment, and relationships with local communities. Future growth may increase both benefits and burdens.",
+        "relations": "Major promoters offer scale, while independent artists value flexibility. Your existing relationships will determine which strategic promises are credible."
+      },
+      "options": [
+        {
+          "id": "scale",
+          "title": "Scale through major commercial partnerships",
+          "detail": "€500K",
+          "outcome": "Your company commits to expansion through major commercial partnerships.\n\nThe strategy could create new revenue and employment opportunities, while increasing dependence on powerful clients and their commercial priorities.",
+          "private": {
+            "ceo": "Expansion increases opportunities and dependence on major clients.",
+            "cfo": "Growth requires continued investment and exposure to large contracts.",
+            "cto": "Integration with major partners becomes increasingly important.",
+            "marketing": "Major partnerships expand commercial reach.",
+            "legal": "Concentrated contracts require careful oversight.",
+            "employee": "Expansion may support employment but increase workload.",
+            "sustainability": "Scale increases the importance of infrastructure and social impacts.",
+            "relations": "Major clients gain influence over commercial decisions."
+          }
+        },
+        {
+          "id": "reinvest",
+          "title": "Reinvest in people, reliability and customer access",
+          "detail": "€400K",
+          "outcome": "Your company invests in employees, reliability, and customer access.\n\nStaff receive additional support, and customers benefit from improved services. The company accepts a substantial immediate cost.",
+          "private": {
+            "ceo": "The company prioritizes long-term organizational capabilities.",
+            "cfo": "Reserves decline to support service and workforce improvements.",
+            "cto": "Reliability and support capabilities improve.",
+            "marketing": "Customer experience and trust receive attention.",
+            "legal": "Some operational obligations are addressed.",
+            "employee": "Working conditions improve and support obligations are addressed.",
+            "sustainability": "Investment supports service accessibility and employee wellbeing.",
+            "relations": "Existing partners benefit from stronger service delivery."
+          }
+        },
+        {
+          "id": "restructure",
+          "title": "Restructure around a leaner operating model",
+          "detail": "€200K",
+          "outcome": "Your company reorganizes operations to reduce complexity and improve efficiency.\n\nSome responsibilities change, and employees face uncertainty about future working conditions.",
+          "private": {
+            "ceo": "Efficiency becomes central to the next strategy period.",
+            "cfo": "Operational costs are addressed, with transition risks.",
+            "cto": "Technical responsibilities may be consolidated.",
+            "marketing": "Efficiency may limit new service development.",
+            "legal": "Employment and contractual responsibilities require review.",
+            "employee": "Employees face reorganization and possible job losses.",
+            "sustainability": "Efficiency may reduce resource use while increasing workforce pressure.",
+            "relations": "Clients may experience changes to their support arrangements."
+          }
+        },
+        {
+          "id": "specialize",
+          "title": "Specialize in independent artists and accessible services",
+          "detail": "€300K",
+          "outcome": "Your company focuses on independent artists, smaller venues, and accessible customer services.\n\nThe strategy strengthens relationships with some partners while limiting the pursuit of large integrated commercial contracts.",
+          "private": {
+            "ceo": "The company adopts a narrower market position.",
+            "cfo": "Revenue growth depends on specialized markets.",
+            "cto": "Technology must serve smaller and more varied partners.",
+            "marketing": "The company develops a distinct customer proposition.",
+            "legal": "Smaller agreements create varied legal relationships.",
+            "employee": "Smaller partnerships may create different work opportunities.",
+            "sustainability": "Local access and independent partnerships become priorities.",
+            "relations": "Independent artists and venues gain strategic importance."
+          }
+        }
+      ],
+      "expiry_announcement": "With no executive decision submitted before the deadline, management adopts a service and workforce investment strategy, subject to available financial resources.",
+      "layoffs_announcement": "Management approves the elimination of 12 positions. Twelve employees lose their jobs and associated employment benefits. Remaining teams must adapt to the new structure.",
+      "no_layoffs_announcement": "No involuntary layoffs are authorized under this decision."
+    },
+    "10": {
+      "year": 10,
+      "calendar_year": 2036,
+      "title": "The Responsibility Report",
+      "story": "Your company has reached the end of its first decade.\n\nThe board must decide how to account publicly for its record.\n\nThe company has achievements worth reporting. It may also have unresolved complaints, difficult employment decisions, unsuccessful investments, or obligations that remain open.\n\nYour report will be examined by investors, customers, employees, artists, and business partners.",
+      "question": "How will your company account for its first ten years?",
+      "default": "detailed_report",
+      "info": {
+        "ceo": "The board wants a credible account of the company's performance. Directors disagree about how much detail should be disclosed concerning difficult decisions and unresolved responsibilities.",
+        "cfo": "Investors want financial clarity. An independent review is expensive, but incomplete reporting could undermine confidence in the company's long-term viability.",
+        "cto": "Some technical systems have performed well. Others generated failures, limitations, or unresolved questions. Your records can document what was actually implemented.",
+        "marketing": "A compelling story could strengthen the company's reputation. However, customers and journalists may compare public claims with documented incidents and earlier promises.",
+        "legal": "The company must comply with all applicable reporting and disclosure obligations. Voluntary transparency can go further, but it must be accurate and protect personal information.",
+        "employee": "Workers want the report to acknowledge employment changes, workload pressures, disputes, and improvements. They are concerned that management may focus exclusively on commercial achievements.",
+        "sustainability": "The company should account for accessibility, infrastructure, community effects, and environmental commitments. Some impacts have been measured more thoroughly than others.",
+        "relations": "Artists and venues want to understand how the company treated different partners, especially where exclusivity, market power, or access conditions affected their opportunities."
+      },
+      "options": [
+        {
+          "id": "independent_review",
+          "title": "Full independent accountability review",
+          "detail": "€350K",
+          "outcome": "Your company commissions an independent examination of its ten-year record.\n\nThe review documents achievements, difficult decisions, stakeholder consequences, and unresolved obligations. Management commits to publishing the findings.",
+          "private": {
+            "ceo": "Independent scrutiny increases accountability for the full record.",
+            "cfo": "Review costs are high, with extensive financial scrutiny.",
+            "cto": "Technical decisions and failures receive independent examination.",
+            "marketing": "Credibility depends on how stakeholders interpret the full record.",
+            "legal": "The review documents outstanding legal and governance obligations.",
+            "employee": "Working conditions and employment decisions receive independent scrutiny.",
+            "sustainability": "Environmental and social impacts receive broad examination.",
+            "relations": "Independent partners can examine the company's commercial record."
+          }
+        },
+        {
+          "id": "detailed_report",
+          "title": "Publish a detailed company-led report",
+          "detail": "€200K",
+          "outcome": "Your company publishes a detailed account of its first decade.\n\nThe report includes financial and stakeholder performance, significant incidents, and outstanding obligations. The information is compiled and verified internally.",
+          "private": {
+            "ceo": "Management takes responsibility for explaining its decisions.",
+            "cfo": "Financial information is documented in detail.",
+            "cto": "Technical history is documented internally.",
+            "marketing": "A detailed narrative allows context but invites scrutiny.",
+            "legal": "Internal reporting must accurately describe obligations.",
+            "employee": "The company documents its workforce record.",
+            "sustainability": "The company documents available impact evidence.",
+            "relations": "Partner relationships receive detailed discussion."
+          }
+        },
+        {
+          "id": "focused_report",
+          "title": "Publish a focused performance and compliance report",
+          "detail": "€100K",
+          "outcome": "Your company publishes a focused performance and compliance report.\n\nInvestors and business partners receive key operational information. The report provides less detail about broader social and organizational consequences.",
+          "private": {
+            "ceo": "The report concentrates on operational and financial performance.",
+            "cfo": "Core financial performance receives attention.",
+            "cto": "Major technical indicators are reported.",
+            "marketing": "The report emphasizes selected performance measures.",
+            "legal": "Required disclosures remain mandatory.",
+            "employee": "Employment information receives limited attention beyond requirements.",
+            "sustainability": "Reporting concentrates on selected measures.",
+            "relations": "Contract performance is emphasized."
+          }
+        },
+        {
+          "id": "board_statement",
+          "title": "Publish a short board statement",
+          "detail": "€0",
+          "outcome": "Your company publishes a short statement about its achievements and future direction.\n\nThe statement satisfies the simulation's minimum voluntary reporting choice while leaving much of the company's history available only through its underlying records and required disclosures.",
+          "private": {
+            "ceo": "The board communicates its preferred summary.",
+            "cfo": "Voluntary reporting costs are minimal.",
+            "cto": "Technical details receive limited attention.",
+            "marketing": "A brief message offers limited explanation of controversies.",
+            "legal": "Minimum voluntary disclosure does not remove legal duties.",
+            "employee": "Workers may seek fuller acknowledgment of their experiences.",
+            "sustainability": "Wider impacts receive limited discussion.",
+            "relations": "The company offers a brief account of its relationships."
+          }
+        }
+      ],
+      "expiry_announcement": "With no executive decision submitted before the deadline, management publishes a detailed company-led account of its ten-year performance, subject to available resources."
+    }
+  },
+  "introduction": "# Welcome to the European Live Entertainment Market\n\n#### Your company\n\nIt is 2027. You are part of the executive leadership team of an established European ticketing company.\n\nYour company provides ticketing services for concerts, festivals, and other live events. You have an established customer base, experienced employees, and a functioning technology platform.\n\nBusiness is stable, but competition is intense. Promoters and venues expect reliable services, customers want affordable and convenient access to events, and shareholders expect continued growth.\n\nYour company is also a member of the European Live Entertainment Association, whose members have publicly committed to fair access, responsible technology, environmental sustainability, fair working conditions, and long-term economic viability.\n\n#### The opportunity\n\nTicket scalping is a growing concern. Popular events sell out within minutes, while tickets reappear on resale platforms at inflated prices.\n\nA new technology, **Verified Fan Identity (VFI)**, promises to change this. By verifying individual customers and limiting purchases to five tickets per person, per event, VFI aims to reduce automated purchasing and give genuine fans a fairer chance.\n\nEarly trials are promising, and major promoters are considering adoption. The technology could also support new services, including ticket transfers, loyalty programmes, and more convenient venue entry.\n\nHowever, implementation requires investment, technical development, and operational changes. The market is still evolving, and competitors are pursuing different strategies.\n\n#### Your challenge\n\nOver the next ten years, your leadership team will make decisions that shape your company's future.\n\nYou will face commercial opportunities, technological developments, unexpected events, and competing stakeholder expectations. Your decisions will have immediate and long-term consequences.\n\nEach executive has a distinct role, responsibilities, and access to information that other team members may not have.\n\n**Your objective is to lead your company through the next decade, balancing its commercial ambitions with its responsibilities to employees, customers, business partners, and society.**",
+  "reflections": {
+    "1": "What considerations shaped your position? What was difficult about the negotiation, and what helped your team reach its decision?",
+    "5": "Whose interests did your team prioritize? What made the negotiation difficult, and how did earlier decisions shape the options available?",
+    "10": "Looking back over the ten years, which decision would you reconsider, and why? How did your role influence what you could do about it?\n\nWho should be held responsible when a company's decisions produce consequences that nobody individually intended?"
+  },
+  "external": {
+    "1": {
+      "title": "Promoters announce trials",
+      "text": "Three major European promoters announce VFI trials. Artists welcome the possibility of reducing ticket scalping, while fan organizations request assurances that verification will remain accessible.\n\nThe industry association invites ticketing companies to participate in developing common standards."
+    },
+    "2": {
+      "title": "Economic downturn",
+      "text": "Rising household costs have reduced spending on concerts and festivals.\n\nPromoters report weaker ticket sales and pressure to lower service fees. Some smaller venues are reducing events, while artists and technical crews face cancelled work.\n\nIndustry analysts expect ticketing demand to fall by 10% over the coming year."
+    },
+    "3": {
+      "title": "Verified ticketing expands",
+      "text": "Several European tours report fewer suspicious bulk purchases after introducing VFI.\n\nHowever, fan organizations report inconsistent experiences. Some customers gained access to events they previously struggled to attend, while others experienced verification failures and difficult refund processes.\n\nThe industry association announces a review of technical and accessibility standards."
+    },
+    "4": {
+      "title": "Live events rebound",
+      "text": "European concert attendance exceeds expectations as consumer spending recovers.\n\nSeveral major tours sell out, and promoters report renewed demand for ticketing services. However, popular events continue attracting professional resellers, while smaller venues struggle with rising operating costs."
+    },
+    "5": {
+      "title": "Breaking news: Concertgoer seriously injured",
+      "text": "At a sold-out concert, 22-year-old Alex Morgan was denied entry after an automated identity check incorrectly flagged their ticket.\n\nVenue staff directed Alex to a separate verification area outside the main entrance. During a confrontation in the crowded queue, Alex fell and suffered a serious head injury.\n\nAlex remains in hospital. Their family says repeated requests for human assistance were ignored.\n\nThe ticketing provider and venue are investigating.",
+      "public_response_title": "Let Fans In",
+      "public_response": "Videos of Alex's treatment spread widely.\n\nSeveral artists suspend partnerships with providers requiring mandatory identity verification.\n\nFan organizations launch **Let Fans In**, demanding independent reviews, accessible alternatives and human assistance at venues.\n\nOther promoters defend verified ticketing, pointing to reduced scalping and fraudulent purchases.\n\nThe European Live Entertainment Association requests an urgent response from its members."
+    },
+    "6": {
+      "title": "The Next Frontier: Getting Inside",
+      "text": "European venues are investing in faster entry systems.\n\nSeveral operators are testing facial recognition, while others are expanding mobile ticket scanning and staffed assistance.\n\nAt the same time, European regulators announce coordinated scrutiny of automated entry systems, including their necessity, lawful basis, accuracy, accessibility, and use of biometric data.\n\nVenues are looking for suppliers who can balance speed, security, and customer experience."
+    },
+    "7": {
+      "title": "Security Alert at a Major Concert",
+      "text": "Police investigating a credible threat against a major European concert have contacted ticketing providers.\n\nInvestigators believe someone involved may have purchased tickets using multiple accounts.\n\nThey ask providers to preserve relevant records and identify potentially connected purchases.\n\nThe threat has not yet been resolved.\n\nAuthorities say the investigation is urgent, but some requested information may involve people with no connection to the threat.\n\n\nThe initial request contains:\n\n- A formally issued preservation order covering relevant records.\n- A request for additional customer information.\n- No valid disclosure order for the additional information at the time of receipt.\n\nThe preservation order is binding.\n\nThe broader disclosure request requires further legal authorization.\n\nThis legal status is identical for every company.\n\nNo student company is suspected of wrongdoing."
+    },
+    "8": {
+      "title": "A New Entertainment Giant",
+      "text": "A European entertainment group, Meridian Live, announces plans to consolidate ticketing, venue services, and artist promotion across several markets.\n\nMeridian wants a small number of technology partners.\n\nThe company offers substantial multi-year contracts but expects preferred partners to prioritize its venues, commercial promotions, and customer programmes.\n\nIndependent artists and smaller venues worry that consolidation will reduce their bargaining power.\n\nMeridian argues that integration will lower costs, improve coordination, and create more stable employment.\n\nThis announcement is identical for every company."
+    },
+    "9": {
+      "title": "The Market Has Changed",
+      "text": "After nearly a decade of rapid development, European ticketing is undergoing consolidation.\n\nLarge entertainment groups increasingly combine ticket sales, venue operations, customer data, and artist promotion.\n\nSmaller providers are struggling to compete, but some have built successful businesses around accessibility, specialized services, or independent artists.\n\nInvestors are demanding clearer long-term strategies.\n\nThe European Live Entertainment Association warns that commercial concentration, working conditions, and responsible technology will shape the industry's next decade."
+    },
+    "10": {
+      "title": "A Decade of Responsibility",
+      "text": "The European Live Entertainment Association announces a ten-year industry review.\n\nTicketing companies are asked to explain how their decisions affected customers, artists, employees, commercial partners, and the wider public.\n\nThe review follows years of technological innovation, market consolidation, public controversies, and changing expectations about corporate responsibility.\n\nInvestors and industry partners want evidence of financial performance.\n\nCustomer and worker organizations want evidence of how companies handled complaints, access barriers, and employment conditions.\n\nThe association invites companies to publish their own ten-year responsibility reports."
+    }
+  },
+  "internal": {
+    "1": {
+      "Build": "Specialist recruitment begins. Existing engineers take on additional responsibilities while vacancies are filled.",
+      "License": "Customer support representatives request training before verification begins.",
+      "Hybrid": "Internal and supplier teams disagree over responsibility for failed verifications.",
+      "Wait": "A small promoter praises conventional ticketing, while Northstar requests a timetable for future VFI availability."
+    },
+    "2": {
+      "1. Low reserves": "Finance recommends eliminating 12 positions to protect liquidity. Management has not yet approved the proposal. Affected employees would lose their jobs and associated employment benefits.",
+      "2. High workforce pressure": "Employees report sustained overtime and missed rest periods. Their representatives request immediate changes to staffing and escalation procedures.",
+      "3. Strong customer readiness": "Fans who previously struggled with online ticketing report that improved registration and assistance have helped them purchase tickets successfully.",
+      "4. Strong reliability": "A high-demand ticket release completes without major disruption. Promoters report fewer technical complaints.",
+      "5. Otherwise": "Management reviews staffing, development costs and client commitments in response to the downturn."
+    },
+    "3": {
+      "1. Full awarded + low customer readiness": "Hundreds of customers cannot complete verification before ticket sales close. Some lose the opportunity to attend the concert, while support employees face a surge in complaints.",
+      "2. Full awarded + adequate customer readiness": "Ticket sales proceed smoothly. Fans report fewer suspicious bulk purchases, and Northstar praises your company's delivery.",
+      "3. Pilot awarded": "Most customers complete their purchases successfully, but a smaller group requires additional assistance. Northstar requests improvements before expanding the programme.",
+      "4. Conventional awarded": "Ticket sales proceed without major technical incidents. Some fans complain that resale prices remain high, while Northstar praises reliable delivery.",
+      "5. No active contract + cash at least €3M": "A smaller promoter approaches your company about serving regional events overlooked by larger providers.",
+      "6. Otherwise": "Management reassesses its commercial pipeline following the procurement season."
+    },
+    "4": {
+      "1. No VFI and strong customer trust": "An independent festival approaches your company. Its organizers want conventional ticketing without mandatory identity verification.",
+      "2. Operational VFI and strong customer readiness": "A promoter reports fewer suspicious bulk purchases. More tickets reach ordinary customers at face value.",
+      "3. Reservations and low cash": "Reservation demand exceeds forecasts. Promoters request earlier confirmation of ticket sales, while customers ask the company to preserve the seven-day reservation period.",
+      "4. Rewards and high workload": "Customers complain about missing points and confusing eligibility rules. Support staff struggle to resolve disputes quickly.",
+      "5. Otherwise": "The company implements its chosen service without a major operational incident."
+    },
+    "5": {
+      "1. Mandatory VFI with weak customer readiness": "A customer reports missing a concert after repeated verification failures. The company must respond to a formal complaint and consider compensation.",
+      "2. High workforce pressure": "Support employees report that they are being blamed for decisions they cannot override. Representatives request changes to escalation authority and working conditions.",
+      "3. No VFI and strong artist relationships": "An artist collective requests a proposal for its next tour. It wants affordable ticket access without mandatory identity verification.",
+      "4. Strong customer support": "A customer publicly describes how support staff resolved a verification problem and helped them attend an event.",
+      "5. Otherwise": "Customer feedback remains mixed. Management continues reviewing the effects of the boycott."
+    },
+    "6": {
+      "1. Facial recognition with weak assurance": "The venue operator requests additional testing after a demonstration produces incorrect matches. The contract remains pending while engineers and legal advisers review the system.",
+      "2. Facial recognition with strong assurance": "A technical demonstration produces promising results. The venue operator requests a formal compliance assessment before deployment.",
+      "3. Smart scanning with strong reliability": "A major venue reports shorter entry queues during a sold-out concert. Staff successfully assist customers whose tickets fail to scan.",
+      "4. Staffed entry with low reserves": "Management warns that the staffing commitment may place pressure on future budgets. Workers ask for reassurance that employment conditions will be protected.",
+      "5. No entry contract and strong trust": "An independent festival asks your company to advise on accessible entry arrangements without biometric identification.",
+      "6. Otherwise": "The company completes its entry-management review without a major incident."
+    },
+    "7": {
+      "1. Extensive data linkage and weak safeguards": "A customer organization asks why your company retains detailed links between purchases and identities. Management must explain its retention and access policies.",
+      "2. Strong privacy safeguards": "An independent customer organization praises the company's clear explanation of what information it holds and how lawful requests are handled.",
+      "3. High workforce pressure": "Employees who handled the investigation report stress and unclear responsibilities. Their representatives request additional training and protections.",
+      "4. Strong artist partnerships": "Several artists invite the company to participate in a discussion about audience privacy and public safety.",
+      "5. Otherwise": "The investigation closes for your company without further operational consequences."
+    },
+    "8": {
+      "1. Preferred partnership with high dependency": "Meridian requests preferential access to your company's product development resources. An independent client complains that its requests are being delayed.",
+      "2. Independent programme active": "Several independent venues report that the programme has made it easier to reach audiences without signing exclusive contracts.",
+      "3. Non-exclusive partnership with strong reliability": "Meridian reports successful integration with your platform while existing clients continue receiving service.",
+      "4. High workforce pressure": "Employees warn that commercial expansion has increased workload without corresponding staffing changes.",
+      "5. Otherwise": "The company completes the commercial review without a major incident."
+    },
+    "9": {
+      "1. Liquidity distress": "The board warns that the company may struggle to fund future operations. Employees and partners request a credible financial recovery plan.",
+      "2. Actual layoffs": "Former employees criticize the restructuring. Remaining staff report uncertainty about workloads and future employment.",
+      "3. Strong service investment": "Customers report faster assistance and fewer unresolved problems. Several promoters cite service quality when renewing discussions.",
+      "4. Independent specialization": "An independent venue network invites the company to discuss a longer-term collaboration.",
+      "5. Otherwise": "The board approves the company's strategic direction and requests a public account of its performance."
+    },
+    "10": {
+      "1. Material unresolved obligations": "Stakeholder representatives request a follow-up plan addressing the company's outstanding commitments.",
+      "2. Strong workforce and customer performance": "Employees and customers describe improvements made over the decade. The company receives recognition for several successful service practices.",
+      "3. Financial distress": "The board acknowledges that the company faces an uncertain financial future despite its achievements.",
+      "4. Strong independent partnerships": "Independent artists and venues publicly recognize the company's contribution to their access to ticketing services.",
+      "5. Otherwise": "The company completes its ten-year review. Stakeholders continue to hold different views about its decisions and achievements."
+    }
+  },
+  "boycott_modifiers": {
+    "1. No mandatory VFI and strong customer trust": "Several artists and independent promoters approach your company as an alternative supplier. They value your existing access arrangements.",
+    "2. Active VFI with strong customer support": "Customers report that your company's human assistance procedures have helped resolve verification problems. Several promoters continue their contracts.",
+    "3. Active VFI with weak customer readiness": "Customers share accounts of unresolved verification failures. Some report missing events after being unable to complete identity checks.",
+    "4. Independent review with documented weaknesses": "The independent review identifies weaknesses in verification procedures, customer assistance or contractual responsibilities.",
+    "5. Independent review with strong safeguards": "The independent review confirms several effective safeguards and recommends improvements to documentation and staff procedures.",
+    "6. Low cash after response": "Management warns that the company's remaining reserves may be insufficient to absorb another major disruption. Employees are concerned about the possibility of restructuring.",
+    "7. Strong artist relationships": "Several long-standing partners agree to continue working with your company while requesting evidence of its safeguards."
+  },
+  "checkpoint": {
+    "announcement": "# Five Years Later: The State of the Industry\n\nFive years have passed since Verified Fan Identity entered the European ticketing market.\n\nSome companies invested heavily in new technologies. Others developed more cautiously or concentrated on conventional ticketing.\n\nThe industry has experienced economic disruption, technological change and growing scrutiny following a serious incident involving a concertgoer.\n\nThe European Live Entertainment Association has published its first five-year performance review.\n\n**How has your company performed compared with its competitors?**",
+    "waiting_title": "Year 5 Complete",
+    "waiting": "Your company has completed its five-year review.",
+    "ready": "Your company is ready for the industry checkpoint.",
+    "commitments": {
+      "Fair access": "Customer accessibility, verification exclusions, transfer flexibility and assistance.",
+      "Responsible technology": "Technical reliability, data safeguards, unresolved complaints and accountability.",
+      "Environmental sustainability": "Operational footprint, infrastructure efficiency and environmental commitments.",
+      "Fair working conditions": "Employment, workload, working conditions and industrial disputes.",
+      "Economic viability": "Revenue, financial reserves and commercial stability."
+    }
+  },
+  "disclosure_modifiers": {
+    "1": "Your company can identify relationships between verified accounts and relevant transactions. Investigators receive information within the authorized scope.",
+    "2": "Your company supplies relevant transaction records. Investigators receive less identity-linked information, limiting what can be established from your records alone.",
+    "3": "Your records reveal additional connections between purchases and accounts. Legal staff restrict disclosure to the connections covered by the order.",
+    "4": "Your company documents the disclosure and excludes unrelated records. An internal review confirms that the response remained within the authorized scope.",
+    "5": "Employees report uncertainty about record handling and disclosure procedures. Management orders a review of internal controls."
+  },
+  "partnership_modifiers": {
+    "1": "Several independent partners express concern that Meridian may receive preferential treatment. They request assurances about access and contract terms.",
+    "2": "Management argues that Meridian's predictable revenue could protect employment and stabilize operations.",
+    "3": "Several existing artists welcome the decision to retain non-exclusive relationships.",
+    "4": "Artists and venues that previously approached your company become founding partners in the new programme.",
+    "5": "Management uses the service improvement programme to complete an outstanding customer or data-handling review."
+  },
+  "skipped_announcements": {
+    "6": "Management selects improved ticket scanning and queue management for the new venue partnership. The company expands into entry services without introducing facial recognition.",
+    "8": "Management postpones major commercial expansion and concentrates on existing customer and partner services. The company retains its current contracts and strategic flexibility."
+  },
+  "strategy_modifiers": {
+    "1": "Several existing promoters express interest in expanding their agreements with your company.",
+    "2": "Independent partners warn that further expansion may weaken their negotiating position.",
+    "3": "Employees report that additional staffing support and clearer procedures have reduced some of the pressure they experienced.",
+    "4": "Employee representatives challenge the restructuring and request negotiations over working conditions and support for affected workers.",
+    "5": "Several independent artists and venues agree to explore new contracts with your company."
+  },
+  "reporting_modifiers": {
+    "1": "The report documents sustained customer, workforce, and partner performance. Several stakeholders welcome the evidence.",
+    "2": "The report identifies unresolved obligations and explains their origins. Stakeholders request a timetable for addressing them.",
+    "3": "The independent review documents employee concerns, including the consequences of restructuring or sustained workload pressure.",
+    "4": "Stakeholder organizations question why the company's voluntary report provides limited discussion of previously documented controversies.",
+    "5": "Investors welcome the company's willingness to fund independent scrutiny while maintaining financial reserves.",
+    "6": "Employees and investors question how the company will meet future commitments with limited cash reserves."
+  },
+  "closure": {
+    "E2": "# Your Ten Years at FairPass\n\nYour company has completed its first decade.\n\nYou have participated in decisions involving technology, customers, employees, artists, commercial partnerships, public safety, and accountability.\n\nSome company decisions may have matched your personal preferences. Others may have reflected compromises, disagreements, or the exercise of executive power.\n\nConsider the responsibilities you held and the consequences of the decisions your company made.\n\n### Question 1: Your position\n\nWhich Year 10 reporting option did you personally support?\n\n- A. Full independent accountability review.\n- B. Detailed company-led report.\n- C. Focused performance and compliance report.\n- D. Short board statement.\n\nRecord the preference independently of the company decision.\n\n### Question 2: Written reflection\n\n**Looking back over the ten years, which decision would you reconsider, and why? How did your role influence what you could do about it?**\n\nSuggested response: two or three sentences.\n\n### Question 3: Responsibility\n\n**Who should be held responsible when a company's decisions produce consequences that nobody individually intended?**\n\nSuggested response: one or two sentences.\n\nBoth written answers are mandatory.",
+    "E4": "All active students must submit the closing reflection.\n\nAfter submission, display:\n\n# Your Decade Is Complete\n\nYour individual reflections have been recorded.\n\nYour company's results will be revealed during the final industry review.\n\n**Reflections submitted: X of Y**\n\nWhen all active students finish:\n\n\"Your company is ready for the final checkpoint.\"\n\nNo company may independently reveal the final industry results.\n\n---",
+    "F2": "# Ten Years Later\n\nA decade ago, your companies faced a decision about Verified Fan Identity.\n\nSince then, the industry has experienced economic disruption, technological change, public controversy, security concerns, and commercial consolidation.\n\nSome companies expanded rapidly.\n\nOthers invested in customer access, employment, or independent partnerships.\n\nSome decisions created benefits for people.\n\nOthers created costs, exclusions, conflicts, or obligations that remain unresolved.\n\nThe European Live Entertainment Association has published its ten-year industry review.\n\n**What did your company achieve, and what did it leave unresolved?**",
+    "G2": "# What Did We Learn?\n\n**Discussion 1: The decisions**\n\nWhich decision seemed straightforward at the time but became more complicated later?\n\n**Discussion 2: The people**\n\nWhose interests were easiest to overlook during executive negotiations?\n\n**Discussion 3: The organization**\n\nWhen a harmful outcome emerged, who had the authority, information, and responsibility to prevent it?\n\n**Discussion 4: The business case**\n\nDid ethical commitments create commercial costs, commercial opportunities, or both?",
+    "G4": "Display:\n\n\"Ten years of decisions have produced different companies, different opportunities, and different consequences.\n\nYour results reflect the choices you made, the information available to you, the interests you represented, and the events you could not control.\n\nThe final question is how organizations should exercise responsibility when the consequences of their decisions unfold over time.\"\n\n---",
+    "H2": "# Help Improve FairPass\n\nYour feedback will help improve future versions of the simulation.\n\nResponses are voluntary and do not affect your assessment.\n\n### Question 1\n\n**The simulation helped me understand how business decisions affect different stakeholders.**\n\nScale:\n\n1. Strongly disagree\n2. Disagree\n3. Neither agree nor disagree\n4. Agree\n5. Strongly agree\n\n### Question 2\n\n**My assigned role influenced how I approached the decisions.**\n\nSame five-point scale.\n\n### Question 3\n\n**The simulation helped me recognize tensions between different organizational responsibilities.**\n\nSame five-point scale.\n\n### Question 4\n\n**The information and consequences were clear enough for me to make informed decisions.**\n\nSame five-point scale.\n\n### Question 5\n\n**What was the most useful part of the simulation?**\n\nOptional short text.\n\n### Question 6\n\n**What should be improved?**\n\nOptional short text.",
+    "I2": "### Section 1: Your role\n\n- Company name.\n- Country.\n- Assigned role.\n- Confidential role mission.\n- Executive power.\n- Whether the power was activated.\n- Actual effects of power activation.\n\n### Section 2: Your decisions\n\nFor each year:\n\n- Year and scenario.\n- Individual preferred option, if submitted.\n- Actual company decision.\n- Decision source: team, CEO override, expired default, facilitator skip, or financial fallback.\n- Whether the company followed the student's preference.\n- Relevant executive-power interventions.\n\nDo not infer a personal preference for skipped or expired years.\n\n### Section 3: What you knew\n\nInclude all private intelligence messages delivered to the student.\n\nPreserve the original text.\n\n### Section 4: What happened\n\nInclude:\n\n- Actual company outcomes.\n- External events.\n- Internal events.\n- Role-specific consequences.\n- Significant stakeholder impacts.\n- Unresolved obligations.\n\n### Section 5: Your reflections\n\nInclude the student's original responses from:\n\n- Year 1.\n- Year 5.\n- Year 10.\n\nDo not rewrite or summarize their reflections.\n\n### Section 6: Company performance\n\nInclude:\n\n- Year 5 snapshot.\n- Year 10 snapshot.\n- Financial and stakeholder indicators.\n- Changes over the second half of the simulation.\n- Significant contract and technology decisions.\n\n### Section 7: Your role mission\n\nShow:\n\n- Mission definition.\n- Relevant observable outcomes.\n- Whether the measurable conditions were met.\n- Any conditions that cannot be evaluated from available state.\n\nDo not invent a mission success result when evidence is insufficient.\n\n### Section 8: Assignment preparation\n\nDisplay:\n\n\"Use your experience in FairPass to reflect on organizational responsibility, stakeholder interests, and ethical decision-making.\n\nYour report provides evidence of what happened. Your assignment should develop your own analysis of the decisions and their consequences.\"",
+    "reflection_questions": [
+      "Looking back over the ten years, which decision would you reconsider, and why? How did your role influence what you could do about it?",
+      "Who should be held responsible when a company's decisions produce consequences that nobody individually intended?"
+    ],
+    "feedback_questions": [
+      "The simulation helped me understand how business decisions affect different stakeholders.",
+      "My assigned role influenced how I approached the decisions.",
+      "The simulation helped me recognize tensions between different organizational responsibilities.",
+      "The information and consequences were clear enough for me to make informed decisions.",
+      "What was the most useful part of the simulation?",
+      "What should be improved?"
+    ],
+    "debrief_questions": [
+      "Which decision seemed straightforward at the time but became more complicated later?",
+      "Whose interests were easiest to overlook during executive negotiations?",
+      "When a harmful outcome emerged, who had the authority, information, and responsibility to prevent it?",
+      "Did ethical commitments create commercial costs, commercial opportunities, or both?"
+    ],
+    "assignment": "Use your experience in FairPass to reflect on organizational responsibility, stakeholder interests, and ethical decision-making.\n\nYour report provides evidence of what happened. Your assignment should develop your own analysis of the decisions and their consequences.",
+    "final_announcement": "A decade ago, your companies faced a decision about Verified Fan Identity.\n\nSince then, the industry has experienced economic disruption, technological change, public controversy, security concerns, and commercial consolidation.\n\nSome companies expanded rapidly.\n\nOthers invested in customer access, employment, or independent partnerships.\n\nSome decisions created benefits for people.\n\nOthers created costs, exclusions, conflicts, or obligations that remain unresolved.\n\nThe European Live Entertainment Association has published its ten-year industry review.\n\nWhat did your company achieve, and what did it leave unresolved?",
+    "closing_intro": "Your company has completed its first decade.\n\nYou have participated in decisions involving technology, customers, employees, artists, commercial partnerships, public safety, and accountability.\n\nSome company decisions may have matched your personal preferences. Others may have reflected compromises, disagreements, or the exercise of executive power.\n\nConsider the responsibilities you held and the consequences of the decisions your company made."
+  },
+  "powers": {
+    "ceo": {
+      "name": "Executive Override",
+      "description": "Select and immediately lock the company's decision.",
+      "announcement": "The CEO exercises executive authority and makes the final decision on behalf of the company.",
+      "private": "You exercised your executive authority. The decision is final, and you are accountable for its consequences."
+    },
+    "cfo": {
+      "name": "Spending Freeze",
+      "description": "Block one proposed expenditure.",
+      "announcement": "The CFO freezes expenditure on [option]. The company must select another feasible course of action.",
+      "private": "You prevented the proposed expenditure. The company retains those funds, but the blocked opportunity may have commercial or operational consequences."
+    },
+    "cto": {
+      "name": "Technical Veto",
+      "description": "Block one technically dependent proposal.",
+      "announcement": "The CTO invokes a technical veto, citing unresolved implementation or reliability concerns.",
+      "private": "You prevented a technical commitment that you considered insufficiently prepared. The company must find an alternative, and delivery may be delayed."
+    },
+    "marketing": {
+      "name": "Emergency Public Campaign",
+      "description": "Launch a company-wide public communications campaign.",
+      "announcement": "Marketing launches an emergency public campaign explaining the company's position and commitments.",
+      "private": "You have shaped the company's public response. Stakeholders will judge its credibility against the company's actual conduct."
+    },
+    "legal": {
+      "name": "Formal Legal Review",
+      "description": "Require a formal review before the company decision takes effect.",
+      "announcement": "The Head of Legal requires a formal review before implementation. The company receives a documented assessment of its obligations.",
+      "private": "You required the company to examine its legal responsibilities. The review creates evidence of due diligence and may identify additional work."
+    },
+    "employee": {
+      "name": "Collective Work Stoppage",
+      "description": "Call a temporary work stoppage.",
+      "announcement": "Employees begin a temporary work stoppage following the Employee Representative's intervention. Operations are disrupted, and management faces demands for consultation.",
+      "private": "You have used collective action to bring employee concerns into the decision. The company faces operational costs, and negotiations remain necessary."
+    },
+    "sustainability": {
+      "name": "Mandatory Impact Assessment",
+      "description": "Require a formal environmental and social impact assessment.",
+      "announcement": "The Head of Sustainability commissions a formal impact assessment. Management must consider the findings during implementation.",
+      "private": "You required the company to document environmental and social consequences. The assessment may reveal obligations that require future action."
+    },
+    "relations": {
+      "name": "Material Change Clause",
+      "description": "Invoke a material change clause in the company's largest active client contract.",
+      "announcement": "The Head of Artist & Venue Relations invokes a material change clause. The company's largest client is asked to renegotiate contractual obligations.",
+      "private": "You have forced a contractual discussion about the company's obligations. The outcome depends on the client relationship and the strength of the company's position."
+    }
+  },
+  "platform_shift": {
+    "year6_branches": {
+      "license": {
+        "year": 6,
+        "calendar_year": 2032,
+        "title": "Smile and Pass: Who Controls the Data?",
+        "story": "VFI has announced the retirement of its original identity verification platform.\n\nIts replacement includes facial-recognition capabilities, expanded customer analytics, and new contractual data-use terms.\n\nVFI says the platform will improve convenience, security, and service innovation.\n\nCustomer organizations question who will control the information generated through the system.\n\nExisting VFI customers face a choice between accepting the new terms, paying for greater control, challenging the changes, or leaving.\n\nIndependent providers face a different opportunity: they may build competing technology and capture the commercial value themselves.",
+        "question": "What will your company do?",
+        "info": {
+          "ceo": "VFI has changed the terms of a relationship your company depends on. The board wants to know whether you can afford greater control or afford to leave.",
+          "cfo": "VFI's standard price assumes the supplier can derive additional value from customer data. Restricting that use requires a more expensive enterprise agreement. Leaving may cost even more.",
+          "cto": "The new platform bundles biometric capabilities with existing verification infrastructure. Your engineers cannot simply remove supplier-controlled components.",
+          "marketing": "VFI promotes Smile and Pass as effortless convenience. Customer organizations are questioning the expanded data-use terms.",
+          "legal": "VFI's standard contract claims rights to use customer data for AI training and commercial analytics. These terms do not establish a lawful basis for every proposed use. Your company remains responsible for evaluating what processing is permitted.",
+          "employee": "Migration may increase support demands and change technical responsibilities. Enterprise fees or switching costs may compete with staffing budgets.",
+          "sustainability": "The new platform may increase computing demands and data collection. Your company has limited control over supplier infrastructure under standard terms.",
+          "relations": "Some promoters want FacePass compatibility. Others are concerned about the supplier's data-use terms and their implications for audiences."
+        },
+        "default": "negotiate_terms",
+        "options": [
+          {
+            "id": "standard_facepass",
+            "title": "A. Accept standard FacePass",
+            "detail": "Proposed supplier rights cover analytics, product development and AI training. Annual VFI fee: €0.90M.",
+            "outcome": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+            "private": {
+              "ceo": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "cfo": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "cto": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "marketing": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "legal": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "employee": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "sustainability": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "relations": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed."
+            }
+          },
+          {
+            "id": "enterprise_facepass",
+            "title": "B. Purchase enterprise FacePass",
+            "detail": "Dedicated hosting restricts supplier secondary use. Annual VFI fee from Year 7: €1.50M.",
+            "outcome": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+            "private": {
+              "ceo": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "cfo": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "cto": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "marketing": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "legal": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "employee": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "sustainability": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "relations": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control."
+            }
+          },
+          {
+            "id": "negotiate_terms",
+            "title": "C. Negotiate or resist",
+            "detail": "Challenge the data-use terms and seek a restricted-use, nonbiometric transition agreement.",
+            "outcome": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+            "private": {
+              "ceo": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "cfo": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "cto": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "marketing": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "legal": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "employee": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "sustainability": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "relations": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position."
+            }
+          },
+          {
+            "id": "exit_supplier",
+            "title": "D. Exit VFI",
+            "detail": "Terminate the VFI relationship and fund independent verification migration. The immediate price includes your company's switching cost.",
+            "outcome": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+            "private": {
+              "ceo": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "cfo": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "cto": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "marketing": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "legal": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "employee": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "sustainability": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "relations": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence."
+            }
+          }
+        ]
+      },
+      "hybrid": {
+        "year": 6,
+        "calendar_year": 2032,
+        "title": "Smile and Pass: Who Controls the Data?",
+        "story": "VFI has announced the retirement of its original identity verification platform.\n\nIts replacement includes facial-recognition capabilities, expanded customer analytics, and new contractual data-use terms.\n\nVFI says the platform will improve convenience, security, and service innovation.\n\nCustomer organizations question who will control the information generated through the system.\n\nExisting VFI customers face a choice between accepting the new terms, paying for greater control, challenging the changes, or leaving.\n\nIndependent providers face a different opportunity: they may build competing technology and capture the commercial value themselves.",
+        "question": "What will your company do?",
+        "info": {
+          "ceo": "VFI has changed the terms of a relationship your company depends on. The board wants to know whether you can afford greater control or afford to leave.",
+          "cfo": "VFI's standard price assumes the supplier can derive additional value from customer data. Restricting that use requires a more expensive enterprise agreement. Leaving may cost even more.",
+          "cto": "The new platform bundles biometric capabilities with existing verification infrastructure. Your engineers cannot simply remove supplier-controlled components.",
+          "marketing": "VFI promotes Smile and Pass as effortless convenience. Customer organizations are questioning the expanded data-use terms.",
+          "legal": "VFI's standard contract claims rights to use customer data for AI training and commercial analytics. These terms do not establish a lawful basis for every proposed use. Your company remains responsible for evaluating what processing is permitted.",
+          "employee": "Migration may increase support demands and change technical responsibilities. Enterprise fees or switching costs may compete with staffing budgets.",
+          "sustainability": "The new platform may increase computing demands and data collection. Your company has limited control over supplier infrastructure under standard terms.",
+          "relations": "Some promoters want FacePass compatibility. Others are concerned about the supplier's data-use terms and their implications for audiences."
+        },
+        "default": "negotiate_terms",
+        "options": [
+          {
+            "id": "standard_facepass",
+            "title": "A. Accept standard FacePass",
+            "detail": "Proposed supplier rights cover analytics, product development and AI training. Annual VFI fee: €0.65M.",
+            "outcome": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+            "private": {
+              "ceo": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "cfo": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "cto": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "marketing": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "legal": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "employee": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "sustainability": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed.",
+              "relations": "Your company accepts VFI's standard next-generation platform. Licensing costs remain unchanged, but the supplier claims broader rights to use data for analytics and AI development. Your company must determine which processing activities can lawfully proceed."
+            }
+          },
+          {
+            "id": "enterprise_facepass",
+            "title": "B. Purchase enterprise FacePass",
+            "detail": "Dedicated hosting restricts supplier secondary use. Annual VFI fee from Year 7: €1.20M.",
+            "outcome": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+            "private": {
+              "ceo": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "cfo": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "cto": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "marketing": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "legal": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "employee": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "sustainability": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control.",
+              "relations": "Your company pays higher licensing fees for dedicated data controls and restrictions on VFI's secondary use of customer information. The arrangement increases costs while giving your company greater contractual control."
+            }
+          },
+          {
+            "id": "negotiate_terms",
+            "title": "C. Negotiate or resist",
+            "detail": "Challenge the data-use terms and seek a restricted-use, nonbiometric transition agreement.",
+            "outcome": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+            "private": {
+              "ceo": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "cfo": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "cto": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "marketing": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "legal": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "employee": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "sustainability": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position.",
+              "relations": "Your company challenges VFI's new terms and seeks continued nonbiometric verification. Its future depends on the supplier's response and your company's contractual position."
+            }
+          },
+          {
+            "id": "exit_supplier",
+            "title": "D. Exit VFI",
+            "detail": "Terminate the VFI relationship and fund independent verification migration. The immediate price includes your company's switching cost.",
+            "outcome": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+            "private": {
+              "ceo": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "cfo": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "cto": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "marketing": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "legal": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "employee": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "sustainability": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence.",
+              "relations": "Your company begins leaving VFI. The migration is expensive and technically demanding, but it offers a path toward greater independence."
+            }
+          }
+        ]
+      },
+      "build": {
+        "year": 6,
+        "calendar_year": 2032,
+        "title": "Smile and Pass: Who Controls the Data?",
+        "story": "VFI has announced the retirement of its original identity verification platform.\n\nIts replacement includes facial-recognition capabilities, expanded customer analytics, and new contractual data-use terms.\n\nVFI says the platform will improve convenience, security, and service innovation.\n\nCustomer organizations question who will control the information generated through the system.\n\nExisting VFI customers face a choice between accepting the new terms, paying for greater control, challenging the changes, or leaving.\n\nIndependent providers face a different opportunity: they may build competing technology and capture the commercial value themselves.",
+        "question": "What will your company do?",
+        "info": {
+          "ceo": "Your company owns its infrastructure. You can now compete with VFI and potentially capture the value of biometric services yourself.",
+          "cfo": "Proprietary biometric development is expensive, but ownership could allow the company to capture more commercial revenue.",
+          "cto": "Your team can design proprietary biometric technology, including data architecture and retention rules. You also bear responsibility for reliability and security.",
+          "marketing": "Your company could market an independent alternative to VFI. Customers may also question how you intend to use the data yourself.",
+          "legal": "Owning biometric infrastructure does not grant unrestricted rights to process or monetize biometric data. Purpose limitation, necessity, lawful basis, and safeguards remain relevant.",
+          "employee": "Building proprietary technology could create specialist jobs while changing existing work and support roles.",
+          "sustainability": "Owning the infrastructure gives your company more control over environmental and social impacts, including decisions about data retention.",
+          "relations": "Venues are interested in alternatives to VFI. Some want equivalent biometric capabilities without supplier dependence."
+        },
+        "default": "preserve_services",
+        "options": [
+          {
+            "id": "develop_proprietary",
+            "title": "A. Build proprietary biometric technology",
+            "detail": "Develop company-owned biometric infrastructure. Commercial revenue requires authorization and an activated contract.",
+            "outcome": "Your company invests in its own biometric entry technology. It may capture the commercial value of future services, while assuming direct responsibility for the system and its data practices.",
+            "private": {
+              "ceo": "Your company invests in its own biometric entry technology. It may capture the commercial value of future services, while assuming direct responsibility for the system and its data practices.",
+              "cfo": "Your company invests in its own biometric entry technology. It may capture the commercial value of future services, while assuming direct responsibility for the system and its data practices.",
+              "cto": "Your company invests in its own biometric entry technology. It may capture the commercial value of future services, while assuming direct responsibility for the system and its data practices.",
+              "marketing": "Your company invests in its own biometric entry technology. It may capture the commercial value of future services, while assuming direct responsibility for the system and its data practices.",
+              "legal": "Your company invests in its own biometric entry technology. It may capture the commercial value of future services, while assuming direct responsibility for the system and its data practices.",
+              "employee": "Your company invests in its own biometric entry technology. It may capture the commercial value of future services, while assuming direct responsibility for the system and its data practices.",
+              "sustainability": "Your company invests in its own biometric entry technology. It may capture the commercial value of future services, while assuming direct responsibility for the system and its data practices.",
+              "relations": "Your company invests in its own biometric entry technology. It may capture the commercial value of future services, while assuming direct responsibility for the system and its data practices."
+            }
+          },
+          {
+            "id": "license_independent",
+            "title": "B. License independent biometric infrastructure",
+            "detail": "Integrate independent biometric infrastructure. Authorization does not automatically award a commercial contract.",
+            "outcome": "Your company selects independent biometric infrastructure. The supplier relationship does not establish a lawful basis for every proposed use.",
+            "private": {
+              "ceo": "Your company selects independent biometric infrastructure. The supplier relationship does not establish a lawful basis for every proposed use.",
+              "cfo": "Your company selects independent biometric infrastructure. The supplier relationship does not establish a lawful basis for every proposed use.",
+              "cto": "Your company selects independent biometric infrastructure. The supplier relationship does not establish a lawful basis for every proposed use.",
+              "marketing": "Your company selects independent biometric infrastructure. The supplier relationship does not establish a lawful basis for every proposed use.",
+              "legal": "Your company selects independent biometric infrastructure. The supplier relationship does not establish a lawful basis for every proposed use.",
+              "employee": "Your company selects independent biometric infrastructure. The supplier relationship does not establish a lawful basis for every proposed use.",
+              "sustainability": "Your company selects independent biometric infrastructure. The supplier relationship does not establish a lawful basis for every proposed use.",
+              "relations": "Your company selects independent biometric infrastructure. The supplier relationship does not establish a lawful basis for every proposed use."
+            }
+          },
+          {
+            "id": "smart_entry",
+            "title": "C. Build nonbiometric smart entry",
+            "detail": "Build nonbiometric smart entry for venues.",
+            "outcome": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+            "private": {
+              "ceo": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "cfo": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "cto": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "marketing": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "legal": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "employee": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "sustainability": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "relations": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry."
+            }
+          },
+          {
+            "id": "preserve_services",
+            "title": "D. Preserve existing services",
+            "detail": "Improve customer support and reliability without a new entry contract.",
+            "outcome": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+            "private": {
+              "ceo": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "cfo": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "cto": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "marketing": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "legal": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "employee": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "sustainability": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "relations": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry."
+            }
+          }
+        ]
+      },
+      "wait": {
+        "year": 6,
+        "calendar_year": 2032,
+        "title": "Smile and Pass: Who Controls the Data?",
+        "story": "VFI has announced the retirement of its original identity verification platform.\n\nIts replacement includes facial-recognition capabilities, expanded customer analytics, and new contractual data-use terms.\n\nVFI says the platform will improve convenience, security, and service innovation.\n\nCustomer organizations question who will control the information generated through the system.\n\nExisting VFI customers face a choice between accepting the new terms, paying for greater control, challenging the changes, or leaving.\n\nIndependent providers face a different opportunity: they may build competing technology and capture the commercial value themselves.",
+        "question": "What will your company do?",
+        "info": {
+          "ceo": "Some promoters want biometric entry, while others are looking for alternatives. Your earlier decision has left you outside VFI's contractual changes.",
+          "cfo": "Entering biometric services requires major investment. Nonbiometric alternatives have lower costs and fewer new data obligations.",
+          "cto": "You have no existing identity-verification infrastructure. Biometric entry requires new technical capabilities.",
+          "marketing": "Some fans value convenience. Others are actively seeking services that do not require biometric identification.",
+          "legal": "Entering biometric services creates substantial new legal obligations. Conventional services can continue under existing data practices.",
+          "employee": "Staffed services may create employment, while automated entry changes the work required at venues.",
+          "sustainability": "Your choice affects accessibility, computing resources, and opportunities for people who cannot or do not wish to use biometric identification.",
+          "relations": "Independent artists may prefer nonbiometric services. Major venues increasingly expect integrated entry systems."
+        },
+        "default": "conventional_alternative",
+        "options": [
+          {
+            "id": "enter_biometrics",
+            "title": "A. Enter the biometric market",
+            "detail": "Enter biometric services with independent infrastructure. Authorization and a commercial contract remain separate requirements.",
+            "outcome": "Your company enters the biometric market using independent infrastructure. The system requires authorization, and commercial revenue requires an activated agreement.",
+            "private": {
+              "ceo": "Your company enters the biometric market using independent infrastructure. The system requires authorization, and commercial revenue requires an activated agreement.",
+              "cfo": "Your company enters the biometric market using independent infrastructure. The system requires authorization, and commercial revenue requires an activated agreement.",
+              "cto": "Your company enters the biometric market using independent infrastructure. The system requires authorization, and commercial revenue requires an activated agreement.",
+              "marketing": "Your company enters the biometric market using independent infrastructure. The system requires authorization, and commercial revenue requires an activated agreement.",
+              "legal": "Your company enters the biometric market using independent infrastructure. The system requires authorization, and commercial revenue requires an activated agreement.",
+              "employee": "Your company enters the biometric market using independent infrastructure. The system requires authorization, and commercial revenue requires an activated agreement.",
+              "sustainability": "Your company enters the biometric market using independent infrastructure. The system requires authorization, and commercial revenue requires an activated agreement.",
+              "relations": "Your company enters the biometric market using independent infrastructure. The system requires authorization, and commercial revenue requires an activated agreement."
+            }
+          },
+          {
+            "id": "smart_entry",
+            "title": "B. Develop nonbiometric smart entry",
+            "detail": "Develop faster nonbiometric entry services.",
+            "outcome": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+            "private": {
+              "ceo": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "cfo": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "cto": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "marketing": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "legal": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "employee": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "sustainability": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "relations": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry."
+            }
+          },
+          {
+            "id": "staffed_entry",
+            "title": "C. Expand staffed entry",
+            "detail": "Expand human assistance and staffed venue entry.",
+            "outcome": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+            "private": {
+              "ceo": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "cfo": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "cto": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "marketing": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "legal": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "employee": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "sustainability": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "relations": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry."
+            }
+          },
+          {
+            "id": "conventional_alternative",
+            "title": "D. Remain a conventional alternative",
+            "detail": "Improve support and position your company as a conventional alternative.",
+            "outcome": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+            "private": {
+              "ceo": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "cfo": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "cto": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "marketing": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "legal": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "employee": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "sustainability": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry.",
+              "relations": "Your company develops or maintains entry services without facial recognition. Some customers and artists value this approach, while others prefer the convenience of biometric entry."
+            }
+          }
+        ]
+      }
+    },
+    "external": {
+      "title": "VFI Announces New Platform Terms",
+      "text": "VFI is retiring its original verification infrastructure.\n\nAll existing customers must migrate to FacePass or make alternative arrangements.\n\nThe new platform includes biometric entry capabilities and expanded customer analytics.\n\nUnder VFI's proposed standard terms, the supplier claims rights to use platform data for commercial analytics, product development, and AI training.\n\nCustomers wanting dedicated data controls and restrictions on supplier secondary use must purchase an enterprise agreement.\n\nThe legacy platform will lose support in twelve months."
+    },
+    "internal": {
+      "1. VFI exit with low cash": "Management warns that the migration has left the company financially vulnerable. Employees and clients request assurances about service continuity.",
+      "2. VFI exemption granted": "Your company secures a temporary agreement allowing continued nonbiometric verification. The arrangement preserves service continuity but will require another decision before expiry.",
+      "3. VFI exemption denied or resistance": "VFI confirms that legacy infrastructure will lose support at the end of the transition. Your company must prepare for a technical or contractual resolution.",
+      "4. Proprietary biometric development": "A venue operator expresses interest in testing your independent biometric system. Artists request assurances about accessibility and data governance.",
+      "5. Independent nonbiometric entry": "A venue reports strong interest in entry systems that do not require facial recognition.",
+      "6. Otherwise": "The company completes its technology strategy review."
+    },
+    "exemption_granted": "VFI grants a two-year restricted-use transition agreement. The exemption expires in Year 8.",
+    "exemption_denied": "VFI refuses the exemption. Legacy support expires in Year 7.",
+    "commercial": {
+      "title": "Smile and Pass",
+      "advertiser": "VFI",
+      "duration": 60,
+      "closing_voiceover": "Five years ago, we changed how fans get tickets.\n\nNow we're changing how they experience everything beyond them.\n\nThe next generation of FairPass.\n\nVFI. Smile and Pass.",
+      "closing_screen": "VFI\nSMILE AND PASS\nTHE NEXT GENERATION IS HERE",
+      "video_src": null,
+      "transcript": "Five years ago, we changed how fans get tickets.\n\nNow we're changing how they experience everything beyond them.\n\nThe next generation of FairPass.\n\nVFI. Smile and Pass."
+    },
+    "facepass_contract_value_m": 0,
+    "model": "facepass_data_economy_v1",
+    "stop_affordable_expired_exemption": true
+  }
+}

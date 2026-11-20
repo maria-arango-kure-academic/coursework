@@ -1,0 +1,12 @@
+node_modules/
+dist/
+__pycache__/
+*.pyc
+*.sqlite3*
+*.db*
+.teacher-key
+.env
+.env.*
+.private/
+data/
+*.log

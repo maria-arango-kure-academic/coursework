@@ -1,0 +1,1385 @@
+{
+  "years": [
+    null,
+    {
+      "title": "Choosing buyer verification",
+      "theme": "Technology strategy",
+      "story": "The association wants to limit each person to five tickets per event by checking who buys them. Verity has offered its verification system; your engineers could build one themselves or connect Verity’s checks to your software.",
+      "question": "How will we provide buyer verification?",
+      "options": [
+        {
+          "id": "build",
+          "title": "Build it ourselves",
+          "detail": "Hire four people to build and maintain verification. Your company owns the code; improvements already promised to customers would wait.",
+          "consider": "Your engineers would maintain the new system alongside current ticketing. Recruitment and testing take time.",
+          "facts": "€1.3m initially · 9–12 months to testing",
+          "summary": "Hire four people to build and maintain verification. Your company owns the code; improvements already promised to customers would wait.",
+          "display_title": "Build it ourselves"
+        },
+        {
+          "id": "buy",
+          "title": "Use Verity’s system",
+          "detail": "Sign a three-year licence. Verity maintains verification while your staff handle customer support and appeals. Fees after Year 1 are €280k a year.",
+          "consider": "The delivery estimate depends on connecting Verity to software that it has not tested.",
+          "facts": "€800k in Year 1 · 4–6 months to testing",
+          "summary": "Sign a three-year licence. Verity maintains verification while your staff handle customer support and appeals. Fees after Year 1 are €280k a year.",
+          "display_title": "Use Verity’s system"
+        },
+        {
+          "id": "hybrid",
+          "title": "Connect Verity to our software",
+          "detail": "Hire two people to connect Verity to your software. Your team controls that connection; Verity controls verification. Annual maintenance afterwards costs €210k.",
+          "consider": "Your engineers and Verity would have to coordinate development and maintenance under a three-year minimum contract.",
+          "facts": "€900k in Year 1 · 6–9 months to testing",
+          "summary": "Hire two people to connect Verity to your software. Your team controls that connection; Verity controls verification. Annual maintenance afterwards costs €210k.",
+          "display_title": "Connect Verity to our software"
+        },
+        {
+          "id": "wait",
+          "title": "Keep existing ticketing",
+          "detail": "Continue current ticket sales and keep cash available. Staff handle fraud manually while promoters consider competitors offering buyer verification.",
+          "consider": "This leaves staff time for existing work, while the response to competitors remains uncertain.",
+          "facts": "Limited new spending · current service continues",
+          "summary": "Continue current ticket sales and keep cash available. Staff handle fraud manually while promoters consider competitors offering buyer verification.",
+          "display_title": "Keep existing ticketing"
+        }
+      ],
+      "info": {
+        "ceo": [
+          "The board is discussing investment that depends on demonstrating the new service within two years.",
+          "That money could help fund your public commitments. Securing it also means choosing a system that your team can demonstrate by the deadline.",
+          "Which promises could this investment help you keep, and which might become harder to fulfil?"
+        ],
+        "cfo": [
+          "A major customer has warned that its payment may arrive late. An internal build is still affordable, but recruitment delays or unexpected costs would leave little cash available.",
+          "You need the business to grow without emergency borrowing. Spending heavily now makes the delayed payment harder to absorb; waiting could mean losing future business.",
+          "How much cash should remain available if the customer pays late?"
+        ],
+        "cto": [
+          "Verity demonstrated its product on a different ticketing system. Nobody has tested whether it works with yours.",
+          "Your team would have to fix integration problems while maintaining current ticket sales. Building internally gives you more control and more development work.",
+          "What would you need to test before trusting Verity’s delivery estimate?"
+        ],
+        "marketing": [
+          "Customer research shows that fans want to stop bulk buying for resale, but many object to uploading identity documents.",
+          "The purchase limit could attract customers who then refuse the checks. Your trust and growth targets depend on how people experience both.",
+          "What can you promise customers before you know whether they will accept verification?"
+        ],
+        "legal": [
+          "Verity’s standard contract makes your company responsible for disputes when verification fails.",
+          "A customer could bring a complaint against your company even if Verity’s software caused the problem. Paying a supplier does not transfer that responsibility.",
+          "Who should investigate a failed check, correct it and compensate the customer?"
+        ],
+        "employee": [
+          "Engineers already owe several customers improvements. They are concerned that an internal build would add another project without enough staff to cover both.",
+          "Investment could create jobs, but taking on more work than staff can deliver could also threaten the business and employment later.",
+          "What staffing would each proposal need, and which existing work would have to wait?"
+        ],
+        "sustainability": [
+          "Verity’s environmental figures leave out the subcontractor that carries out verification.",
+          "You cannot yet compare the full resource use of Verity’s offer with an internal build. That missing work still contributes to the company’s environmental impact.",
+          "What would you need to know about the subcontractor and your own proposed system?"
+        ],
+        "relations": [
+          "A promoter is interested in an early trial, but wants a credible delivery date before discussing a contract.",
+          "The trial could lead to a partnership. A date that your company cannot meet could also damage the relationship before it starts.",
+          "What could you offer the promoter while protecting promises to existing venues?"
+        ]
+      },
+      "decision_scope": "This year you choose who will build and maintain verification. Testing and launch follow later. Checking buyers does not introduce facial recognition at venues.",
+      "team": [
+        "Value · Quality and Service / Mission and Impact",
+        "The team needs a verification service it can maintain and correct. Fans need a real chance of buying a ticket without giving up more identity information than the purchase requires."
+      ]
+    },
+    {
+      "title": "A demonstration with a deadline",
+      "theme": "Testing and prototyping",
+      "story": "The European promoter wants to see buyer verification working before committing to its tour. It can provide a small event for testing. Your team needs to decide what to investigate before giving the promoter an answer.",
+      "question": "What do we need to test?",
+      "options": [
+        {
+          "id": "broad",
+          "title": "Test customers, devices and failures",
+          "detail": "Test the prototype with different customers and devices, including failed checks. A working, broadly tested prototype can earn the €150k demonstration investment.",
+          "consider": "The wider pilot needs more staff time and delays the next commercial decision.",
+          "display_title": "Test customers, devices and failures",
+          "summary": "Test the prototype with different customers and devices, including failed checks. A working, broadly tested prototype can earn the €150k demonstration investment."
+        },
+        {
+          "id": "focused",
+          "title": "Test access and integration",
+          "detail": "Investigate accessibility and how the systems connect. The team will still have less evidence about other customers and conditions.",
+          "consider": "The narrower investigation costs less than a broad pilot and leaves other questions open.",
+          "display_title": "Test access and integration",
+          "summary": "Investigate accessibility and how the systems connect. The team will still have less evidence about other customers and conditions."
+        },
+        {
+          "id": "existing",
+          "title": "Use the evidence we have",
+          "detail": "Continue using supplier demonstrations and existing records, without new testing.",
+          "consider": "Preparation can continue sooner, with assumptions that customers will encounter when the service runs.",
+          "display_title": "Use the evidence we have",
+          "summary": "Continue using supplier demonstrations and existing records, without new testing."
+        },
+        {
+          "id": "explore",
+          "title": "Compare designs and exit terms",
+          "detail": "Compare alternative designs and supplier exit terms. Document how the systems connect so that the company can switch more easily.",
+          "consider": "This helps the team understand its alternatives while leaving the promoter’s demonstration request unresolved.",
+          "display_title": "Compare designs and exit terms",
+          "summary": "Compare alternative designs and supplier exit terms. Document how the systems connect so that the company can switch more easily."
+        },
+        {
+          "id": "late_build",
+          "title": "Build a prototype now",
+          "detail": "Spend €1.3m on an internal verification prototype. The acquisition prepares the technology without launching a live service.",
+          "consider": "The demonstration investment deadline is missed. You can consider launch in Year 3 or Year 6.",
+          "display_title": "Build a prototype now",
+          "summary": "Spend €1.3m on an internal verification prototype. Prepare it this year for a possible launch in Year 3 or Year 6; the demonstration investment deadline is missed."
+        },
+        {
+          "id": "late_buy",
+          "title": "License Verity now",
+          "detail": "Spend €800k on a Verity verification licence. The acquisition prepares the technology without launching a live service.",
+          "consider": "The demonstration investment deadline is missed. You can consider launch in Year 3 or Year 6.",
+          "display_title": "License Verity now",
+          "summary": "Spend €800k on a Verity verification licence. Prepare it this year for a possible launch in Year 3 or Year 6; the demonstration investment deadline is missed."
+        },
+        {
+          "id": "late_hybrid",
+          "title": "Connect Verity now",
+          "detail": "Spend €900k connecting Verity verification to your software. The acquisition prepares the technology without launching a live service.",
+          "consider": "The demonstration investment deadline is missed. You can consider launch in Year 3 or Year 6.",
+          "display_title": "Connect Verity now",
+          "summary": "Spend €900k connecting Verity verification to your software. Prepare it this year for a possible launch in Year 3 or Year 6; the demonstration investment deadline is missed."
+        }
+      ],
+      "proposal": [
+        "The promoter’s offer",
+        "The promoter provides a small event for testing. A working prototype tested with varied customers, devices and failures can earn €150k. A targeted investigation examines access and integration. Acquiring technology this year misses the investment deadline."
+      ],
+      "team": [
+        "Insight · Data and Decision-making / Privacy and Security",
+        "A successful identity check is part of a ticket purchase. Customers also need account recovery, transfers, support when checks fail and a way to buy without a smartphone. Test results can reveal which checks are useful and where they fail. Every extra record collected during testing needs a purpose, a retention limit and protection."
+      ],
+      "info": {
+        "ceo": [
+          "The promoter will accept a demonstration with clear limits. The board has been describing it as the start of a commercial launch.",
+          "The same demonstration could leave the promoter and board expecting different things. You would be responsible for the promises made to both.",
+          "What should they understand about what the demonstration can establish?"
+        ],
+        "cfo": [
+          "A broader pilot delays the next commercial payment. The short-pilot estimate leaves out extra support for participants who struggle.",
+          "A cheaper pilot could still become expensive if staff have to resolve problems that the estimate excludes. A longer pilot also delays income.",
+          "Which costs would you want included before agreeing to the testing budget?"
+        ],
+        "cto": [
+          "The demonstration showed a successful purchase. It did not show recovery after a failed check or what happens during a network interruption.",
+          "Customers will need the service to work under those conditions too. Your reliability target depends partly on how the company handles failures.",
+          "Which failures should the pilot test, and who would investigate them?"
+        ],
+        "marketing": [
+          "Most research participants came from the company’s mailing list and attend events frequently. Occasional customers have barely been included.",
+          "Enthusiastic fans may accept a process that other customers abandon. Their response alone gives you little basis for a wider launch message.",
+          "Whose experience would you need before making promises to a wider audience?"
+        ],
+        "legal": [
+          "The draft pilot consent form does not explain how participants can challenge an incorrect result.",
+          "A participant who is wrongly rejected needs a way to ask for correction. Leaving that unclear could lead to a complaint before the service launches.",
+          "What should participants be told, and who would handle a challenge?"
+        ],
+        "employee": [
+          "Support staff are missing from the pilot timetable. They expect to handle failed checks while continuing their usual work.",
+          "Testing can help prevent future problems, but it creates work now. Staff need time to support participants as well as existing customers.",
+          "Who will handle pilot problems, and what other work will they have time to do?"
+        ],
+        "sustainability": [
+          "The pilot estimate counts completed checks. It excludes energy use, repeated attempts and the devices that participants need.",
+          "Those activities contribute to resource use even when a check fails. Leaving them out would make the environmental comparison incomplete.",
+          "What should the pilot measure to help you judge the environmental impact?"
+        ],
+        "relations": [
+          "The promoter can recruit volunteers, but cannot promise that they represent the needs of its wider audience.",
+          "A successful volunteer trial could help win this contract while leaving unanswered questions about other venues and audiences.",
+          "What would you need to know before recommending the system to another venue?"
+        ]
+      },
+      "decision_scope": "You can test an existing prototype, examine particular problems or use the records you already have. If you have no prototype, you can acquire one this year."
+    },
+    {
+      "title": "Preparing to launch",
+      "theme": "Launch",
+      "story": "Promoters are asking when buyer verification will be available. Marketing needs a date, and support staff need a way to help customers whose checks fail. Your team must decide how much of the service is ready to launch.",
+      "question": "How should we proceed with the service?",
+      "options": [
+        {
+          "id": "broad",
+          "title": "Launch across the service",
+          "detail": "Introduce buyer verification across participating events. More customers can use it immediately and encounter any unresolved failures.",
+          "consider": "Sales can grow sooner, while failures affect a larger audience.",
+          "display_title": "Launch across the service",
+          "summary": "Introduce buyer verification across participating events. More customers can use it immediately and encounter any unresolved failures."
+        },
+        {
+          "id": "limited",
+          "title": "Launch at selected venues",
+          "detail": "Introduce verification at selected venues, with staff to help when checks fail. Expansion is slower and needs customer support.",
+          "consider": "The company can learn from a smaller release before extending it to other venues.",
+          "display_title": "Launch at selected venues",
+          "summary": "Introduce verification at selected venues, with staff to help when checks fail. Expansion is slower and needs customer support."
+        },
+        {
+          "id": "delay",
+          "title": "Fix the prototype before launch",
+          "detail": "Keep conventional sales while fixing the prototype. Renegotiate launch promises; the next launch opportunity is in Year 6.",
+          "consider": "Customers can keep buying tickets while the team spends more time and money preparing verification.",
+          "display_title": "Fix the prototype before launch",
+          "summary": "Keep conventional sales while fixing the prototype. Renegotiate launch promises; the next launch opportunity is in Year 6."
+        },
+        {
+          "id": "conventional",
+          "title": "Keep conventional ticket sales",
+          "detail": "Continue ticket sales and manual fraud handling. Keep any prototype for later, while support staff handle disputes.",
+          "consider": "Current customers keep their existing way to buy tickets; the company leaves buyer verification unlaunched.",
+          "display_title": "Keep conventional ticket sales",
+          "summary": "Continue ticket sales and manual fraud handling. Keep any prototype for later, while support staff handle disputes."
+        },
+        {
+          "id": "late_build",
+          "title": "Build a prototype now",
+          "detail": "Spend €1.3m on an internal verification prototype. The acquisition prepares the technology without launching a live service.",
+          "consider": "The demonstration investment deadline is missed. You can consider launch in Year 6.",
+          "display_title": "Build a prototype now",
+          "summary": "Spend €1.3m on an internal verification prototype. Prepare it this year for a possible launch in Year 6; the demonstration investment deadline is missed."
+        },
+        {
+          "id": "late_buy",
+          "title": "License Verity now",
+          "detail": "Spend €800k on a Verity verification licence. The acquisition prepares the technology without launching a live service.",
+          "consider": "The demonstration investment deadline is missed. You can consider launch in Year 6.",
+          "display_title": "License Verity now",
+          "summary": "Spend €800k on a Verity verification licence. Prepare it this year for a possible launch in Year 6; the demonstration investment deadline is missed."
+        },
+        {
+          "id": "late_hybrid",
+          "title": "Connect Verity now",
+          "detail": "Spend €900k connecting Verity verification to your software. The acquisition prepares the technology without launching a live service.",
+          "consider": "The demonstration investment deadline is missed. You can consider launch in Year 6.",
+          "display_title": "Connect Verity now",
+          "summary": "Spend €900k connecting Verity verification to your software. Prepare it this year for a possible launch in Year 6; the demonstration investment deadline is missed."
+        }
+      ],
+      "proposal": [
+        "Planning the release",
+        "A broad release introduces verification across participating events. A limited release uses selected venues and staff to help with failed checks. You can delay to fix the prototype or continue conventional sales, keeping any prototype for later."
+      ],
+      "team": [
+        "Audience · Reach and Engagement / Accessibility and Inclusion",
+        "Your evidence describes the people and conditions included in testing. Other customers, venues and failure conditions may need more investigation before the service can support them reliably. A wider launch reaches more venues. The organisers also need to know who can complete the check, who can appeal and who gives up before buying."
+      ],
+      "info": {
+        "ceo": [
+          "The board will accept a limited release with clear restrictions and a review date. It has not agreed to an indefinite delay.",
+          "You can propose a smaller launch while checking whether the company can keep its promises. The board will still expect a reason for expanding or waiting.",
+          "What evidence would justify the next step after a limited release?"
+        ],
+        "cfo": [
+          "Launch income depends on completed purchases. Allowing for refunds and customer support reduces the expected return.",
+          "More sales will help only if the company can also afford the work and refunds they generate. Those costs could rise if demand or failures exceed expectations.",
+          "How much support could the company afford after launch?"
+        ],
+        "cto": [
+          "Your team can monitor failed transactions, but cannot investigate every failure immediately.",
+          "Monitoring will show problems that your team may not have time to fix. Launch size needs to reflect both the software’s performance and your response capacity.",
+          "Which failures could your team detect and resolve during the release?"
+        ],
+        "marketing": [
+          "The prepared announcement promises fair access for every fan. Testing has not covered every audience or access need.",
+          "People may buy tickets because of that promise and then find that they cannot use the service. That would affect their trust in the company.",
+          "What could the announcement say that your evidence supports?"
+        ],
+        "legal": [
+          "The customer terms leave it unclear who can reverse a failed identity decision.",
+          "A customer could remain locked out while your company and supplier dispute who has authority to help. That delay could turn a mistake into a serious complaint.",
+          "Who needs the authority and information to correct a failed check?"
+        ],
+        "employee": [
+          "Support workers want permission to resolve straightforward cases without waiting for a manager.",
+          "That permission could help them resolve queues and disputes, provided they also have clear responsibilities and support when a case is difficult.",
+          "What should support staff be allowed to resolve themselves?"
+        ],
+        "sustainability": [
+          "Running the existing and new services together would temporarily use more infrastructure. Closing the existing route would affect customers who still need it.",
+          "Reducing duplication could lower resource use while making access harder for some fans. Your environmental target is one of several company commitments.",
+          "How could the company manage the transition while keeping an accessible route?"
+        ],
+        "relations": [
+          "A smaller venue will accept a restricted launch. The larger promoter expects the advertised features to work throughout its tour.",
+          "The smaller launch gives you time to learn. The larger agreement asks you to take responsibility for more events from the start.",
+          "What can you credibly promise each partner with the evidence you have?"
+        ]
+      },
+      "decision_scope": "Launching requires a prototype. You can keep conventional sales running and retain a prototype for later. If you have none, acquisition remains an option this year."
+    },
+    {
+      "title": "What customers need next",
+      "theme": "Features and customer benefits",
+      "story": "Support staff have collected requests from fans who need to reserve until payday, transfer a ticket or recover an account. Frequent attendees want rewards and early access, while promoters want fewer empty seats. Your team can prioritise one improvement this year.",
+      "question": "Which improvement should we prioritise?",
+      "options": [
+        {
+          "id": "loyalty",
+          "title": "Reward repeat customers",
+          "detail": "Give repeat customers rewards and early access. Staff will maintain the rewards, answer queries and process more customer data.",
+          "consider": "Benefits favour people who already attend often and could encourage them to return.",
+          "display_title": "Reward repeat customers",
+          "summary": "Give repeat customers rewards and early access. Staff will maintain the rewards, answer queries and process more customer data."
+        },
+        {
+          "id": "reservations",
+          "title": "Add reservations and transfers",
+          "detail": "Let fans reserve until payday and transfer tickets under clear rules. Staff will handle unpaid reservations and transfer disputes.",
+          "consider": "Customers gain flexibility, while promoters may have tickets reserved without payment.",
+          "display_title": "Add reservations and transfers",
+          "summary": "Let fans reserve until payday and transfer tickets under clear rules. Staff will handle unpaid reservations and transfer disputes."
+        },
+        {
+          "id": "support",
+          "title": "Improve booking and account recovery",
+          "detail": "Improve accessible booking, account recovery and staffed alternatives. Customers get more help with failed transactions, reducing repeated support work.",
+          "consider": "This improves existing services and gives marketing fewer new features to announce.",
+          "display_title": "Improve booking and account recovery",
+          "summary": "Improve accessible booking, account recovery and staffed alternatives. Customers get more help with failed transactions, reducing repeated support work."
+        },
+        {
+          "id": "basic",
+          "title": "Keep the current features",
+          "detail": "Give staff time to maintain existing features while competitors add new offers.",
+          "consider": "The company avoids a new product commitment and leaves some customer requests unanswered.",
+          "display_title": "Keep the current features",
+          "summary": "Give staff time to maintain existing features while competitors add new offers."
+        }
+      ],
+      "proposal": [
+        "Requests from customers",
+        "Repeat customers want rewards and early access. Others need payday reservations, legitimate transfers or help when booking fails. Your team can develop one of these this year, or concentrate on maintaining current features."
+      ],
+      "team": [
+        "Resilience · Culture and Balance / Health and Wellbeing",
+        "Staff will design and build the feature, maintain it and help customers use it. Existing customer problems and maintenance continue while that work takes place. An offer the team can support leaves staff time for difficult cases. Fans should be able to plan a night out without constantly checking rewards or chasing unresolved bookings."
+      ],
+      "info": {
+        "ceo": [
+          "The board wants a new feature to present to investors. Existing customers are asking why earlier requests remain unresolved.",
+          "Your staff would have to deliver the new feature alongside those promises. Choosing a visible addition may delay work that current customers already expect.",
+          "Which investment would help the company keep its promises this year?"
+        ],
+        "cfo": [
+          "A reserved ticket can remain unpaid while the promoter treats it as unavailable. Loyalty benefits cost money when customers redeem them.",
+          "Both features can create costs before they bring in income. Their popularity alone will not tell you whether the company can afford them.",
+          "What conditions would make the proposed benefit affordable to provide?"
+        ],
+        "cto": [
+          "Your team can build the proposed features, but connecting them to older customer accounts requires extra work.",
+          "Owning the code lets your team make changes. It also leaves them responsible for maintaining older systems while adding the feature.",
+          "Which connections would need work before the feature could launch?"
+        ],
+        "marketing": [
+          "Occasional customers prefer payday reservations. Frequent attendees prefer rewards and early access.",
+          "Early access could strengthen repeat business while leaving occasional fans with fewer tickets to buy. Reservations would serve a different group of customers.",
+          "Whom would each feature help, and how would you explain the choice to other fans?"
+        ],
+        "legal": [
+          "Reservations and transfers need rules about who owns a ticket when a payment or account is disputed.",
+          "Working software will not settle a dispute if the terms give customers conflicting expectations. Unclear ownership could lead to complaints.",
+          "What should a customer understand before reserving or transferring a ticket?"
+        ],
+        "employee": [
+          "Support staff expect reservation disputes and reward queries to arrive alongside their existing workload.",
+          "Extra income could help protect jobs, but the proposed features also create work. Staff will need time or additional help to provide them.",
+          "What would staff need to deliver the feature without extending their working hours?"
+        ],
+        "sustainability": [
+          "Rewards could include physical merchandise, deliveries or digital benefits. Each uses different resources.",
+          "The details of the reward will affect your environmental target as well as the decision to offer it. A digital benefit also needs processing and storage.",
+          "Which version of the feature would use fewer resources?"
+        ],
+        "relations": [
+          "Some promoters welcome reservations. Others want immediate payment and straightforward transfers.",
+          "The same feature could help one promoter while complicating another’s sales. Supporting different arrangements would also create work for your company.",
+          "Which differences could the service accommodate reliably?"
+        ]
+      },
+      "decision_scope": "Your company will maintain the feature and handle the work it creates. Keeping the current features gives staff time to concentrate on the existing service."
+    },
+    {
+      "title": "Paying for the service",
+      "theme": "Privacy and monetisation",
+      "story": "The company needs to pay for the service it now runs. Commercial partners propose higher ticketing fees, a subscription, sponsored rewards or audience reports for venues. Each offer asks customers to pay with money, information or access to benefits.",
+      "question": "How should we fund the service?",
+      "options": [
+        {
+          "id": "fees",
+          "title": "Raise ticketing fees",
+          "detail": "Fund the service through higher ticketing fees. Customers pay more to buy tickets.",
+          "consider": "The company receives more per sale, while higher fees affect affordability and partner relationships.",
+          "display_title": "Raise ticketing fees",
+          "summary": "Fund the service through higher ticketing fees. Customers pay more to buy tickets."
+        },
+        {
+          "id": "premium",
+          "title": "Offer a €4 monthly subscription",
+          "detail": "Keep a basic service and charge €4 a month for extra benefits. Subscribers receive advantages that other customers cannot use.",
+          "consider": "Regular subscription income depends on customers wanting the benefits and continuing to pay.",
+          "display_title": "Offer a €4 monthly subscription",
+          "summary": "Keep a basic service and charge €4 a month for extra benefits. Subscribers receive advantages that other customers cannot use."
+        },
+        {
+          "id": "sponsors",
+          "title": "Sell personalised sponsored rewards",
+          "detail": "Sponsors fund rewards and keep ticket prices stable. They receive identifiable customer engagement data for 180 days.",
+          "consider": "Continued sponsor funding depends on showing results from customers’ activity.",
+          "display_title": "Sell personalised sponsored rewards",
+          "summary": "Sponsors fund rewards and keep ticket prices stable. They receive identifiable customer engagement data for 180 days."
+        },
+        {
+          "id": "analytics",
+          "title": "Sell aggregated audience reports",
+          "detail": "Sell venues reports combining audience information without individual attendance records. Preparing them adds work for your staff.",
+          "consider": "The reports create another income source, with limits on the information that venues receive.",
+          "display_title": "Sell aggregated audience reports",
+          "summary": "Sell venues reports combining audience information without individual attendance records. Preparing them adds work for your staff."
+        },
+        {
+          "id": "retain",
+          "title": "Keep current prices and terms",
+          "detail": "Continue the existing revenue arrangement, with the same prices and commercial terms.",
+          "consider": "The company keeps its existing income sources and remains responsible for funding the current service.",
+          "display_title": "Keep current prices and terms",
+          "summary": "Continue the existing revenue arrangement, with the same prices and commercial terms."
+        }
+      ],
+      "proposal": [
+        "The funding offers",
+        "Higher fees charge more per ticket. A €4 monthly subscription sells extra benefits. Sponsors fund personalised rewards and receive identifiable engagement data for 180 days. Aggregated venue reports exclude individual attendance records and need staff to prepare them."
+      ],
+      "team": [
+        "Value · Quality and Service / Mission and Impact",
+        "The team still needs to deliver existing features, fulfil contracts and help customers. A new agreement must fund its own work alongside those responsibilities. Revenue keeps the service running. What funds it also changes what people get: affordable tickets, preferential treatment for subscribers or offers shaped by surveillance."
+      ],
+      "info": {
+        "ceo": [
+          "Shareholders will discuss several revenue models, but want a credible explanation of who will pay for the service.",
+          "The company needs income to stay operational. Each source also creates responsibilities to customers or commercial partners that could affect your public commitments.",
+          "What would the company owe the people funding each option?"
+        ],
+        "cfo": [
+          "The sponsor’s initial offer depends on later results for continued funding. Fee income depends on how many tickets customers buy.",
+          "You need to keep operating if demand or sponsorship income falls. The largest initial offer may leave the company with ongoing costs after funding changes.",
+          "Which costs would remain if this income source weakened?"
+        ],
+        "cto": [
+          "Your team can produce useful event-level statistics without keeping a single customer profile across every event.",
+          "Selling useful reports does not require every possible connection between customer records. The design determines how much data your team has to maintain and protect.",
+          "What information does the proposed service need, and what could it leave out?"
+        ],
+        "marketing": [
+          "Fans object to rising fees. They also object when paid members receive first access to scarce tickets.",
+          "Keeping the headline ticket price stable may still leave some fans with fewer chances to attend. That experience could affect trust and future sales.",
+          "How would you explain who pays and who receives the benefits?"
+        ],
+        "legal": [
+          "The draft partner agreement allows shared information to be used for future service development, without defining what that includes.",
+          "Signing would permit uses that the company has not examined. A dispute later could concern both the partner’s actions and your decision to allow them.",
+          "Which purposes, recipients and limits should the agreement specify?"
+        ],
+        "employee": [
+          "The commercial proposal adds reporting tasks without adding staff.",
+          "New income could help protect jobs, but somebody still has to prepare the reports and handle requests. The current team has other work to finish.",
+          "Who would deliver the agreement, and what time would they need?"
+        ],
+        "sustainability": [
+          "Commercial partners want more detailed reports, more often. Nobody has assessed the extra processing and storage.",
+          "Frequent reporting could increase the resources needed to run the service. Those costs count towards your environmental target even if a partner requests the work.",
+          "What would you need to estimate the resource use of the reporting proposal?"
+        ],
+        "relations": [
+          "One promoter may accept higher fees if recovery and transfers improve. Another puts cheaper service first.",
+          "Existing partners may help fund the service on different terms. Their willingness depends on what the company can deliver in return.",
+          "Which partners could support the business, and what would they expect?"
+        ]
+      },
+      "decision_scope": "You can keep existing prices and terms. Every option leaves the company responsible for its current contracts, promised features and customer support."
+    },
+    {
+      "title": "A venue asks for faster entry",
+      "theme": "New capabilities",
+      "story": "A venue operator wants shorter queues and better security. It proposes facial recognition, movement tracking and temperature checks, but will consider optional facial entry or an alternative using offline codes, accessible gates and staffed checks.",
+      "question": "What should we offer the venue?",
+      "options": [
+        {
+          "id": "full",
+          "title": "Buy the full entry package",
+          "detail": "Add facial recognition, movement tracking and temperature checks. Keep identifiable attendance for a year; some customers face additional entry barriers.",
+          "consider": "The package could win more business while adding equipment, maintenance and responsibility for sensitive records.",
+          "display_title": "Buy the full entry package",
+          "summary": "Add facial recognition, movement tracking and temperature checks. Keep identifiable attendance for a year; some customers face additional entry barriers."
+        },
+        {
+          "id": "selective",
+          "title": "Make facial entry optional",
+          "detail": "Offer facial entry alongside staffed alternatives. Keep attendance records for 30 days; staff manage both entry routes.",
+          "consider": "Customers retain an alternative, and the venue must support two working procedures.",
+          "display_title": "Make facial entry optional",
+          "summary": "Offer facial entry alongside staffed alternatives. Keep attendance records for 30 days; staff manage both entry routes."
+        },
+        {
+          "id": "alternative",
+          "title": "Use codes and staffed entry",
+          "detail": "Add offline codes, accessible gates and staffed checks using lower-power hardware.",
+          "consider": "The venue may accept this approach to queues and safety, though it differs from its preferred equipment.",
+          "display_title": "Use codes and staffed entry",
+          "summary": "Add offline codes, accessible gates and staffed checks using lower-power hardware."
+        },
+        {
+          "id": "decline",
+          "title": "Decline the new entry contract",
+          "detail": "Keep current entry arrangements and pass on the venue’s expansion offer.",
+          "consider": "Your company avoids the new equipment and responsibilities while another supplier may win the contract.",
+          "display_title": "Decline the new entry contract",
+          "summary": "Keep current entry arrangements and pass on the venue’s expansion offer."
+        },
+        {
+          "id": "launch_broad",
+          "title": "Launch buyer verification widely",
+          "detail": "Launch the prototype across ticket sales instead of buying entry equipment. Limited testing leaves more customers exposed to failures.",
+          "consider": "Market presence rises 18 points and resale abuse falls 8 percentage points. Weak testing also creates access and reliability failures.",
+          "display_title": "Launch buyer verification widely",
+          "summary": "Launch the prototype across ticket sales instead of buying entry equipment. Limited testing leaves more customers exposed to failures."
+        },
+        {
+          "id": "launch_limited",
+          "title": "Launch verification at selected venues",
+          "detail": "Launch the retained prototype with selected venues and staff to help with failed checks, instead of buying entry equipment this year.",
+          "consider": "Market presence rises 8 points and resale abuse falls 5 percentage points. Staff support the smaller release.",
+          "display_title": "Launch verification at selected venues",
+          "summary": "Launch the retained prototype with selected venues and staff to help with failed checks, instead of buying entry equipment this year."
+        }
+      ],
+      "proposal": [
+        "The venue’s proposal",
+        "The full package combines facial entry, movement tracking and temperature checks, keeping identifiable attendance for a year. Optional facial entry keeps staffed alternatives and records for 30 days. Offline codes and staffed checks use lower-power hardware. Each option has equipment and running costs."
+      ],
+      "team": [
+        "Resources · Processes and Efficiency / Sustainability and Impact",
+        "Buyer verification checks who purchases a ticket. Facial entry, temperature sensors and movement tracking need additional equipment, integration and maintenance at the venue. Ask how much work each gate arrangement saves or creates. Count the equipment, continuous processing and storage it requires, including at suppliers. A shorter queue does not tell you how much energy the system uses."
+      ],
+      "info": {
+        "ceo": [
+          "The venue operator will consider introducing changes in stages, but wants one company to take responsibility for delivery.",
+          "The contract could help the company grow. It also makes you responsible for coordinating equipment, entry staff and customer support alongside your existing commitments.",
+          "What could you commit to now, and what would need testing first?"
+        ],
+        "cfo": [
+          "The venue’s offer assumes savings from fewer entry staff. It leaves out the cost of helping people whose checks fail.",
+          "Some of the promised savings may depend on removing staff who would still be needed for exceptions. Your company could have to fund that work.",
+          "Who would pay for failed checks and alternative entry?"
+        ],
+        "cto": [
+          "Your current system cannot simply switch to facial entry. A new component would need integration and ongoing maintenance.",
+          "This would give your team another system to support, with changes that may depend on a supplier. That affects both reliability and your technical control.",
+          "What would the team need to maintain, and which changes could it make itself?"
+        ],
+        "marketing": [
+          "Some customers want faster entry. Others want to attend without leaving a continuing record of their movements.",
+          "A convenient entrance may attract fans while its data practices discourage others. Explaining the speed benefit alone would leave out part of their experience.",
+          "What would customers need to know before choosing how to enter?"
+        ],
+        "legal": [
+          "The venue’s draft allows broad access to operational data and leaves later uses unspecified.",
+          "An agreement about entry could also permit the venue to use attendance information for other purposes. Your company would need to account for that permission.",
+          "Which data uses and responsibilities should be settled before signing?"
+        ],
+        "employee": [
+          "Entry staff expect fewer routine checks and more responsibility for people rejected by the system. The proposal includes no retraining.",
+          "Staff numbers could stay the same while the work becomes harder. People handling rejections would need training and authority to help customers.",
+          "What support would staff need to manage rejected checks?"
+        ],
+        "sustainability": [
+          "The proposal needs new cameras and sensors at every entrance. Another approach could use existing equipment.",
+          "New hardware adds manufacturing, maintenance and replacement to ongoing resource use. Keeping working equipment could reduce some of those demands.",
+          "What would justify replacing the equipment, and how long would the new hardware last?"
+        ],
+        "relations": [
+          "A major artist wants faster entry and has also asked for an entrance that does not use facial recognition.",
+          "The venue and artist need arrangements that work together. Winning the operator’s contract would still leave you responsible for meeting the artist’s requirements.",
+          "What could you offer that both partners would accept?"
+        ]
+      },
+      "decision_scope": "These systems check people at the entrance, separately from buyer verification. If you kept an unlaunched verification prototype, you can launch that instead of adding entry equipment this year."
+    },
+    {
+      "title": "A request for attendee records",
+      "theme": "Safety and data sharing",
+      "story": "After an incident, a promoter proposes ongoing access for law enforcement through Palantir. Depending on your entry system, this could include live facial identification. A separate request concerns existing records for one named investigation.",
+      "question": "How should we respond to the safety request?",
+      "options": [
+        {
+          "id": "expanded",
+          "title": "Accept broad attendee screening",
+          "detail": "Give law enforcement ongoing access through Palantir, including live face matches wherever your entry system produces them.",
+          "consider": "An accurate match can tell officers exactly who attended an event. The company takes on paid screening work and faces a serious rights complaint.",
+          "display_title": "Accept broad attendee screening",
+          "summary": "Give law enforcement ongoing access through Palantir, including live face matches wherever your entry system produces them."
+        },
+        {
+          "id": "narrow",
+          "title": "Share records for the named case",
+          "detail": "Provide records already held under documented authority, with human checks and deletion. Staff spend time reviewing the request.",
+          "consider": "The defined purpose limits the agreement and may leave some promoter demands unmet.",
+          "display_title": "Share records for the named case",
+          "summary": "Provide records already held under documented authority, with human checks and deletion. Staff spend time reviewing the request."
+        },
+        {
+          "id": "other",
+          "title": "Fund staff and crowd safety",
+          "detail": "Improve safeguarding, incident reporting and crowd safety without identifying attendees. Pass on the security-service contract.",
+          "consider": "This relies on venue procedures and staff cooperation alongside the company’s work.",
+          "display_title": "Fund staff and crowd safety",
+          "summary": "Improve safeguarding, incident reporting and crowd safety without identifying attendees. Pass on the security-service contract."
+        },
+        {
+          "id": "refuse",
+          "title": "Decline the expanded role",
+          "detail": "Keep the existing service and lawful duties. A venue favours another supplier.",
+          "consider": "The company keeps its current responsibilities while leaving the promoter’s additional safety request unresolved.",
+          "display_title": "Decline the expanded role",
+          "summary": "Keep the existing service and lawful duties. A venue favours another supplier."
+        }
+      ],
+      "proposal": [
+        "The requests for information",
+        "The broad agreement gives law enforcement continuing access through Palantir. Where facial entry is in use, police could receive live matches. The narrow request concerns existing records for one named case, with documented authority, human checks and deletion."
+      ],
+      "team": [
+        "Insight · Data and Decision-making / Privacy and Security",
+        "Earlier decisions determine which records your company has. It can provide existing information under the narrow request; it cannot supply attendance records that it never collected. A live feed gives police information they can act on. Ask what an accurate match reveals about a person and who can keep or use that information after the event."
+      ],
+      "info": {
+        "ceo": [
+          "The promoter says refusal could affect renewal. It is still willing to hear another proposal.",
+          "Keeping the contract could help the company grow, but the requested screening would make it responsible for excluding people as well as selling tickets.",
+          "Which part of the safety problem can your company reasonably take responsibility for?"
+        ],
+        "cfo": [
+          "The promoter offers extra income and expects your company to pay for investigating disputed exclusions.",
+          "You may receive the contract income before you know the cost of disputes. Some investigations could continue after the agreement ends.",
+          "What costs might remain after the contract income stops?"
+        ],
+        "cto": [
+          "A system can match a person’s identity correctly while the information attached to that identity is wrong.",
+          "A correct match can expose someone attending a union meeting, a political talk or an LGBTQ+ event. Your entry system determines whether live facial identification is possible and which people are captured.",
+          "How would somebody discover and correct a mistaken record?"
+        ],
+        "marketing": [
+          "Customers support event safety but disagree about who should be barred and on what grounds.",
+          "How the company defines an exclusion could affect trust even when the policy is explained clearly. Some current customers could be excluded by it.",
+          "What could you tell customers about who decides, checks and corrects an exclusion?"
+        ],
+        "legal": [
+          "The promoter has not explained the basis for every proposed category of exclusion. Some requests need separate review.",
+          "A general appeal to safety does not establish authority for each use of personal information. Accepting the whole request could create a serious complaint.",
+          "What authority and review process would each part of the request need?"
+        ],
+        "employee": [
+          "Front-line staff would explain exclusions to customers, including people who are distressed or angry.",
+          "Staff could face the consequences of a decision that they cannot examine or reverse. Training alone would not give them the authority to correct a mistake.",
+          "What information, authority and protection would staff need?"
+        ],
+        "sustainability": [
+          "Continuous matching would keep cameras and computing equipment running. Longer retention also means more data to store and process.",
+          "Those records require processing and storage throughout the contract. The safety proposal adds to the resource use that you are trying to reduce.",
+          "Could a narrower service address the stated problem with fewer resources?"
+        ],
+        "relations": [
+          "Organisers of a union meeting and an LGBTQ+ event say some regulars will stay home if attending means registering their full names or being identified at the door.",
+          "Your partners disagree about what would protect the audience. Agreeing with one could put the other relationship at risk.",
+          "What arrangement could you negotiate that addresses both concerns?"
+        ]
+      },
+      "decision_scope": "The broad request has no authority for a specific case; the narrow request has documented authority. Other options fund safety work or continue the company’s existing duties."
+    },
+    {
+      "title": "An artist asks for changes",
+      "theme": "Artist and audience boycotts",
+      "story": "An artist wants a public commitment about ticket prices, identity checks, data use and access before confirming a tour. Venues need to know how changes would affect entry, and fans already holding tickets need to know what to expect.",
+      "question": "What changes should we agree to?",
+      "options": [
+        {
+          "id": "negotiate",
+          "title": "Agree targeted changes",
+          "detail": "End broad screening, resolve its complaint and limit attendance records to 30 days. Keep any personalised commercial tracking already in use.",
+          "consider": "Named partners receive specific changes while other campaign demands remain unresolved.",
+          "display_title": "Agree targeted changes",
+          "summary": "End broad screening, resolve its complaint and limit attendance records to 30 days. Keep any personalised commercial tracking already in use."
+        },
+        {
+          "id": "revise",
+          "title": "Revise access and data use",
+          "detail": "Change access and data practices across the company. End personalised sponsorship and broad screening, and adopt lower-power systems.",
+          "consider": "The company must fund and deliver the transition. Past fines and job losses stay in its record.",
+          "display_title": "Revise access and data use",
+          "summary": "Change access and data practices across the company. End personalised sponsorship and broad screening, and adopt lower-power systems."
+        },
+        {
+          "id": "separate",
+          "title": "Offer a separate low-data service",
+          "detail": "Run a low-data service alongside the original. Existing customers keep their terms unless they switch; staff manage both services.",
+          "consider": "Different customers can choose different arrangements, with extra maintenance and support work.",
+          "display_title": "Offer a separate low-data service",
+          "summary": "Run a low-data service alongside the original. Existing customers keep their terms unless they switch; staff manage both services."
+        },
+        {
+          "id": "maintain",
+          "title": "Keep current services and terms",
+          "detail": "Continue the current arrangements. Customers and venues decide whether to stay based on their experience of the service.",
+          "consider": "Renewals depend on the company’s actual access, trust and data practices.",
+          "display_title": "Keep current services and terms",
+          "summary": "Continue the current arrangements. Customers and venues decide whether to stay based on their experience of the service."
+        }
+      ],
+      "proposal": [
+        "The proposed changes",
+        "A targeted agreement would end broad screening, resolve its complaint and set a 30-day limit on attendance records. A wider revision would also end personalised sponsorship, improve access and use lower-power systems. A separate service would offer low-data terms to customers who switch, while others keep current arrangements."
+      ],
+      "team": [
+        "Audience · Reach and Engagement / Accessibility and Inclusion",
+        "Fans already hold tickets, and partners have contracts in place. Any transition needs arrangements for those customers and enough staff to maintain the service while making changes. Venues want people to come back. Organisers need to know whether people who stayed home can now attend safely and who still holds the information already shared."
+      ],
+      "info": {
+        "ceo": [
+          "Board members disagree about whether a broad public commitment would settle the dispute or create promises that the company cannot deliver.",
+          "Changing a policy also means funding and delivering the change. A public announcement would add obligations to the commitments that you already need to meet.",
+          "Which changes can the company deliver now?"
+        ],
+        "cfo": [
+          "One partner will waive some transition charges if the company agrees soon. Other agreements may still be expensive to change.",
+          "An early agreement could save money on one contract while leaving costs elsewhere. You need enough cash to keep the service running through the transition.",
+          "Which transition costs can the company afford alongside its current work?"
+        ],
+        "cto": [
+          "Separate services would still share some account and support components.",
+          "Calling the services separate could imply stronger separation than your systems provide. Shared components would still need maintenance and could carry data between services.",
+          "What would be separate, and which connections would remain?"
+        ],
+        "marketing": [
+          "Campaign supporters want evidence of change. Some existing customers want to keep the features being criticised.",
+          "A response could rebuild trust with one group while disappointing another. Both will judge it by what changes when they use the service.",
+          "How would you explain what will change and what will continue?"
+        ],
+        "legal": [
+          "Contracts have different terms and renewal dates. Some limit how quickly the company can change its services.",
+          "A single public deadline could promise changes that individual contracts prevent. Those agreements would need attention alongside the announcement.",
+          "Which agreements would need renegotiating before the company makes that promise?"
+        ],
+        "employee": [
+          "Staff want to help plan the changes before the company announces delivery dates.",
+          "They know which work the existing team can complete. Involving them early could reduce last-minute overtime and disruption during the transition.",
+          "What time and authority would staff need to help plan delivery?"
+        ],
+        "sustainability": [
+          "A wider revision could retire working equipment early. Keeping the current system would continue its resource use.",
+          "A lower-power service could reduce ongoing consumption while replacement creates waste now. Both contribute to the environmental consequences of the decision.",
+          "What would happen to the working equipment during the change?"
+        ],
+        "relations": [
+          "An artist has privately said that a credible, limited change could prevent withdrawal. The public campaign is asking for more.",
+          "You may be able to keep this artist without resolving every campaign demand. Their private willingness is not an endorsement of the company’s whole service.",
+          "What can you negotiate or disclose without misrepresenting the artist’s position?"
+        ]
+      },
+      "decision_scope": "Your response concerns the services and data practices that your company uses. Any changes must also account for existing tickets, contracts and staff."
+    },
+    {
+      "title": "The company’s next step",
+      "theme": "Final strategic decision",
+      "story": "The board is considering expansion, rebuilding operations, specialising in smaller accessible venues, or accepting a controlling investor. Each proposal would change the company that you have built. You can also continue the current business.",
+      "question": "What should the company do next?",
+      "options": [
+        {
+          "id": "expand",
+          "title": "Expand and hire six people",
+          "detail": "Use existing capabilities to serve new partners, with six new staff. More business increases support work and resource use.",
+          "consider": "Expansion adds customers and income opportunities alongside the cost of delivering more service.",
+          "display_title": "Expand and hire six people",
+          "summary": "Use existing capabilities to serve new partners, with six new staff. More business increases support work and resource use."
+        },
+        {
+          "id": "restructure",
+          "title": "Rebuild the rollout team and cut six jobs",
+          "detail": "Fix operational problems and improve technical control. Six employees lose their jobs through compulsory redundancies.",
+          "consider": "The company funds a transition that improves reliability while adding six job losses to its record.",
+          "display_title": "Rebuild the rollout team and cut six jobs",
+          "summary": "Fix operational problems and improve technical control. Six employees lose their jobs through compulsory redundancies."
+        },
+        {
+          "id": "specialise",
+          "title": "Serve smaller accessible venues",
+          "detail": "Focus on smaller accessible venues, venue-run exchanges and manual checks. Simpler operations reduce resource use and resale abuse.",
+          "consider": "Serving a smaller market reduces market presence. Obligations to departing customers and employees still apply.",
+          "display_title": "Serve smaller accessible venues",
+          "summary": "Focus on smaller accessible venues, venue-run exchanges and manual checks. Simpler operations reduce resource use and resale abuse."
+        },
+        {
+          "id": "merge",
+          "title": "Accept a controlling investor",
+          "detail": "Receive €600k and combine operations under an investor’s control. Eight people lose their jobs, and your team loses some technical control.",
+          "consider": "The payment helps fund the combined business while the investor gains authority over it.",
+          "display_title": "Accept a controlling investor",
+          "summary": "Receive €600k and combine operations under an investor’s control. Eight people lose their jobs, and your team loses some technical control."
+        },
+        {
+          "id": "continue",
+          "title": "Keep the current business",
+          "detail": "Continue current operations and obligations, without new investment, an asset sale or further redundancies from this choice.",
+          "consider": "Existing costs, customer promises and supplier dependencies continue.",
+          "display_title": "Keep the current business",
+          "summary": "Continue current operations and obligations, without new investment, an asset sale or further redundancies from this choice."
+        }
+      ],
+      "proposal": [
+        "The board’s proposals",
+        "Expansion hires six people. Rebuilding improves operations and cuts six jobs. Specialisation serves smaller accessible venues. A controlling investor provides €600k, combines operations and cuts eight jobs. Keeping the current business continues its existing responsibilities."
+      ],
+      "team": [
+        "Resilience · Culture and Balance / Health and Wellbeing",
+        "Your company’s earlier promises affect what it can transfer, close or expand. A change of owner or strategy leaves obligations to customers, suppliers and employees to be fulfilled. Expansion, restructuring and a merger change who has time and authority to handle disputes. Fans need a service they can use without fear and a way to get help when the system harms them."
+      ],
+      "info": {
+        "ceo": [
+          "A potential partner will keep some public commitments but wants authority to revise others after the deal.",
+          "The agreement could help keep the business operational while reducing your say over its promises. Your mission still depends on which commitments the company fulfils.",
+          "Which commitments would need protection in the agreement?"
+        ],
+        "cfo": [
+          "The investor offers €600k now in exchange for control. Other proposals require the company to fund changes from its own resources.",
+          "The payment would add cash immediately, alongside the costs and obligations of combining operations. The company would still need to earn enough to keep running.",
+          "Which proposal can the company afford through the transition and afterwards?"
+        ],
+        "cto": [
+          "Some supplier components need approval before transfer. Internal systems depend on staff who know how to maintain them.",
+          "Changing ownership could affect access to both supplier services and staff knowledge. Owning the code would not by itself ensure that the service keeps working.",
+          "Which people and agreements would the company need to keep the service running?"
+        ],
+        "marketing": [
+          "Customers recognise the brand and often associate it with particular features of the service.",
+          "A change of owner or direction could alter the features that customers trust. Their response will depend on what happens to the service they use.",
+          "What would customers need to know before the change?"
+        ],
+        "legal": [
+          "Customer promises, employee obligations and supplier contracts would need review before restructuring.",
+          "A public strategy announcement could promise an outcome that the company has not yet secured through those agreements. That could lead to disputes during the change.",
+          "Which conditions should be settled before announcing the strategy?"
+        ],
+        "employee": [
+          "The investor’s plan combines operations and cuts eight jobs. The rebuilding proposal cuts six.",
+          "Either choice would prevent you from meeting your mission to protect jobs, even if the company later hires more people. Earlier redundancies also remain part of your record.",
+          "How would you represent staff when the company considers these offers?"
+        ],
+        "sustainability": [
+          "The rebuilding plan could reduce ongoing resource use, but would replace equipment that still works.",
+          "The environmental result depends on what the company replaces, retires and continues using. A lower running cost alone does not describe the whole change.",
+          "What would you compare before recommending replacement?"
+        ],
+        "relations": [
+          "Several partners may stay after a change of owner if the service still meets their practical needs.",
+          "A deal between owners does not guarantee that venues will renew. Keeping those relationships depends on the service and terms that follow the agreement.",
+          "Which partners would need explicit agreement before the company proceeds?"
+        ]
+      },
+      "decision_scope": "Your existing contracts, technical dependencies and responsibilities to employees continue through a change of strategy or ownership."
+    },
+    {
+      "title": "Reporting on the past decade",
+      "theme": "Disclosure and reporting",
+      "story": "The association has asked your company to explain its record on access, employment, environmental impact, data use and business performance. Customers, staff and partners have their own experience of those decisions. Your team must decide what to publish.",
+      "question": "What should we publish?",
+      "options": [
+        {
+          "id": "full",
+          "title": "Publish the full account",
+          "detail": "Publish findings, failures, evidence and remedies while protecting confidential records. Past fines and job losses remain recorded.",
+          "consider": "Readers can examine the results in detail; some supporting records need redaction or further review.",
+          "display_title": "Publish the full account",
+          "summary": "Publish findings, failures, evidence and remedies while protecting confidential records. Past fines and job losses remain recorded."
+        },
+        {
+          "id": "staged",
+          "title": "Publish now, with follow-up dates",
+          "detail": "Publish findings now and name who will complete unresolved work and when.",
+          "consider": "Readers can see what is still unfinished, including checks or redactions that delay publication.",
+          "display_title": "Publish now, with follow-up dates",
+          "summary": "Publish findings now and name who will complete unresolved work and when."
+        },
+        {
+          "id": "summary",
+          "title": "Publish selected results",
+          "detail": "Publish a short selection and share fuller material privately. Leaving out a serious problem damages confidence in the account.",
+          "consider": "The company controls how much it publishes, while omissions can mislead readers.",
+          "display_title": "Publish selected results",
+          "summary": "Publish a short selection and share fuller material privately. Leaving out a serious problem damages confidence in the account."
+        },
+        {
+          "id": "review",
+          "title": "Commission an independent review",
+          "detail": "Give an independent reviewer access to records and publish the review’s scope and findings.",
+          "consider": "The review costs time and money and examines past failures. Its conclusions depend on the evidence provided.",
+          "display_title": "Commission an independent review",
+          "summary": "Give an independent reviewer access to records and publish the review’s scope and findings."
+        },
+        {
+          "id": "none",
+          "title": "Keep existing reporting duties",
+          "detail": "Continue required reporting without an additional publication. Unresolved complaints remain recorded.",
+          "consider": "The company avoids a new publication cost and provides no additional public account of its work.",
+          "display_title": "Keep existing reporting duties",
+          "summary": "Continue required reporting without an additional publication. Unresolved complaints remain recorded."
+        }
+      ],
+      "proposal": [
+        "Preparing the report",
+        "A full account includes findings, failures, evidence and remedies. Staged publication identifies unfinished work and dates. A summary publishes selected results. An independent review examines the records. Existing reporting duties continue whichever option you choose."
+      ],
+      "team": [
+        "Message · Voice and Positioning / Truth and Transparency",
+        "Your reflection can explain where you disagreed with the company’s decision and why. Company performance and mission success do not determine your grade. The company wants people to understand what it achieved. Fans and venues need enough detail to judge what happened, including who was excluded, what information left the company and what can still be repaired."
+      ],
+      "info": {
+        "ceo": [
+          "The draft calls some commitments achieved even though the records include unresolved exceptions.",
+          "The report should explain which commitments the company met and where it fell short. Publication will not change the results against which your mission is assessed.",
+          "Which claims do the records support, and what remains uncertain?"
+        ],
+        "cfo": [
+          "One financial result improves when transition and support costs are left out. The draft does not explain the exclusion.",
+          "Readers would see a stronger result without knowing which costs they were missing. Your account needs to make the basis of the figures clear.",
+          "What should readers know to judge the financial result?"
+        ],
+        "cto": [
+          "The operational records show how the service performed. They do not establish every claim in the draft about its effects on people.",
+          "Transaction data can support reliability claims while leaving questions about customers’ experiences unanswered. Those claims need different evidence.",
+          "Which claims can the technical records support?"
+        ],
+        "marketing": [
+          "The proposed headline makes a stronger claim than the findings support. There is room in the announcement to explain the limitation.",
+          "A short summary can still leave readers with a misleading impression. That could damage trust when customers compare the announcement with their experience.",
+          "How would you describe the findings accurately in the announcement?"
+        ],
+        "legal": [
+          "Some documents contain personal information and confidential terms. The company can explain their findings while protecting those details.",
+          "Publishing evidence requires decisions about what to redact or summarise. Withholding a document also needs an explanation if it affects the report’s claims.",
+          "What can be published, and how would you explain anything withheld?"
+        ],
+        "employee": [
+          "Staff describe changes in workload and jobs that the final headcount does not show.",
+          "A company can finish with more employees after making people redundant earlier. Your mission concerns those job losses as well as the final staffing total.",
+          "How should the report describe what happened to employees?"
+        ],
+        "sustainability": [
+          "The draft combines supplier estimates with direct environmental measurements without identifying which is which.",
+          "Readers could mistake an estimate for a measured result. Explaining the source and missing information would let them judge the environmental claims.",
+          "How should the report distinguish measurements, estimates and missing information?"
+        ],
+        "relations": [
+          "A partner wrote its testimonial before the latest service changes and has not approved using it in this report.",
+          "The testimonial may describe a service that has since changed. Using it as a current endorsement could damage the relationship that you want to retain.",
+          "What would you confirm with the partner before including the testimonial?"
+        ]
+      },
+      "decision_scope": "Reporting can explain decisions, evidence and repairs. Recorded fines, debt and job losses remain part of the company’s history whichever publication option you choose."
+    }
+  ],
+  "events": [
+    null,
+    {
+      "title": "A promoter brings its plans forward",
+      "type": "External",
+      "story": "A European promoter has brought forward plans for a tour and invited companies to demonstrate buyer verification. It wants to know what they can deliver before discussing a contract.",
+      "impacts": {
+        "ceo": "The tour could help fund your commitments if the company can meet the promoter’s conditions.",
+        "cfo": "Income from the tour would come with delivery costs that are still uncertain.",
+        "cto": "The demonstration deadline may come before your team can prepare the whole system.",
+        "marketing": "Customers could read a demonstration announcement as a promise that the service is ready.",
+        "legal": "The agreement needs to explain what the demonstration includes and who is responsible when it fails.",
+        "employee": "Staff may need to begin work before the company has arranged enough cover.",
+        "sustainability": "A short deadline could leave the company relying on incomplete supplier estimates.",
+        "relations": "The promoter needs a delivery date and a clear offer that your company can provide."
+      }
+    },
+    {
+      "title": "A customer payment is delayed",
+      "type": "Internal",
+      "story": "Finance has revised the forecast after a customer delayed payment. The company still owes its existing work, and the team needs to decide how much it can spend preparing a launch.",
+      "impacts": {
+        "ceo": "Promises to customers now need to fit the cash available after the delay.",
+        "cfo": "There is less cash available for unexpected costs, refunds or additional support.",
+        "cto": "Your team may have less funding to fix problems before launch.",
+        "marketing": "Customer promises need to reflect the support that the company can now afford.",
+        "legal": "The company still owes customers and suppliers what its agreements require.",
+        "employee": "A funding gap could lead to pressure for longer hours or fewer staff.",
+        "sustainability": "Environmental work still needs staff time and funding in the revised plan.",
+        "relations": "Partners may need revised dates if the company can no longer fund the original plan."
+      }
+    },
+    {
+      "title": "Customers compare their experiences",
+      "type": "External",
+      "story": "A consumer organisation has investigated ticketing services. Its report includes successful purchases, failed checks, resale fraud, inaccessible interfaces and transfer disputes. Customers and venues are asking companies to explain their results.",
+      "impacts": {
+        "ceo": "The company needs to explain how its results compare with its promises about access.",
+        "cfo": "Refunds and extra support can reduce the income from a successful launch.",
+        "cto": "Customers judge the service by failed purchases and recovery as well as completed sales.",
+        "marketing": "Fans can compare the company’s explanation with their own experience of buying tickets.",
+        "legal": "Specific complaints need records that let the company investigate and correct mistakes.",
+        "employee": "Support staff may receive more requests from customers who recognise problems in the report.",
+        "sustainability": "The report’s focus on access may leave resource use unexplained unless the company provides evidence.",
+        "relations": "Venues want to know how the findings affect their audiences and upcoming events."
+      }
+    },
+    {
+      "title": "Support staff report the workload",
+      "type": "Internal",
+      "story": "Support staff have reported how much work the current service creates. Their experience includes everyday queries and the time needed to resolve problems with the features your company provides.",
+      "impacts": {
+        "ceo": "Keeping existing promises may require more attention before the company expands again.",
+        "cfo": "Staff time spent delivering a feature is part of its cost to the company.",
+        "cto": "Repeated support requests can help identify software or integration problems that need fixing.",
+        "marketing": "Customers’ experience of getting help affects whether they trust the service again.",
+        "legal": "Recurring disputes may point to unclear terms or responsibility for correction.",
+        "employee": "Staff now have evidence of the time needed for queries, disputes and recovery.",
+        "sustainability": "Retries, storage and repeated support processes add to the resources used by the service.",
+        "relations": "Promoters may also spend time resolving problems created by the company’s features."
+      }
+    },
+    {
+      "title": "Fans cut back on spending",
+      "type": "External",
+      "story": "Households are spending less on entertainment. Promoters report weaker sales outside the largest tours, and venues and suppliers want to protect their income. Your company must continue delivering its service in this market.",
+      "impacts": {
+        "ceo": "Less income may make it harder to fund several commitments at once.",
+        "cfo": "Lower demand affects ticket fees, subscriptions and sponsorship income differently.",
+        "cto": "Your team still maintains systems introduced when the company expected more growth.",
+        "marketing": "Fans may reconsider fees and subscriptions as they reduce spending.",
+        "legal": "Partners may ask to renegotiate, while current contract terms continue to apply.",
+        "employee": "Cost-cutting proposals could affect jobs and the amount of work left to each employee.",
+        "sustainability": "Reducing resource use may save money, while some environmental changes require investment first.",
+        "relations": "Partners want concessions and still need a service that works reliably."
+      }
+    },
+    {
+      "title": "Entry arrangements at a busy event",
+      "type": "Internal",
+      "story": "A busy event has tested the company’s entry arrangements. Staff have reported how the service coped when arrivals peaked, including the help customers needed when something went wrong.",
+      "impacts": {
+        "ceo": "The event gives you evidence of whether the company can deliver its entry promises.",
+        "cfo": "Helping people through failed checks may cost more than the proposal allowed.",
+        "cto": "Your team needs to establish what caused failures and which changes it can make.",
+        "marketing": "The company’s announcement needs to account for what customers experienced at the entrance.",
+        "legal": "The company, supplier and venue may disagree over responsibility for entry failures.",
+        "employee": "Staff can explain whether they had enough time and authority to help rejected customers.",
+        "sustainability": "The event shows which equipment and processing the entry service actually used.",
+        "relations": "The artist and venue may have different accounts of how entry worked for the audience."
+      }
+    },
+    {
+      "title": "Artists and fans ask for change",
+      "type": "External",
+      "story": "Artists and fans have organised around ticket prices, identity checks, data use and access. Some threaten to withdraw, while others defend measures that they believe protect audiences. They want each company to explain its practices.",
+      "impacts": {
+        "ceo": "A response may require changes to promises made to customers and commercial partners.",
+        "cfo": "Service changes and lost contracts could both affect income and operating costs.",
+        "cto": "Promising a change requires knowing which systems and supplier agreements it would affect.",
+        "marketing": "Both supporters and critics may be customers who want to keep attending events.",
+        "legal": "Each campaign demand needs examination against the company’s current duties and agreements.",
+        "employee": "Staff will deliver any announced changes alongside the service that they already run.",
+        "sustainability": "Changing services could reduce ongoing resource use and retire equipment before it wears out.",
+        "relations": "A partner may accept a negotiated change even when its public demand sounds fixed."
+      }
+    },
+    {
+      "title": "Venues decide whether to renew",
+      "type": "Internal",
+      "story": "Partners have responded to the company’s offer. Some are considering renewals, changes to their agreements or leaving. They need to know whether the service will meet their audiences’ needs.",
+      "impacts": {
+        "ceo": "The company now needs to deliver changes promised during negotiations.",
+        "cfo": "Keeping contract income may depend on concessions that cost money to provide.",
+        "cto": "Several revised agreements may need work from the same engineers at the same time.",
+        "marketing": "Announcements should describe the terms that partners have agreed to.",
+        "legal": "Revised contracts determine which obligations continue and which have changed.",
+        "employee": "Keeping a contract can protect jobs and add work to the existing team.",
+        "sustainability": "The transition plan needs to account for equipment, storage and ongoing resource use.",
+        "relations": "A renewed contract still requires the company to provide the newly agreed service."
+      }
+    },
+    {
+      "title": "The association reviews the record",
+      "type": "External",
+      "story": "The association has commissioned an independent review of its original commitments. Reviewers will compare company records with customers’ accounts and partners’ statements before companies publish their final reports.",
+      "impacts": {
+        "ceo": "Reviewers will compare public claims with the company’s recorded decisions and results.",
+        "cfo": "Readers need to know which costs and income the financial figures include.",
+        "cto": "Technical records support some claims, while customer experiences need additional evidence.",
+        "marketing": "A short public account still needs to give readers an accurate impression of the findings.",
+        "legal": "Some evidence needs checking or redaction before it can be published.",
+        "employee": "A staffing total can leave out earlier redundancies and changes in workload.",
+        "sustainability": "The report needs to identify measurements, estimates and gaps in environmental information.",
+        "relations": "Partner statements need to describe their current experience of the service."
+      }
+    }
+  ],
+  "roles": {
+    "ceo": [
+      "Chief executive officer",
+      "Keep the company operational and grow its market presence index from 100 to at least 125. By the end, meet at least three of its four public commitments.",
+      "The board is discussing investment that depends on demonstrating the new service within two years.",
+      "Executive override",
+      "You can record the company’s decision during any open decision year. Your reason and decision are saved. Finance, technical and legal blocks still apply; using this power carries no automatic trust penalty."
+    ],
+    "cfo": [
+      "Chief financial officer",
+      "Keep the company operational, grow its market presence index from 100 to at least 125 and avoid emergency borrowing throughout the exercise.",
+      "A major customer has warned that its payment may arrive late. An internal build is still affordable, but recruitment delays or unexpected costs would leave little cash available.",
+      "Freeze funding",
+      "Once during the exercise, you can block one option for the current year. The block ends with that year and has no direct cost or score change."
+    ],
+    "cto": [
+      "Chief technology officer",
+      "Finish with reliability of at least 97% and technical control of at least 60 out of 100. Your team needs a dependable service that it can maintain and change.",
+      "Verity demonstrated its product on a different ticketing system. Nobody has tested whether it works with yours.",
+      "Technical veto",
+      "Once during the exercise, you can block one option for the current year. The block ends with that year and has no direct cost or score change."
+    ],
+    "marketing": [
+      "Head of marketing and PR",
+      "Finish with trust of at least 75 out of 100 and a market presence index of at least 120, up from 100 at the start.",
+      "Customer research shows that fans want to stop bulk buying for resale, but many object to uploading identity documents.",
+      "Strategic campaign",
+      "Once during the exercise, you can spend €80k on a campaign. Trust rises by 6 if the evidence level is at least 2 or buyer verification is not live. Otherwise, challenged claims reduce trust by 3."
+    ],
+    "legal": [
+      "Head of legal",
+      "Finish with no upheld major penalties and no unresolved serious complaint against the company.",
+      "Verity’s standard contract makes your company responsible for disputes when verification fails.",
+      "Formal legal review",
+      "Once during the exercise, you can commission a €35k legal review and block one option for that year. The review raises the evidence level by one. Your team can then choose another option without waiting for the teacher."
+    ],
+    "employee": [
+      "Employee representative",
+      "Protect employees from involuntary redundancy throughout the exercise. Job losses through a merger or financial rescue count too, even if the company later hires again.",
+      "Engineers already owe several customers improvements. They are concerned that an internal build would add another project without enough staff to cover both.",
+      "Call a strike",
+      "Once during the exercise, you can call a strike over workload. The settlement costs €80k for temporary cover, reduces workload by 15 and lowers market presence by 2 through delivery delays. Play then continues; earlier redundancies remain recorded."
+    ],
+    "sustainability": [
+      "Head of sustainability",
+      "Reduce the operational footprint index from 100 to 90 or below by the end. It represents resources used to run the service. Carbon emissions are not measured in this exercise.",
+      "Verity’s environmental figures leave out the subcontractor that carries out verification.",
+      "Impact assessment",
+      "Once during the exercise, you can spend €60k assessing operations and making changes. This reduces the operational-footprint index by 12. Your team can continue without waiting for the teacher."
+    ],
+    "relations": [
+      "Head of artist and venue relations",
+      "Keep at least eight of your ten original venue customers and gain at least two new partnerships by the end. New partners do not replace lost original venues for this mission.",
+      "A promoter is interested in an early trial, but wants a credible delivery date before discussing a contract.",
+      "Industry connections",
+      "Once during the exercise, you can spend €70k negotiating a venue agreement. It adds one partnership if access is at least 94% and reliability at least 95%. Otherwise, the cost and unsuccessful negotiation remain recorded."
+    ]
+  },
+  "stories": {
+    "ceo": "You helped start {company} when a small festival needed affordable ticketing. The company now serves major venues, but the festival still calls you directly when something goes wrong. You know the people who depend on the service as well as the board that expects it to grow.",
+    "cfo": "When a tour was cancelled, you kept customer refunds moving while the company waited to recover its own money. Customers were checking their bank accounts, and staff were asking whether the company could pay them. You remember both when somebody presents a promising sales forecast.",
+    "cto": "You wrote parts of the original ticketing system that are still running today. Your team wants to replace them, but urgent venue requests keep interrupting the work. You know how much maintenance can follow a decision that first looked straightforward.",
+    "marketing": "Your last campaign promised a less frustrating way to buy tickets, and customers replied with screenshots of their problems. You read them before preparing the next announcement. You want to know what the service can deliver before asking people to trust another promise.",
+    "legal": "A supplier once assured you that leaving its service would be straightforward. You spent the following summer negotiating the exit. Since then, you have read the termination terms before the sales presentation, including who remains responsible when something goes wrong.",
+    "employee": "Your colleagues elected you after a product launch kept them working late for months. They want the company to succeed and expect you to represent the people delivering its promises. When a new project is proposed, you want to know who will do the work.",
+    "sustainability": "You joined to help the company reduce its environmental impact. Following up supplier presentations has taught you how often their figures leave work out. You want to know what the company and its suppliers use to deliver a service before calling it an improvement.",
+    "relations": "You used to work at venues, helping people whose tickets would not scan. Your former colleagues now choose ticketing suppliers, and they still tell you what happens at the entrance. You want agreements that will work for those staff and their audiences."
+  },
+  "docs": {
+    "brief": [
+      "Industry brief",
+      "Verified ticket purchasing",
+      "The industry association proposes verifying purchasers and limiting each person to five tickets per event. It expects this to reduce automated bulk buying and resale abuse.",
+      "This year you choose who builds and maintains verification. Testing, launch and data policies follow later."
+    ],
+    "company": [
+      "Company information",
+      "{company}",
+      "Your division starts with ten venue partners and a 40-person rollout team inside a company with thousands of employees. The team works with promoters and artists and handles ticketing and customer problems for the rollout. Your engineers maintain the current service and have already promised improvements.",
+      "You start with €1.6m in cash and no debt. Every Year 1 option is affordable, though an internal build leaves the least cash available for unexpected costs."
+    ],
+    "supplier": [
+      "Supplier offer",
+      "Verity Access verification service",
+      "Verity offers a complete verification system or a verification component that your own team can integrate.",
+      "Verity maintains its technology. Your company handles customer support and appeals when checks fail."
+    ],
+    "internal": [
+      "Internal proposal",
+      "What your team can deliver",
+      "Your engineers could build the system or connect a supplier’s verification service to your own software.",
+      "Delivery dates are estimates. Both approaches still need testing with your customers and existing systems."
+    ]
+  },
+  "data": {
+    "brief": {
+      "rows": [
+        [
+          "Purpose",
+          "Reduce bulk purchasing while keeping tickets available to legitimate customers."
+        ],
+        [
+          "Company choice",
+          "Build internally, license a system, combine both approaches or postpone investment."
+        ],
+        [
+          "Information",
+          "Read the proposals and discuss what each person knows before deciding."
+        ]
+      ],
+      "notes": ""
+    },
+    "company": {
+      "rows": [
+        [
+          "Commercial pressure",
+          "Shareholders expect growth, and promoters want to know whether you will offer buyer verification."
+        ],
+        [
+          "People",
+          "Your engineers maintain current ticketing and have already promised improvements to customers."
+        ],
+        [
+          "Public commitments",
+          "Fair access, accessibility, responsible data use and lower environmental impact."
+        ]
+      ],
+      "notes": ""
+    },
+    "supplier": {
+      "rows": [
+        [
+          "Price and timing",
+          "Around €800,000 for the first year of the complete system. It could be ready for testing in 4–6 months."
+        ],
+        [
+          "Control",
+          "A three-year contract covers maintenance and support. Changes to verification depend on the supplier. Leaving early incurs a fee."
+        ],
+        [
+          "Data and access",
+          "Hosting is in the EU, and identity images are kept for up to 30 days. Compatibility and accessibility are untested. The offer covers buyer verification without facial recognition at venues."
+        ]
+      ],
+      "notes": "The hybrid proposal is around €900,000 in the first year, including internal integration."
+    },
+    "internal": {
+      "rows": [
+        [
+          "Build internally",
+          "Around €1.3m initially; 9–12 months to testing. You control the system and take responsibility for maintenance."
+        ],
+        [
+          "Combine both approaches",
+          "Around €900,000 initially; 6–9 months to testing. Your team and the supplier share responsibility for delivery."
+        ],
+        [
+          "Workload",
+          "Both approaches need recruitment and work from existing engineers. An internal build delays promised improvements; the hybrid budget includes temporary cover."
+        ]
+      ],
+      "notes": ""
+    }
+  },
+  "roleKeys": [
+    "ceo",
+    "cfo",
+    "cto",
+    "marketing",
+    "legal",
+    "employee",
+    "sustainability",
+    "relations"
+  ],
+  "quickDocuments": {
+    "company": {
+      "title": "Your company",
+      "text": "Your company must keep ticket sales running while it grows. An internal build is affordable, but leaves less cash for unexpected costs.",
+      "points": [
+        "Engineers have already promised improvements to customers.",
+        "The company has commitments to fair access, accessibility, responsible data use and lower environmental impact."
+      ]
+    },
+    "supplier": {
+      "title": "The supplier offer",
+      "text": "Verity maintains verification while your staff handle support and appeals.",
+      "points": [
+        "The minimum contract is three years, with a fee for leaving early.",
+        "Hosting is in the EU; identity images are kept for up to 30 days.",
+        "Compatibility and accessibility are untested. The offer covers buyer verification, without facial recognition at venues."
+      ]
+    },
+    "internal": {
+      "title": "Your delivery team",
+      "text": "Your team could build verification or connect Verity to your software. Both approaches need recruitment and testing.",
+      "points": [
+        "Building internally gives your team control and maintenance work; promised improvements would wait.",
+        "The hybrid approach includes your own integration and temporary staff cover, with Verity responsible for verification.",
+        "Delivery dates are estimates."
+      ]
+    }
+  },
+  "companyOverview": {
+    "history": "{company} began when a small festival needed an affordable way to sell tickets. It is now a major ticketing operator with thousands of employees across markets. That first festival still calls one of the founders when something goes wrong.",
+    "business": "You lead the division responsible for this rollout. Its 40-person team and ten original venue partners are the starting point for the decisions and figures in this case. A system adopted by the division can be used across many events at those venues.",
+    "work": "",
+    "commitments": [
+      [
+        "Fair access",
+        "Tickets stay affordable, with fewer bought in bulk for resale at inflated prices."
+      ],
+      [
+        "Accessibility",
+        "Fans can buy tickets and enter events, including people who need help or an alternative to digital checks."
+      ],
+      [
+        "Responsible data use",
+        "The company collects only the data needed for its service, limits how long it keeps it and who receives it, and lets people challenge mistakes."
+      ],
+      [
+        "Lower environmental impact",
+        "The company reduces the resources needed to run its services."
+      ]
+    ],
+    "commitmentsIntroduction": "The company has made these promises to its customers and partners."
+  },
+  "companyDocuments": {
+    "supplier": {
+      "title": "Verity’s offer",
+      "paragraphs": [
+        "Verity offers buyer verification under a three-year minimum contract. It maintains the checks; you handle customer support and appeals. The complete system costs €800k in the first year, then €280k a year. Leaving early costs extra.",
+        "Verity estimates 4–6 months before testing. Hosting is in the EU and identity images are kept for up to 30 days. Compatibility and accessibility have not been tested. Venue facial recognition is not required.",
+        "The hybrid offer costs €900k in the first year, including your team’s integration work. It takes an estimated 6–9 months to reach testing, with €210k annual maintenance afterwards. Verification still depends on Verity."
+      ]
+    },
+    "internal": {
+      "title": "Your engineering team’s proposal",
+      "paragraphs": [
+        "Your team could build and maintain its own verification system for €1.3m initially, hiring four people. You would own the code and control changes. Testing is estimated in 9–12 months, with €150k annual maintenance from the following year.",
+        "Alternatively, two new staff could connect Verity to your software. This costs €900k initially and includes temporary cover. You control the integration; Verity controls verification under its three-year minimum contract. Testing is estimated in 6–9 months, with €210k annual maintenance.",
+        "Both routes need recruitment and testing with your customers and current systems. Building internally would postpone improvements already promised to customers. The delivery dates are estimates."
+      ]
+    }
+  }
+}
