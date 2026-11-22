@@ -1,0 +1,15 @@
+services:
+  case-store:
+    build: .
+    image: case-store:latest
+    container_name: case-store
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8088:8088"
+    volumes:
+      - ./data:/data
+    environment:
+      - BLOB_DATA_DIR=/data
+      - BLOB_PORT=8088
+      - BLOB_ALLOW_ORIGIN=*
+      - BLOB_MAX_BYTES=262144

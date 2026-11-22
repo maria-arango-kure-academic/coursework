@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+  <!-- One cell of the small interface grid, for dark mode. Repeat it at 0.5rem. Pebble at 3% on Onyx. -->
+  <rect width="8" height="1" fill="#dcdfd8" fill-opacity="0.03"/>
+  <rect width="1" height="8" fill="#dcdfd8" fill-opacity="0.03"/>
+</svg>

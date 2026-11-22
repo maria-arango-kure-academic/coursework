@@ -1,0 +1,596 @@
+/* Well & Good interface kit. One stylesheet for every Well & Good interface.
+
+   Load it with wg.js:
+     <link rel="stylesheet" href="…/kit/wg.css">
+     <script src="…/kit/wg.js"></script>
+
+   Contract
+   - Values come from system/tokens.json. Variables are --wg-*, classes are wg-*.
+   - Both modes ship. The mode is the data-mode attribute on <html>, set by wg.js.
+   - The grid cell is 0.5rem, the same as one spacing step. Every width, height, padding,
+     gap and line height is a multiple of 0.5rem. Borders are inset shadows, so they take
+     no space and every box edge lands on a grid line.
+   - No radius anywhere. Chrome, panels and cards are solid fills over the grid.
+   - The grid is always 3%: Pebble on dark, Woodsmoke on light.
+   - Sulfur is rare. It appears in three places only: a button on hover, the marker behind one line
+     of text, and the solid badge for the one thing on a page that deserves the most attention.
+     Links, current items, checked boxes, tags and charts take the ink. */
+
+@font-face { font-family: "ZT Talk"; src: url("../fonts/ZTTalk-Black-ss01ce.woff") format("woff"); font-weight: 900; font-display: swap; }
+@font-face { font-family: "ZT Talk"; src: url("../fonts/ZTTalk-Bold-ss01ce.woff") format("woff"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Pangea Text"; src: url("../fonts/PangeaText-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Pangea Text"; src: url("../fonts/PangeaText-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Pangea Text"; src: url("../fonts/PangeaText-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Pangea Text"; src: url("../fonts/PangeaText-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Architect Pro Cap"; src: url("../fonts/ArchitectProCap.woff2") format("woff2"); font-display: swap; }
+
+/* ---------- tokens ---------- */
+
+:root {
+  /* palette: four main, four accents, four neutrals */
+  --wg-onyx: #000d01; --wg-woodsmoke: #041606; --wg-eucalyptus: #0d1b10; --wg-marshland: #07210b;
+  --wg-moss: #1d3a09; --wg-holly: #7ca300; --wg-sulfur: #bdf520; --wg-lichen: #d1f78d;
+  --wg-seasalt: #f7faf2; --wg-pebble: #dcdfd8; --wg-bark: #818179; --wg-ash: #3a3b3a;
+  /* reserve: two muted greens outside the palette, for rules and hairlines */
+  --wg-reserve-2: #2f4a33; --wg-reserve-3: #809681;
+
+  /* interface roles, dark mode */
+  --wg-ground: var(--wg-onyx);        /* the page */
+  --wg-panel: var(--wg-woodsmoke);    /* first elevation: chrome, panels, cards */
+  --wg-panel-2: var(--wg-eucalyptus); /* second elevation: small cards, inset areas */
+  --wg-current: var(--wg-eucalyptus); /* hover and current item in menus */
+  --wg-ink: var(--wg-pebble); --wg-head: var(--wg-pebble); --wg-quiet: var(--wg-bark);
+  --wg-h1: var(--wg-head); --wg-h2: var(--wg-head); /* page title and section title; green on light */
+  --wg-note: var(--wg-pebble); --wg-link: var(--wg-pebble); --wg-rule: var(--wg-reserve-3);
+  --wg-on-link: var(--wg-eucalyptus); /* text on a fill in the link color */
+  --wg-signal: var(--wg-sulfur); --wg-on-signal: var(--wg-woodsmoke); /* rare: see the note above */
+  --wg-btn-fill: var(--wg-pebble); --wg-btn-ink: var(--wg-eucalyptus); --wg-btn-edge: var(--wg-signal);
+  --wg-hair: #dcdfd826; --wg-edge: var(--wg-hair);
+  --wg-control: #dcdfd880;            /* borders of form controls: 3 : 1 against the panel */
+  --wg-tile: url("../assets/grid-tile-pebble.svg");
+  /* chart series: the ink and two quieter neutrals, always labelled. Proposed. */
+  --wg-series-1: var(--wg-pebble); --wg-series-2: var(--wg-bark); --wg-series-3: var(--wg-reserve-3);
+
+  --wg-u: 0.5rem;        /* one grid cell and one spacing step */
+  --wg-side: 16rem;      /* sidebar width */
+  --wg-content: 72rem;   /* widest content column */
+  --wg-line: inset 0 0 0 1px var(--wg-edge);
+  --wg-display: "ZT Talk", system-ui, sans-serif;
+  --wg-body: "Pangea Text", system-ui, sans-serif;
+  --wg-hand: "Architect Pro Cap", cursive;
+  --wg-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  color-scheme: dark;
+}
+:root[data-mode="light"] {
+  --wg-ground: var(--wg-pebble); --wg-panel: var(--wg-seasalt); --wg-panel-2: var(--wg-pebble); --wg-current: var(--wg-pebble);
+  --wg-ink: var(--wg-ash); --wg-head: var(--wg-eucalyptus); --wg-quiet: var(--wg-ash);
+  --wg-h1: var(--wg-moss); --wg-h2: var(--wg-moss);
+  --wg-note: var(--wg-moss); --wg-link: var(--wg-moss); --wg-rule: var(--wg-reserve-2);
+  --wg-on-link: var(--wg-seasalt);
+  --wg-btn-fill: var(--wg-eucalyptus); --wg-btn-ink: var(--wg-pebble); --wg-btn-edge: var(--wg-eucalyptus);
+  --wg-hair: #0d1b1033; --wg-edge: var(--wg-reserve-3);
+  --wg-control: var(--wg-bark);
+  --wg-tile: url("../assets/grid-tile-woodsmoke.svg");
+  --wg-series-1: var(--wg-moss); --wg-series-2: var(--wg-holly); --wg-series-3: var(--wg-bark);
+  color-scheme: light;
+}
+
+/* ---------- base ---------- */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+body {
+  font-family: var(--wg-body); font-size: 1rem; line-height: 1.5rem;
+  color: var(--wg-ink); background-color: var(--wg-ground);
+  background-image: var(--wg-tile); background-size: var(--wg-u) var(--wg-u);
+  min-height: 100vh;
+}
+a { color: var(--wg-link); text-decoration: underline; text-underline-offset: 0.2em; text-decoration-thickness: 0.0625rem; }
+h1, h2, h3, h4 { font-family: var(--wg-display); font-weight: 900; color: var(--wg-head); }
+h1 { font-size: 4rem; line-height: 4rem; color: var(--wg-h1); }
+h2 { font-size: 2rem; line-height: 2.5rem; color: var(--wg-h2); }
+h3 { font-size: 1.375rem; font-weight: 700; line-height: 1.5rem; }
+h4 { font-family: var(--wg-body); font-size: 1rem; font-weight: 600; line-height: 1.5rem; }
+p, li { max-width: 38rem; }
+ul, ol { padding-left: 1.5rem; }
+img, svg, video { max-width: 100%; }
+code, .wg-mono { font-family: var(--wg-mono); font-size: 0.9rem; }
+p code, li code, td code { line-height: 1; }
+kbd { font-family: var(--wg-mono); font-size: 0.9rem; line-height: 1.5rem; height: 1.5rem; padding: 0 0.5rem; background: var(--wg-panel-2); box-shadow: var(--wg-line); color: var(--wg-quiet); white-space: nowrap; flex: none; }
+pre { font-family: var(--wg-mono); font-size: 0.9rem; line-height: 1.5rem; padding: 1.5rem; background: var(--wg-panel); box-shadow: var(--wg-line); overflow-x: auto; white-space: pre; }
+mark { background: var(--wg-signal); color: var(--wg-on-signal); padding: 0 0.2em; }
+hr { border: 0; height: 0.5rem; box-shadow: inset 0 1px 0 var(--wg-rule); width: 100%; }
+button, input, select, textarea { font: inherit; color: inherit; border-radius: 0; }
+:focus-visible { outline: 0.125rem solid var(--wg-link); outline-offset: 0.125rem; }
+
+.wg-note { font-family: var(--wg-hand); text-transform: uppercase; letter-spacing: 0.14em; font-size: 1rem; line-height: 1.5rem; color: var(--wg-note); }
+.wg-quiet { color: var(--wg-quiet); font-weight: 600; font-size: 0.9rem; line-height: 1.5rem; }
+.wg-small { font-size: 0.9rem; line-height: 1.5rem; color: var(--wg-quiet); }
+.wg-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.wg-skip { position: absolute; left: 0.5rem; top: -4rem; z-index: 30; background: var(--wg-btn-fill); color: var(--wg-btn-ink); padding: 0.5rem 1rem; }
+.wg-skip:focus { top: 0.5rem; }
+.wg-icon { width: 1rem; height: 1rem; flex: none; display: block; }
+.wg-icon--lg { width: 1.5rem; height: 1.5rem; }
+.wg-dot { display: inline-block; width: 1rem; height: 1rem; box-shadow: var(--wg-line); vertical-align: -0.15em; margin-right: 0.5rem; }
+
+/* ---------- backgrounds ---------- */
+
+.wg-bg-grid { background-color: var(--wg-ground); background-image: var(--wg-tile); background-size: var(--wg-u) var(--wg-u); }
+.wg-bg-ground { background: var(--wg-ground); }
+.wg-bg-panel { background: var(--wg-panel); }
+.wg-bg-inset { background: var(--wg-panel-2); }
+
+/* ---------- layout ---------- */
+
+/* page with a sidebar: put wg-shell on <body>, then .wg-side and .wg-main */
+.wg-shell { display: grid; grid-template-columns: var(--wg-side) minmax(0, 1fr); }
+/* page with a top bar: put wg-page on <body>, then .wg-topnav, .wg-main, .wg-footer */
+.wg-page { display: flex; flex-direction: column; }
+.wg-page > .wg-main { flex: 1; }
+
+/* the content column: centered, with its start edge on a grid line */
+.wg-main {
+  display: grid; align-content: start; row-gap: 4rem; padding: 3rem 0 6rem;
+  grid-template-columns: round(down, max(3rem, calc((100% - var(--wg-content)) / 2)), 0.5rem) minmax(0, var(--wg-content)) minmax(3rem, 1fr);
+}
+.wg-main > * { grid-column: 2; width: round(down, min(100%, var(--wg-content)), 1rem); }
+.wg-main--narrow { --wg-content: 44rem; }
+.wg-main section, .wg-section { display: grid; gap: 1.5rem; align-content: start; }
+
+/* page header: a chip, the title, one lead paragraph */
+.wg-lead { display: grid; gap: 1rem; justify-items: start; }
+.wg-lead h1 { font-size: 4.5rem; line-height: 4.5rem; }
+.wg-lead p { font-size: 1.375rem; line-height: 2rem; max-width: 40rem; }
+/* section label: small capitals with a rule running to the edge */
+.wg-label, .wg-main section > h2 {
+  display: flex; align-items: center; gap: 1rem;
+  font-family: var(--wg-body); font-weight: 600; font-size: 0.9rem; line-height: 1.5rem;
+  text-transform: uppercase; letter-spacing: 0.14em; color: var(--wg-quiet); white-space: nowrap;
+}
+.wg-label::after, .wg-main section > h2::after { content: ""; flex: 1; height: 1px; background: var(--wg-hair); }
+
+.wg-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.wg-row--end { justify-content: flex-end; }
+.wg-row--between { justify-content: space-between; }
+.wg-stack { display: grid; gap: 1rem; align-content: start; }
+.wg-stack--tight { gap: 0.5rem; }
+/* equal columns; the width is trimmed so each column is a whole number of grid cells */
+.wg-grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; list-style: none; padding: 0; }
+.wg-grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; list-style: none; padding: 0; width: calc(round(down, calc(100% + 1.5rem), 3rem) - 1.5rem); }
+.wg-grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; list-style: none; padding: 0; width: calc(round(down, calc(100% + 1rem), 4rem) - 1rem); }
+.wg-grid-2 > li, .wg-grid-3 > li, .wg-grid-4 > li { max-width: none; display: grid; }
+.wg-scroll { overflow-x: auto; }
+
+/* ---------- surfaces ---------- */
+
+.wg-panel { background: var(--wg-panel); box-shadow: var(--wg-line); padding: 1.5rem; display: grid; gap: 1rem; align-content: start; }
+.wg-tile { display: grid; gap: 0.5rem; align-content: start; padding: 1.5rem; background: var(--wg-panel); box-shadow: var(--wg-line); }
+.wg-tile p, .wg-panel p { max-width: none; }
+.wg-tile--inset { background: var(--wg-panel-2); }
+.wg-empty { outline: 1px dashed var(--wg-quiet); outline-offset: -1px; background: none; box-shadow: none; }
+
+/* ---------- sidebar ---------- */
+
+/* first elevation, in four bands: brand, search, sections, foot. It never scrolls by itself:
+   it fits a normal window and joins the page flow when the window is short. */
+.wg-side { position: sticky; top: 0; align-self: start; height: 100vh; background: var(--wg-panel); box-shadow: inset -1px 0 0 var(--wg-edge); display: flex; flex-direction: column; z-index: 10; }
+.wg-side-brand { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.5rem; box-shadow: inset 0 -1px 0 var(--wg-hair); }
+.wg-brand { display: grid; gap: 0.5rem; flex: none; color: var(--wg-head); text-decoration: none; }
+.wg-brand-logo { display: block; height: 1.5rem; }
+.wg-brand-logo svg { display: block; height: 1.5rem; width: auto; max-width: none; }
+.wg-brand-sub { font-size: 0.9rem; line-height: 1rem; letter-spacing: 0.04em; color: var(--wg-quiet); }
+.wg-side-tools { display: none; align-items: center; gap: 0.5rem; }
+.wg-side-body { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+.wg-side nav { flex: 1; padding: 1rem 0.5rem; }
+.wg-side-foot { display: grid; padding: 1rem 0.5rem; box-shadow: inset 0 1px 0 var(--wg-hair); }
+@media (max-height: 45rem) { .wg-side { position: static; height: auto; min-height: 100vh; } }
+
+/* a vertical menu: used in the sidebar and in menus */
+.wg-nav { list-style: none; padding: 0; display: grid; }
+.wg-nav li { max-width: none; }
+.wg-nav a, .wg-nav button {
+  display: flex; align-items: center; gap: 0.5rem; width: 100%; height: 2rem; padding: 0 1rem; text-align: left;
+  color: var(--wg-ink); background: none; border: 0; text-decoration: none; cursor: pointer; transition: background-color 120ms, color 120ms;
+}
+.wg-nav a:hover, .wg-nav button:hover { background: var(--wg-current); color: var(--wg-head); }
+.wg-nav [aria-current="page"] { background: var(--wg-current); color: var(--wg-head); font-weight: 600; box-shadow: inset 0.125rem 0 0 var(--wg-link); }
+.wg-nav [aria-current="page"] .wg-icon { color: var(--wg-link); }
+.wg-nav .wg-tag { margin-left: auto; }
+.wg-nav-title { padding: 1rem 1rem 0.5rem; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--wg-quiet); }
+
+/* the mode switch: any button with data-wg-mode. wg.js fills the label and the icon. */
+.wg-mode { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; width: 100%; height: 2.5rem; padding: 0 1rem; font-size: 0.9rem; background: none; border: 0; color: var(--wg-quiet); cursor: pointer; transition: background-color 120ms, color 120ms; }
+.wg-mode:hover { background: var(--wg-current); color: var(--wg-head); }
+
+/* ---------- top navigation ---------- */
+
+/* a solid bar: brand, links, tools. It sticks to the top of the window. */
+.wg-topnav { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 2rem; height: 4rem; padding: 0 1.5rem; background: var(--wg-panel); box-shadow: inset 0 -1px 0 var(--wg-edge); }
+.wg-topnav-links { display: flex; align-items: center; gap: 0.5rem; list-style: none; padding: 0; flex: 1; }
+.wg-topnav-links li { max-width: none; }
+.wg-topnav-links a { display: flex; align-items: center; height: 2.5rem; padding: 0 1rem; color: var(--wg-ink); text-decoration: none; transition: background-color 120ms, color 120ms; }
+.wg-topnav-links a:hover { background: var(--wg-current); color: var(--wg-head); }
+.wg-topnav-links [aria-current="page"] { color: var(--wg-head); font-weight: 600; box-shadow: inset 0 -0.125rem 0 var(--wg-link); }
+.wg-topnav-tools { display: flex; align-items: center; gap: 0.5rem; margin-left: auto; }
+.wg-topnav .wg-menu-btn { display: none; }
+
+/* ---------- footers ---------- */
+
+/* expanded: brand and a line, link columns, then a bottom line */
+.wg-footer { background: var(--wg-panel); box-shadow: inset 0 1px 0 var(--wg-edge); padding: 3rem 1.5rem 1.5rem; display: grid; gap: 3rem; }
+.wg-footer-top { display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); gap: 2rem; }
+.wg-footer-col { display: grid; gap: 0.5rem; align-content: start; }
+.wg-footer-col ul { list-style: none; padding: 0; display: grid; gap: 0.5rem; }
+.wg-footer-col a { color: var(--wg-ink); text-decoration: none; }
+.wg-footer-col a:hover { color: var(--wg-head); text-decoration: underline; }
+.wg-footer-title { font-size: 0.9rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--wg-quiet); }
+.wg-footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; box-shadow: inset 0 1px 0 var(--wg-hair); font-size: 0.9rem; color: var(--wg-quiet); }
+.wg-footer-bottom ul { list-style: none; padding: 0; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.wg-footer-bottom a { color: var(--wg-quiet); }
+/* minimal: one line */
+.wg-footer--min { padding: 1.5rem; gap: 0; }
+.wg-footer--min .wg-footer-bottom { padding-top: 0; box-shadow: none; }
+
+/* ---------- buttons ---------- */
+
+/* the fill is the opposite ground and the text is the ground. Hover, focus and active
+   turn it Sulfur and tilt it 6 degrees over half a second. */
+.wg-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0 1rem; height: 3rem;
+  background: var(--wg-btn-fill); color: var(--wg-btn-ink); border: 1px solid var(--wg-btn-fill);
+  text-transform: uppercase; font-family: inherit; font-weight: 600; font-size: 0.875rem; letter-spacing: 0.04em; text-decoration: none; white-space: nowrap;
+  transition: background-color 500ms ease, border-color 500ms ease, color 500ms ease, transform 500ms ease; cursor: pointer;
+}
+.wg-btn svg { width: 1.12em; height: 1.12em; }
+.wg-btn:hover, .wg-btn:focus-visible, .wg-btn:active { background: var(--wg-signal); color: var(--wg-on-signal); border-color: var(--wg-btn-edge); transform: rotate(6deg); }
+.wg-btn--ghost { background: transparent; color: var(--wg-ink); border-color: var(--wg-ink); }
+/* a text button: no fill and no border, for the third action in a row */
+.wg-btn--quiet { background: transparent; color: var(--wg-ink); border-color: transparent; text-decoration: underline; text-underline-offset: 0.2em; }
+.wg-btn--sm { height: 2.5rem; font-size: 0.8125rem; }
+.wg-btn--lg { height: 3.5rem; padding: 0 1.5rem; font-size: 1rem; }
+.wg-btn--wide { width: 100%; }
+.wg-btn:disabled, .wg-btn[aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; transform: none; background: var(--wg-btn-fill); color: var(--wg-btn-ink); border-color: var(--wg-btn-fill); }
+.wg-btn--ghost:disabled, .wg-btn--ghost[aria-disabled="true"] { background: transparent; color: var(--wg-ink); border-color: var(--wg-ink); }
+/* a square button that holds one icon; it needs an aria-label */
+.wg-icon-btn { width: 2.5rem; height: 2.5rem; display: grid; place-items: center; flex: none; background: none; border: 0; padding: 0; color: var(--wg-ink); cursor: pointer; transition: background-color 120ms, color 120ms; }
+.wg-icon-btn:hover { background: var(--wg-current); color: var(--wg-head); }
+.wg-menu-btn { width: 2.5rem; height: 2.5rem; display: grid; place-content: center; gap: 0.375rem; flex: none; background: none; border: 0; padding: 0; color: var(--wg-ink); cursor: pointer; }
+.wg-menu-btn span { display: block; width: 1.25rem; height: 1px; background: currentColor; }
+
+/* ---------- forms ---------- */
+
+.wg-form { display: grid; gap: 1.5rem; align-content: start; }
+.wg-field { display: grid; gap: 0.5rem; align-content: start; }
+.wg-field > label, .wg-legend { font-weight: 600; font-size: 0.9rem; line-height: 1.5rem; color: var(--wg-head); }
+.wg-hint { font-size: 0.9rem; line-height: 1.5rem; color: var(--wg-quiet); }
+/* an error is said in words, with a mark before it and a heavier border on the field */
+.wg-error { font-size: 0.9rem; line-height: 1.5rem; font-weight: 600; color: var(--wg-head); }
+.wg-error::before { content: "✗ "; }
+.wg-input, .wg-select, .wg-textarea {
+  width: 100%; height: 3rem; padding: 0 1rem; color: var(--wg-ink); background: var(--wg-ground);
+  border: 0; box-shadow: inset 0 0 0 1px var(--wg-control); appearance: none;
+}
+.wg-input::placeholder, .wg-textarea::placeholder { color: var(--wg-quiet); opacity: 1; }
+.wg-textarea { height: auto; min-height: 6rem; padding: 0.75rem 1rem; line-height: 1.5rem; resize: vertical; }
+.wg-select {
+  padding-right: 3rem; cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: calc(100% - 1.25rem) 50%, calc(100% - 0.875rem) 50%; background-size: 0.375rem 0.375rem; background-repeat: no-repeat;
+}
+.wg-input:hover, .wg-select:hover, .wg-textarea:hover { box-shadow: inset 0 0 0 1px var(--wg-ink); }
+.wg-input[aria-invalid="true"], .wg-select[aria-invalid="true"], .wg-textarea[aria-invalid="true"] { box-shadow: inset 0 0 0 0.125rem var(--wg-head); }
+.wg-input:disabled, .wg-select:disabled, .wg-textarea:disabled { opacity: 0.5; cursor: not-allowed; }
+.wg-input[type="date"] { font-family: var(--wg-mono); font-size: 0.9rem; }
+/* a field with an icon before the input and a key hint after it */
+.wg-search { position: relative; }
+.wg-search-field { display: flex; align-items: center; gap: 0.5rem; height: 2.5rem; padding: 0 0.5rem; background: var(--wg-ground); box-shadow: inset 0 0 0 1px var(--wg-control); color: var(--wg-quiet); }
+.wg-search-field:focus-within { outline: 0.125rem solid var(--wg-link); outline-offset: 0.125rem; }
+.wg-search-field input { flex: 1; min-width: 0; height: 100%; padding: 0; font-family: var(--wg-mono); font-size: 0.9rem; color: var(--wg-ink); background: none; border: 0; outline: 0; }
+.wg-search-field input::-webkit-search-cancel-button { display: none; }
+
+/* checkbox, radio and switch: a native input drawn square. The label wraps the input. */
+.wg-check, .wg-radio, .wg-switch { display: flex; align-items: flex-start; gap: 0.75rem; min-height: 1.5rem; cursor: pointer; }
+.wg-check input, .wg-radio input { appearance: none; width: 1.5rem; height: 1.5rem; flex: none; background: var(--wg-ground); box-shadow: inset 0 0 0 1px var(--wg-control); cursor: pointer; display: grid; place-items: center; }
+.wg-check input::after { content: ""; width: 0.75rem; height: 0.375rem; border: solid var(--wg-on-link); border-width: 0 0 0.125rem 0.125rem; transform: translateY(-0.0625rem) rotate(-45deg); opacity: 0; }
+.wg-check input:checked { background: var(--wg-link); box-shadow: none; }
+.wg-check input:checked::after { opacity: 1; }
+/* the radio is square too; a filled square inside marks the choice */
+.wg-radio input::after { content: ""; width: 0.75rem; height: 0.75rem; background: var(--wg-link); opacity: 0; }
+.wg-radio input:checked { box-shadow: inset 0 0 0 0.125rem var(--wg-link); }
+.wg-radio input:checked::after { opacity: 1; }
+.wg-switch input { appearance: none; width: 3rem; height: 1.5rem; flex: none; background: var(--wg-ground); box-shadow: inset 0 0 0 1px var(--wg-control); cursor: pointer; position: relative; transition: background-color 200ms; }
+.wg-switch input::after { content: ""; position: absolute; left: 0.25rem; top: 0.25rem; width: 1rem; height: 1rem; background: var(--wg-ink); transition: left 200ms, background-color 200ms; }
+.wg-switch input:checked { background: var(--wg-link); box-shadow: none; }
+.wg-switch input:checked::after { left: 1.75rem; background: var(--wg-on-link); }
+.wg-check input:disabled, .wg-radio input:disabled, .wg-switch input:disabled { opacity: 0.5; cursor: not-allowed; }
+fieldset.wg-fieldset { border: 0; padding: 0; display: grid; gap: 0.75rem; }
+
+/* a joined row of choices where one is pressed: date ranges, views */
+.wg-segment { display: inline-flex; max-width: 100%; overflow-x: auto; box-shadow: var(--wg-line); background: var(--wg-ground); }
+.wg-segment button { flex: none; height: 2.5rem; min-width: 3.5rem; padding: 0 1rem; font-family: var(--wg-mono); font-size: 0.9rem; text-transform: uppercase; background: none; border: 0; box-shadow: inset -1px 0 0 var(--wg-hair); color: var(--wg-ink); cursor: pointer; transition: background-color 120ms, color 120ms; }
+.wg-segment button:last-child { box-shadow: none; }
+.wg-segment button:hover { background: var(--wg-current); color: var(--wg-head); }
+.wg-segment button[aria-pressed="true"] { background: var(--wg-link); color: var(--wg-on-link); font-weight: 700; }
+
+/* a small choice: a filter, a logo color. Pressed chips fill with the ink. */
+.wg-chip { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 600; background: transparent; color: var(--wg-ink); border: 0; box-shadow: var(--wg-line); padding: 0 1rem; height: 2.5rem; cursor: pointer; white-space: nowrap; list-style: none; transition: background-color 200ms, color 200ms; }
+.wg-chip[aria-pressed="true"] { background: var(--wg-ink); color: var(--wg-panel); }
+.wg-chip:hover { background: var(--wg-current); color: var(--wg-head); }
+.wg-chip[aria-pressed="true"]:hover { background: var(--wg-ink); color: var(--wg-panel); }
+.wg-chip::-webkit-details-marker { display: none; }
+
+/* a menu that opens under its button: <details class="wg-menu"><summary class="wg-chip">… */
+.wg-menu { position: relative; display: inline-block; }
+.wg-menu-list { position: absolute; z-index: 20; top: calc(100% + 0.5rem); left: 0; min-width: 14rem; padding: 0.5rem; background: var(--wg-panel-2); box-shadow: var(--wg-line); }
+:root[data-mode="light"] .wg-menu-list { background: var(--wg-panel); }
+
+/* a card that is a choice: the label wraps a radio or a checkbox */
+.wg-choice { display: grid; gap: 0.5rem; align-content: start; padding: 1.5rem; background: var(--wg-panel); box-shadow: var(--wg-line); cursor: pointer; position: relative; }
+.wg-choice input { position: absolute; top: 1.5rem; right: 1.5rem; }
+.wg-choice:has(input:checked) { box-shadow: inset 0 0 0 0.125rem var(--wg-link); }
+.wg-choice:has(input:focus-visible) { outline: 0.125rem solid var(--wg-link); outline-offset: 0.125rem; }
+.wg-choice p { max-width: none; }
+
+/* ---------- tabs, breadcrumb, pagination ---------- */
+
+.wg-tablist { display: flex; gap: 0; box-shadow: inset 0 -1px 0 var(--wg-hair); overflow-x: auto; }
+.wg-tablist [role="tab"] { height: 3rem; padding: 0 1.5rem; background: none; border: 0; color: var(--wg-ink); cursor: pointer; white-space: nowrap; transition: background-color 120ms, color 120ms; }
+.wg-tablist [role="tab"]:hover { background: var(--wg-current); color: var(--wg-head); }
+.wg-tablist [role="tab"][aria-selected="true"] { color: var(--wg-head); font-weight: 600; box-shadow: inset 0 -0.125rem 0 var(--wg-link); }
+.wg-tabpanel { padding: 1.5rem 0; }
+.wg-tabpanel[hidden] { display: none; }
+.wg-crumbs { list-style: none; padding: 0; display: flex; flex-wrap: wrap; align-items: center; font-size: 0.9rem; }
+.wg-crumbs li { max-width: none; display: flex; align-items: center; }
+.wg-crumbs li + li::before { content: "/"; padding: 0 0.5rem; color: var(--wg-quiet); }
+.wg-crumbs a { color: var(--wg-ink); }
+.wg-crumbs [aria-current="page"] { color: var(--wg-head); font-weight: 600; }
+.wg-pages { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.wg-pages li { max-width: none; }
+.wg-pages a, .wg-pages span { display: grid; place-items: center; min-width: 2.5rem; height: 2.5rem; padding: 0 0.5rem; font-family: var(--wg-mono); font-size: 0.9rem; color: var(--wg-ink); text-decoration: none; box-shadow: var(--wg-line); }
+.wg-pages a:hover { background: var(--wg-current); color: var(--wg-head); }
+.wg-pages [aria-current="page"] { background: var(--wg-ink); color: var(--wg-panel); font-weight: 700; }
+.wg-pages span { box-shadow: none; color: var(--wg-quiet); }
+
+/* a row of cards that scrolls sideways and snaps */
+.wg-rail { contain: inline-size; display: grid; grid-auto-flow: column; grid-auto-columns: 18rem; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; list-style: none; padding-left: 0; }
+.wg-rail > * { scroll-snap-align: start; max-width: none; }
+
+/* ---------- cards ---------- */
+
+.wg-card { display: grid; gap: 1rem; align-content: start; padding: 1.5rem; background: var(--wg-panel); box-shadow: var(--wg-line); color: var(--wg-ink); text-decoration: none; }
+.wg-card p { max-width: none; }
+a.wg-card { transition: background-color 240ms; }
+a.wg-card:hover, a.wg-card:focus-visible { background: var(--wg-panel-2); }
+a.wg-card:hover h3, a.wg-card:focus-visible h3 { text-decoration: underline; text-underline-offset: 0.2em; }
+.wg-card-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.wg-card-name { display: flex; align-items: center; gap: 0.5rem; }
+.wg-card-name .wg-icon { color: var(--wg-link); }
+.wg-card-foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1rem; box-shadow: inset 0 1px 0 var(--wg-hair); font-size: 0.9rem; color: var(--wg-quiet); }
+/* a card for a post: cover, meta line, title, one line */
+.wg-post { padding: 0; gap: 0; }
+.wg-post-cover { aspect-ratio: 16 / 9; background: var(--wg-panel-2); box-shadow: inset 0 -1px 0 var(--wg-hair); display: grid; place-items: center; color: var(--wg-quiet); overflow: hidden; }
+.wg-post-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.wg-post-body { display: grid; gap: 0.5rem; padding: 1.5rem; }
+.wg-meta { font-size: 0.9rem; font-weight: 600; line-height: 1.5rem; color: var(--wg-quiet); }
+/* one message that should not be missed */
+.wg-callout { display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem; background: var(--wg-panel-2); box-shadow: var(--wg-line); }
+.wg-callout-badge { width: 2.5rem; height: 2.5rem; display: grid; place-items: center; flex: none; font-family: var(--wg-mono); font-weight: 700; font-size: 0.9rem; color: var(--wg-link); box-shadow: inset 0 0 0 1px currentColor; }
+.wg-callout-body { display: grid; gap: 0.5rem; }
+.wg-callout p { max-width: 44rem; }
+.wg-callout code { background: var(--wg-panel); box-shadow: var(--wg-line); padding: 0 0.5rem; }
+:root[data-mode="light"] .wg-callout { background: var(--wg-panel); }
+:root[data-mode="light"] .wg-callout code { background: var(--wg-panel-2); }
+/* a numbered step: a large numeral, a title, a line */
+.wg-step { display: grid; grid-template-columns: 4rem minmax(0, 1fr); gap: 0 1rem; align-items: start; padding: 1.5rem; background: var(--wg-panel); box-shadow: var(--wg-line); }
+.wg-step-num { font-family: var(--wg-display); font-weight: 900; font-size: 3rem; line-height: 3rem; color: var(--wg-link); grid-row: span 2; }
+.wg-step p { max-width: none; }
+/* a wide band with one message and one action */
+.wg-band { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; padding: 2rem 1.5rem; background: var(--wg-panel); box-shadow: var(--wg-line), inset 0.125rem 0 0 var(--wg-link); }
+.wg-band-text { display: grid; gap: 0.5rem; }
+
+/* ---------- lists of rows ---------- */
+
+/* rows in one panel: a name, a value, a description */
+.wg-list { display: grid; background: var(--wg-panel); box-shadow: var(--wg-line); list-style: none; padding: 0; }
+.wg-list > li, .wg-list > div { display: grid; grid-template-columns: 16rem 12rem minmax(0, 1fr); gap: 0 1rem; align-items: center; min-height: 3rem; padding: 0.5rem 1.5rem; box-shadow: inset 0 -1px 0 var(--wg-hair); max-width: none; }
+.wg-list > :last-child { box-shadow: none; }
+.wg-list--two > li, .wg-list--two > div { grid-template-columns: 16rem minmax(0, 1fr); }
+.wg-list b { color: var(--wg-head); font-weight: 600; }
+.wg-list code { line-height: 1.5rem; white-space: nowrap; }
+/* a card of keys and values: <dl class="wg-kv"> */
+.wg-kv { display: grid; grid-template-columns: 10rem minmax(0, 1fr); background: var(--wg-panel); box-shadow: var(--wg-line); }
+.wg-kv dt, .wg-kv dd { padding: 0.75rem 1.5rem; box-shadow: inset 0 -1px 0 var(--wg-hair); }
+.wg-kv dt { font-size: 0.9rem; font-weight: 600; color: var(--wg-quiet); }
+.wg-kv dd { color: var(--wg-head); }
+.wg-kv > :nth-last-child(-n + 2) { box-shadow: none; }
+/* do and do not */
+.wg-checks { list-style: none; padding: 0; display: grid; background: var(--wg-panel); box-shadow: var(--wg-line); }
+.wg-checks li { position: relative; padding: 0.75rem 1.5rem 0.75rem 4rem; box-shadow: inset 0 -1px 0 var(--wg-hair); max-width: none; }
+.wg-checks li:last-child { box-shadow: none; }
+.wg-checks li::before { content: "✓"; position: absolute; left: 1.5rem; top: 0.75rem; font-weight: 700; color: var(--wg-link); }
+.wg-checks li.wg-no::before { content: "✗"; color: var(--wg-quiet); }
+
+/* ---------- quotes ---------- */
+
+blockquote, .wg-quote { display: grid; gap: 1rem; background: var(--wg-panel); box-shadow: var(--wg-line), inset 0.125rem 0 0 var(--wg-link); padding: 1.5rem; font-size: 1.375rem; line-height: 2rem; color: var(--wg-head); }
+blockquote p { max-width: none; }
+blockquote footer, .wg-quote footer { font-size: 0.9rem; line-height: 1.5rem; color: var(--wg-quiet); }
+blockquote cite { font-style: normal; font-weight: 600; color: var(--wg-ink); }
+
+/* ---------- badges and tags ---------- */
+
+.wg-tag, .wg-ns, .wg-badge, .wg-proposed { display: inline-block; vertical-align: top; height: 1.5rem; line-height: 1.5rem; padding: 0 0.5rem; font-size: 0.9rem; white-space: nowrap; flex: none; }
+.wg-tag { font-family: var(--wg-mono); color: var(--wg-link); box-shadow: var(--wg-line); }
+.wg-ns { font-family: var(--wg-mono); color: var(--wg-quiet); box-shadow: var(--wg-line); }
+.wg-badge { font-weight: 600; color: var(--wg-ink); box-shadow: var(--wg-line); }
+.wg-badge--solid { background: var(--wg-signal); color: var(--wg-on-signal); box-shadow: none; }
+.wg-badge--quiet { color: var(--wg-quiet); }
+.wg-proposed { outline: 1px dashed var(--wg-quiet); outline-offset: -0.125rem; margin-right: 0.5rem; font-weight: 600; }
+.wg-count { display: inline-grid; place-items: center; min-width: 1.5rem; height: 1.5rem; padding: 0 0.375rem; font-family: var(--wg-mono); font-size: 0.8125rem; font-weight: 700; background: var(--wg-link); color: var(--wg-on-link); }
+
+/* ---------- avatar and identity ---------- */
+
+.wg-avatar { width: 2.5rem; height: 2.5rem; flex: none; display: grid; place-items: center; background: var(--wg-panel-2); box-shadow: var(--wg-line); font-weight: 700; font-size: 0.9rem; color: var(--wg-head); overflow: hidden; }
+.wg-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.wg-avatar--lg { width: 4rem; height: 4rem; font-size: 1.375rem; }
+.wg-identity { display: flex; align-items: center; gap: 0.75rem; }
+.wg-identity b { display: block; color: var(--wg-head); font-weight: 600; line-height: 1.5rem; }
+.wg-identity div span { display: block; font-size: 0.9rem; line-height: 1rem; color: var(--wg-quiet); }
+/* a row of logos, each in its own cell */
+.wg-logos { display: grid; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); gap: 1px; list-style: none; padding: 0; background: var(--wg-hair); box-shadow: var(--wg-line); }
+.wg-logos li { max-width: none; display: grid; place-items: center; height: 6rem; padding: 1.5rem; background: var(--wg-panel); color: var(--wg-quiet); }
+.wg-logos svg, .wg-logos img { max-height: 2rem; width: auto; }
+
+/* ---------- tables ---------- */
+
+table { width: 100%; border-collapse: collapse; }
+td, th { text-align: left; padding: 0.5rem 1rem 0.5rem 0; box-shadow: inset 0 -1px 0 var(--wg-hair); vertical-align: top; line-height: 1.5rem; }
+th { font-size: 0.9rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--wg-quiet); }
+td.wg-num, th.wg-num { text-align: right; font-family: var(--wg-mono); font-size: 0.9rem; padding-right: 0; }
+.wg-table-wrap { background: var(--wg-panel); box-shadow: var(--wg-line); padding: 0.5rem 1.5rem 1rem; overflow-x: auto; }
+tbody tr:last-child td { box-shadow: none; }
+
+/* ---------- numbers and charts ---------- */
+
+/* one number and its label */
+.wg-stat { display: grid; gap: 0.5rem; align-content: start; padding: 1.5rem; background: var(--wg-panel); box-shadow: var(--wg-line); }
+.wg-stat-value { font-family: var(--wg-display); font-weight: 900; font-size: 3rem; line-height: 3rem; color: var(--wg-head); }
+.wg-stat-label { font-size: 0.9rem; font-weight: 600; line-height: 1.5rem; color: var(--wg-quiet); }
+/* a change against an earlier period: the arrow and the sign carry the direction, not a color */
+.wg-delta { font-family: var(--wg-mono); font-size: 0.9rem; line-height: 1.5rem; color: var(--wg-ink); }
+.wg-delta--up::before { content: "▲ "; }
+.wg-delta--down::before { content: "▼ "; }
+/* a stat with a small trend line under the number */
+.wg-spark { width: 100%; height: 3rem; display: block; margin-top: 0.5rem; overflow: visible; }
+.wg-spark polyline, .wg-chart .wg-line-1 { fill: none; stroke: var(--wg-series-1); stroke-width: 2; vector-effect: non-scaling-stroke; }
+
+/* a chart sits in a figure with a title, the plot and a legend or direct labels */
+.wg-figure { display: grid; gap: 1rem; padding: 1.5rem; background: var(--wg-panel); box-shadow: var(--wg-line); }
+.wg-figure figcaption { display: grid; gap: 0.25rem; }
+.wg-figure figcaption b { color: var(--wg-head); font-weight: 600; }
+/* horizontal bars: label, bar, value. Set --v from 0 to 100 on each row. */
+.wg-bars { list-style: none; padding: 0; display: grid; gap: 0.5rem; }
+.wg-bars li { max-width: none; display: grid; grid-template-columns: minmax(4rem, 0.5fr) minmax(4rem, 1fr) minmax(3rem, auto); gap: 1rem; align-items: center; min-height: 1.5rem; font-size: 0.9rem; }
+.wg-bars .wg-bar { height: 1rem; background: linear-gradient(to right, var(--wg-series-2) calc(var(--v) * 1%), transparent 0); box-shadow: inset 0 -1px 0 var(--wg-hair); }
+.wg-bars .wg-top .wg-bar { background: linear-gradient(to right, var(--wg-series-1) calc(var(--v) * 1%), transparent 0); }
+.wg-bars .wg-val { font-family: var(--wg-mono); text-align: right; color: var(--wg-head); }
+/* a line or column chart drawn in SVG: axis and grid in the hairline, text in the quiet color */
+.wg-chart { width: 100%; height: auto; display: block; }
+.wg-chart .wg-axis { stroke: var(--wg-rule); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.wg-chart .wg-gridline { stroke: var(--wg-hair); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.wg-chart text { font-family: var(--wg-mono); font-size: 11px; fill: var(--wg-quiet); }
+.wg-chart text.wg-strong { fill: var(--wg-head); font-weight: 700; }
+.wg-chart .wg-line-2 { fill: none; stroke: var(--wg-series-2); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.wg-chart .wg-line-3 { fill: none; stroke: var(--wg-series-3); stroke-width: 2; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke; }
+.wg-chart .wg-fill-1 { fill: var(--wg-series-1); } .wg-chart .wg-fill-2 { fill: var(--wg-series-2); } .wg-chart .wg-fill-3 { fill: var(--wg-series-3); }
+.wg-chart .wg-point { fill: var(--wg-series-1); stroke: var(--wg-panel); stroke-width: 2; }
+.wg-chart-legend { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-size: 0.9rem; }
+.wg-chart-legend li { max-width: none; display: flex; align-items: center; gap: 0.5rem; }
+.wg-key { width: 1rem; height: 0.25rem; flex: none; background: var(--wg-series-1); }
+.wg-key--2 { background: var(--wg-series-2); }
+.wg-key--3 { background: repeating-linear-gradient(to right, var(--wg-series-3) 0 0.25rem, transparent 0 0.4375rem); }
+
+/* ---------- messages ---------- */
+
+/* an alert: an icon, a title, a line. The kind is said by the icon and the title;
+   Well & Good has no warning or error color. */
+.wg-alert { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr) auto; gap: 0 1rem; align-items: start; padding: 1rem 1.5rem; background: var(--wg-panel); box-shadow: var(--wg-line), inset 0.125rem 0 0 var(--wg-quiet); }
+.wg-alert .wg-icon { width: 1.5rem; height: 1.5rem; color: var(--wg-quiet); }
+.wg-alert b { display: block; color: var(--wg-head); font-weight: 600; }
+.wg-alert p { max-width: none; }
+.wg-alert--ok { box-shadow: var(--wg-line), inset 0.125rem 0 0 var(--wg-link); }
+.wg-alert--ok .wg-icon { color: var(--wg-link); }
+.wg-alert--warn { box-shadow: var(--wg-line), inset 0.25rem 0 0 var(--wg-head); }
+.wg-alert--warn .wg-icon { color: var(--wg-head); }
+.wg-alert--error { box-shadow: inset 0 0 0 0.125rem var(--wg-head); }
+.wg-alert--error .wg-icon { color: var(--wg-head); }
+/* toasts stack in a corner; wg.js adds and removes them: WG.toast("Saved") */
+.wg-toasts { position: fixed; z-index: 40; right: 1rem; bottom: 1rem; display: grid; gap: 0.5rem; width: min(22rem, calc(100vw - 2rem)); }
+.wg-toast { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.75rem 1rem; background: var(--wg-btn-fill); color: var(--wg-btn-ink); font-weight: 600; font-size: 0.9rem; }
+.wg-toast button { background: none; border: 0; padding: 0 0.25rem; cursor: pointer; color: inherit; font-size: 1.25rem; line-height: 1.5rem; }
+
+/* ---------- loading and progress ---------- */
+
+.wg-spinner { width: 1.5rem; height: 1.5rem; display: inline-block; border: 0.125rem solid var(--wg-hair); border-top-color: var(--wg-link); animation: wg-spin 900ms steps(8) infinite; }
+@keyframes wg-spin { to { transform: rotate(360deg); } }
+progress.wg-progress { appearance: none; width: 100%; height: 0.5rem; border: 0; background: var(--wg-panel-2); box-shadow: var(--wg-line); display: block; }
+progress.wg-progress::-webkit-progress-bar { background: transparent; }
+progress.wg-progress::-webkit-progress-value { background: var(--wg-link); }
+progress.wg-progress::-moz-progress-bar { background: var(--wg-link); }
+.wg-skeleton { display: block; height: 1rem; background: var(--wg-panel-2); animation: wg-pulse 1400ms ease-in-out infinite; }
+.wg-skeleton--title { height: 1.5rem; width: 60%; }
+@keyframes wg-pulse { 50% { opacity: 0.5; } }
+/* numbered steps of a flow: the current one is marked with aria-current="step" */
+.wg-steps { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; counter-reset: wg-step; }
+.wg-steps li { max-width: none; counter-increment: wg-step; display: flex; align-items: center; gap: 0.5rem; height: 2.5rem; padding: 0 1rem; box-shadow: var(--wg-line); font-size: 0.9rem; color: var(--wg-quiet); }
+.wg-steps li::before { content: counter(wg-step, decimal-leading-zero); font-family: var(--wg-mono); }
+.wg-steps [aria-current="step"] { background: var(--wg-ink); color: var(--wg-panel); font-weight: 600; }
+
+/* nothing here yet: a dashed box with a title, a line and one action */
+.wg-empty-state { display: grid; gap: 1rem; justify-items: center; text-align: center; padding: 3rem 1.5rem; outline: 1px dashed var(--wg-quiet); outline-offset: -1px; }
+.wg-empty-state .wg-icon { width: 2rem; height: 2rem; color: var(--wg-quiet); }
+
+/* ---------- disclosure and overlays ---------- */
+
+details.wg-disclosure { background: var(--wg-panel); box-shadow: var(--wg-line); }
+details.wg-disclosure + details.wg-disclosure { margin-top: -1px; }
+details.wg-disclosure > summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3rem; padding: 0.75rem 1.5rem; cursor: pointer; font-weight: 600; color: var(--wg-head); list-style: none; }
+details.wg-disclosure > summary::-webkit-details-marker { display: none; }
+details.wg-disclosure > summary::after { content: "+"; font-family: var(--wg-mono); font-size: 1.25rem; color: var(--wg-quiet); }
+details.wg-disclosure[open] > summary::after { content: "−"; }
+details.wg-disclosure > :not(summary) { padding: 0 1.5rem 1.5rem; }
+dialog.wg-dialog { margin: auto; width: min(32rem, calc(100vw - 2rem)); padding: 0; border: 0; color: var(--wg-ink); background: var(--wg-panel); box-shadow: var(--wg-line); }
+dialog.wg-dialog::backdrop { background: #000d01cc; }
+.wg-dialog-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.5rem; box-shadow: inset 0 -1px 0 var(--wg-hair); }
+.wg-dialog-body { display: grid; gap: 1rem; padding: 1.5rem; }
+.wg-dialog-foot { display: flex; justify-content: flex-end; gap: 0.5rem; padding: 1rem 1.5rem; box-shadow: inset 0 1px 0 var(--wg-hair); }
+/* a short label that appears on hover and on focus: data-wg-tip="text" */
+[data-wg-tip] { position: relative; }
+[data-wg-tip]:hover::after, [data-wg-tip]:focus-visible::after { content: attr(data-wg-tip); position: absolute; z-index: 20; left: 50%; bottom: calc(100% + 0.5rem); transform: translateX(-50%); padding: 0.25rem 0.5rem; background: var(--wg-btn-fill); color: var(--wg-btn-ink); font-family: var(--wg-body); font-size: 0.8125rem; font-weight: 600; line-height: 1rem; letter-spacing: 0; text-transform: none; white-space: nowrap; pointer-events: none; }
+
+/* ---------- sign in ---------- */
+
+/* a page with one centered card: put wg-auth on <body> or on a wrapper */
+.wg-auth { min-height: 100vh; display: grid; place-items: center; padding: 2rem 1rem; }
+.wg-auth-card { width: min(26rem, 100%); display: grid; gap: 1.5rem; padding: 2rem; background: var(--wg-panel); box-shadow: var(--wg-line); }
+.wg-auth-card .wg-brand-logo { height: 1.5rem; color: var(--wg-head); }
+.wg-auth-foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.9rem; }
+.wg-or { display: flex; align-items: center; gap: 1rem; font-size: 0.9rem; color: var(--wg-quiet); }
+.wg-or::before, .wg-or::after { content: ""; flex: 1; height: 1px; background: var(--wg-hair); }
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 56rem) {
+  .wg-shell { display: block; }
+  .wg-side { position: sticky; top: 0; height: auto; min-height: 0; max-height: 100vh; overflow-y: auto; box-shadow: inset 0 -1px 0 var(--wg-edge); }
+  .wg-side-brand { padding: 1rem; box-shadow: none; }
+  .wg-side-tools { display: flex; }
+  .wg-side-body { display: none; }
+  .wg-side.is-open .wg-side-body { display: flex; }
+  .wg-side.is-open .wg-side-brand { box-shadow: inset 0 -1px 0 var(--wg-hair); }
+  .wg-nav a, .wg-nav button, .wg-mode { height: 3rem; }
+  .wg-side-foot .wg-mode { display: none; }
+  .wg-main { grid-template-columns: 1rem minmax(0, 1fr) 1rem; row-gap: 3rem; padding: 2rem 0 4rem; }
+  .wg-main > * { width: auto; }
+  h1 { font-size: 2.5rem; line-height: 3rem; }
+  .wg-lead h1 { font-size: 3rem; line-height: 3rem; }
+  .wg-grid-2, .wg-grid-3, .wg-grid-4 { grid-template-columns: minmax(0, 1fr); width: auto; }
+  .wg-list > li, .wg-list > div, .wg-list--two > li, .wg-list--two > div { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .wg-kv { grid-template-columns: minmax(0, 1fr); }
+  .wg-kv dt { box-shadow: none; padding-bottom: 0; }
+  .wg-kv > :nth-last-child(2) { box-shadow: none; }
+  .wg-topnav { flex-wrap: wrap; height: auto; min-height: 4rem; padding: 0 1rem; gap: 0 1rem; }
+  .wg-topnav .wg-menu-btn { display: grid; }
+  .wg-topnav-links { display: none; order: 3; flex-basis: 100%; flex-direction: column; align-items: stretch; padding-bottom: 1rem; }
+  .wg-topnav.is-open .wg-topnav-links { display: flex; }
+  .wg-topnav-links a { height: 3rem; }
+  .wg-topnav-tools .wg-btn { display: none; }
+  .wg-footer-top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .wg-footer-top > :first-child { grid-column: 1 / -1; }
+  .wg-bars li { gap: 0.5rem; }
+  .wg-step { grid-template-columns: 3rem minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .wg-btn:hover, .wg-btn:focus-visible, .wg-btn:active { transform: none; }
+}

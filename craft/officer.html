@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Officer view — Brewery 2032</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="officer">
+
+  <main id="app">
+
+    <!-- Join (if no session+brewery in URL) -->
+    <section class="screen" data-screen="join">
+      <h1 id="join-heading"></h1>
+      <p class="situation" id="join-hint"></p>
+      <label class="reflection">
+        <span id="join-code-label"></span>
+        <input type="text" id="join-code" autocomplete="off" />
+      </label>
+      <label class="reflection">
+        <span id="join-brewery-label"></span>
+        <input type="text" id="join-brewery" autocomplete="off" />
+      </label>
+      <div class="actions">
+        <button class="primary" data-action="join">Continue</button>
+      </div>
+      <div id="join-error" class="error" hidden></div>
+    </section>
+
+    <!-- Role picker -->
+    <section class="screen" data-screen="picker">
+      <header class="officer-header">
+        <span class="brewery-tag" id="picker-brewery"></span>
+      </header>
+      <h2 id="picker-heading"></h2>
+      <p id="picker-hint" class="situation"></p>
+      <div class="role-grid" id="role-grid"></div>
+    </section>
+
+    <!-- Mission + per-step prompts -->
+    <section class="screen" data-screen="mission">
+      <header class="officer-header">
+        <span class="role-tag" id="mission-role-tag"></span>
+        <span class="brewery-tag" id="mission-brewery"></span>
+        <span class="sync-tag" id="sync-tag"></span>
+      </header>
+
+      <article class="mission-card" id="mission-card"></article>
+
+      <div class="step-block" id="step-block"></div>
+
+      <div id="step-status" class="status" hidden></div>
+    </section>
+
+  </main>
+
+  <script src="content.js"></script>
+  <script src="storage.js"></script>
+  <script src="officer.js"></script>
+</body>
+</html>

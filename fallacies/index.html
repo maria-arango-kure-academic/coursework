@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fallacy pairs</title>
+<!-- The Well & Good interface kit: a copy of shared/brands/wellgoodco/kit, fonts and grid tiles, kept in wg/ so this folder can be served on its own. -->
+<link rel="stylesheet" href="wg/kit/wg.css">
+<script src="wg/kit/wg.js"></script>
+<style>
+/* Only what the kit does not hold: a title in the top bar, the one-screen board and the turning card.
+   Colors are the kit's role variables; sizes are multiples of 0.5rem. */
+.wg-topnav h1 { font-size: 1.375rem; line-height: 1.5rem; flex: 1; }
+.wg-topnav-tools .wg-btn { display: inline-flex; } /* the kit hides bar buttons on phones; these two are the activity's actions */
+
+.fp-board { flex: 1; min-height: 0; padding: 1rem; }
+.fp-cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr)); }
+.fp-cards li { max-width: none; min-width: 0; }
+
+/* A card is one button, 4:3, with two faces. */
+.fp-card { display: grid; width: 100%; aspect-ratio: 4 / 3; perspective: 70rem; container-type: inline-size; text-align: left; background: none; border: 0; padding: 0; cursor: pointer; }
+.fp-card[aria-disabled="true"] { cursor: default; }
+.fp-inner { display: grid; grid-template-columns: minmax(0, 1fr); }
+.fp-face { grid-area: 1 / 1; display: flex; flex-direction: column; gap: 0.5rem; padding: 1rem; }
+.fp-face > span { display: block; }
+.fp-example { font-size: 1rem; line-height: 1.5rem; color: var(--wg-head); }
+@container (min-width: 20rem) { .fp-example { font-size: 1.125rem; } }
+.fp-card:hover .fp-front { background: var(--wg-panel-2); }
+/* chosen: a heavier edge and the inset fill, so the state never rests on color alone */
+.fp-card[aria-pressed="true"] .fp-front { background: var(--wg-panel-2); box-shadow: inset 0 0 0 0.125rem var(--wg-head); }
+/* not a pair: a dashed edge for a moment */
+.fp-card.fp-miss .fp-front { outline: 0.125rem dashed var(--wg-ink); outline-offset: -0.5rem; }
+/* matched: Lichen with Woodsmoke text in both modes, the name first, the type last */
+.fp-back { visibility: hidden; background: var(--wg-lichen); color: var(--wg-woodsmoke); box-shadow: inset 0 0 0 0.125rem var(--wg-moss); }
+.fp-name { font-family: var(--wg-display); font-weight: 700; font-size: 1.375rem; line-height: 1.5rem; }
+.fp-back .wg-quiet { color: var(--wg-woodsmoke); margin-top: auto; }
+
+/* The turn: the card swings edge-on, the faces swap at the halfway point, and it swings back flat.
+   Neither face is ever drawn rotated or mirrored; with reduced motion the faces simply swap. */
+.fp-card.fp-found .fp-front { visibility: hidden; animation: fp-out 0.5s step-end; }
+.fp-card.fp-found .fp-back { visibility: visible; animation: fp-in 0.5s step-end; }
+.fp-card.fp-found .fp-inner { animation: fp-turn 0.5s ease-in-out; }
+@keyframes fp-turn { 50% { transform: rotateY(90deg); } }
+@keyframes fp-out { 0% { visibility: visible; } 50%, 100% { visibility: hidden; } }
+@keyframes fp-in { 0% { visibility: hidden; } 50%, 100% { visibility: visible; } }
+
+/* Desktop: one screen, nothing scrolls. The board is 3 by 2; a card takes the widest 4:3 size that fits,
+   stepped to 2rem so its edges land on the 0.5rem grid, and the board starts on a grid line. */
+@media (min-width: 56rem) {
+  body.wg-page { height: 100dvh; overflow: hidden; }
+  .fp-board { container-type: size; padding: 0; }
+  .fp-cards {
+    --w: round(down, min((100cqw - 2rem) / 3, (100cqh - 1.5rem) / 2 * 4 / 3), 2rem);
+    grid-template-columns: repeat(3, var(--w)); justify-content: start; align-content: start;
+    margin-left: round(down, calc((100cqw - 3 * var(--w) - 1rem) / 2), 0.5rem);
+    margin-top: round(down, calc((100cqh - 1.5 * var(--w) - 0.5rem) / 2), 0.5rem);
+  }
+  .fp-card, .fp-inner, .fp-face { min-height: 0; }
+  .fp-inner { grid-template-rows: minmax(0, 1fr); }
+}
+
+/* Scores: the game-over panel beside the top 10. It takes the place of the cards while it is open. */
+.fp-cards[hidden], .fp-scores[hidden], .fp-scores [hidden] { display: none; }
+.fp-board.fp-open { overflow: auto; padding: 1rem; }
+.fp-scores { display: grid; gap: 0.5rem; grid-template-columns: minmax(0, 1fr); max-width: 60rem; margin-inline: auto; align-items: start; }
+@media (min-width: 56rem) { .fp-scores { grid-template-columns: minmax(0, 20rem) minmax(0, 1fr); } }
+.fp-scores th:first-child, .fp-scores td:first-child { padding-left: 0.5rem; }
+.fp-scores th.wg-num, .fp-scores td.wg-num { padding-right: 0.5rem; }
+.fp-scores td:nth-child(3), .fp-scores td.wg-num { white-space: nowrap; } /* a date or a score never breaks; a long name may */
+/* Phones: the score line gets its own row in the bar, above the two buttons. */
+@media (max-width: 56rem) {
+  .wg-topnav-tools { flex-wrap: wrap; flex-basis: 100%; padding-bottom: 0.5rem; }
+  .wg-topnav-tools #count { flex-basis: 100%; }
+  .fp-scores th, .fp-scores td { padding-right: 0.5rem; }
+  .fp-scores .wg-panel { overflow-x: auto; }
+}
+/* the player's own row: the inset fill and the words "(you)", so it never rests on color alone */
+.fp-scores tr.fp-own td { background: var(--wg-current); color: var(--wg-head); font-weight: 600; }
+</style>
+</head>
+<body class="wg-page">
+<a class="wg-skip" href="#cards">Skip to the cards</a>
+<header class="wg-topnav">
+  <h1>Find the two examples of the same fallacy</h1>
+  <div class="wg-topnav-tools">
+    <span class="wg-quiet" id="count"></span>
+    <button class="wg-btn wg-btn--sm" id="next" type="button" disabled>Next round</button>
+    <button class="wg-btn wg-btn--ghost wg-btn--sm" id="show-board" type="button">Top 10</button>
+    <button class="wg-icon-btn" type="button" data-wg-mode></button>
+  </div>
+</header>
+<main class="fp-board" id="main">
+  <ul class="fp-cards" id="cards" tabindex="-1"></ul>
+  <section class="fp-scores" id="board" aria-labelledby="board-title" hidden>
+    <div class="wg-panel">
+      <h2 id="board-title" tabindex="-1"></h2>
+      <p id="result"></p>
+      <form class="wg-field" id="name-form" hidden>
+        <label for="name">Your name</label>
+        <input class="wg-input" id="name" name="name" maxlength="12" pattern="[A-Za-z0-9_. \-]{1,12}" required
+               autocomplete="nickname" autocapitalize="off" spellcheck="false" aria-describedby="name-hint">
+        <span class="wg-hint" id="name-hint">Up to 12 letters, numbers, spaces, or . _ -</span>
+        <div class="wg-row"><button class="wg-btn" type="submit">Save score</button></div>
+      </form>
+      <p class="wg-small" id="best"></p>
+      <div class="wg-row"><button class="wg-btn" id="resume" type="button"></button></div>
+    </div>
+    <div class="wg-panel">
+      <h2>Top 10 of all time</h2>
+      <table id="scores">
+        <thead><tr><th scope="col" aria-label="Rank">#</th><th scope="col">Name</th><th scope="col">Date</th><th scope="col" class="wg-num">Score</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <p class="wg-small" id="board-note"></p>
+    </div>
+  </section>
+  <p class="wg-hidden" id="status" role="status" aria-live="polite"></p>
+</main>
+<footer class="wg-footer wg-footer--min">
+  <div class="wg-footer-bottom"><span>Technology &amp; Society · Maria Arango-Kure · 2026</span></div>
+</footer>
+<script>
+(() => {
+  // ---------- Rules of the game. Change the numbers here. ----------
+  const PAIRS = 3;               // fallacies per round; each one puts two cards on the board
+  const LIVES = 3;               // wrong pairs a player can make in one game
+  const MATCH_POINTS = 100;      // for every pair found
+  const BONUS_START = 100;       // time bonus at the start of a round; what is left is added to each match
+  const BONUS_TICK_MS = 600;     // round 1: the bonus loses one point every 600 ms
+  const BONUS_SPEEDUP = 0.9;     // every later round counts down 10% faster
+  const BONUS_TICK_MIN_MS = 150; // the countdown never gets faster than this
+  const ROUND_POINTS = 200;      // for clearing a round
+  const MISS_HOLD = 1400;        // how long a wrong pair stays marked, in ms
+  const BOARD_SIZE = 10;         // scores kept on the shared board
+  const NAME_MAX = 12;
+  const SCORES_URL = "/api/blob/fallacy-pairs-top10"; // one shared JSON list on the server
+
+  const $ = id => document.getElementById(id);
+  const main = $("main"), list = $("cards"), board = $("board"), status = $("status"), count = $("count"), next = $("next");
+  const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const points = n => n.toLocaleString("en-GB");
+  const today = () => new Date().toISOString().slice(0, 10);
+  const day = iso => { const d = new Date(iso); return isNaN(d) ? "" : d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); };
+  const ordinal = n => n + (n % 100 >= 11 && n % 100 <= 13 ? "th" : ["th", "st", "nd", "rd"][n % 10] || "th");
+  const remember = (key, value) => { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {} };
+  const recall = key => { try { return JSON.parse(localStorage.getItem(key)); } catch (e) { return null; } };
+
+  let all = [];   // filled from fallacies.json; add fallacies or examples there
+  let queue = []; // fallacies not yet dealt in this game
+  let picked = [], found = 0, total = 0, locked = false;
+  let score = 0, lives = LIVES, round = 0, bonus = 0, clock = null, over = false;
+
+  // ---------- The countdown ----------
+  // It runs while the player is choosing. It stops after a match, so reading the definition costs nothing,
+  // and starts again with the next card chosen.
+  function startClock() {
+    if (clock || over || found === total) return;
+    const tick = Math.max(BONUS_TICK_MIN_MS, BONUS_TICK_MS * Math.pow(BONUS_SPEEDUP, round - 1));
+    clock = setInterval(() => { if (bonus > 0) { bonus--; paintBar(); } }, tick);
+  }
+  function stopClock() { clearInterval(clock); clock = null; }
+
+  function paintBar() {
+    count.textContent = `Round ${round} · ${points(score)} points · Bonus ${bonus} · ${lives} ${lives === 1 ? "life" : "lives"}`;
+  }
+
+  // ---------- Cards ----------
+  function card(f, example, i) {
+    const li = document.createElement("li");
+    li.innerHTML = `<button class="fp-card" type="button" aria-pressed="false" data-f="${f.n}">
+      <span class="fp-inner">
+        <span class="fp-face fp-front wg-card"><span class="wg-quiet">Example ${i + 1}</span><span class="fp-example"></span></span>
+        <span class="fp-face fp-back wg-card" aria-hidden="true"><span class="fp-name"></span><span class="fp-definition"></span><span class="wg-quiet"></span></span>
+      </span></button>`;
+    const b = li.firstElementChild;
+    b.querySelector(".fp-example").textContent = `“${example}”`;
+    b.querySelector(".fp-back .wg-quiet").textContent = f.type;
+    b.querySelector(".fp-name").textContent = f.name;
+    b.querySelector(".fp-definition").textContent = f.definition;
+    b.addEventListener("click", () => choose(b));
+    return li;
+  }
+
+  const setPicked = (b, on) => b.setAttribute("aria-pressed", on);
+
+  function choose(b) {
+    if (over || locked || b.classList.contains("fp-found")) return;
+    startClock();
+    if (picked.includes(b)) { setPicked(b, false); picked = picked.filter(x => x !== b); status.textContent = "Choose two cards."; return; }
+    setPicked(b, true); picked.push(b);
+    if (picked.length < 2) { status.textContent = "One card chosen. Choose a second."; return; }
+    const [x, y] = picked; picked = [];
+    if (x.dataset.f === y.dataset.f) match(x, y); else miss(x, y);
+  }
+
+  function match(x, y) {
+    [x, y].forEach(c => { c.removeAttribute("aria-pressed"); c.setAttribute("aria-disabled", "true"); c.classList.add("fp-found");
+      c.querySelector(".fp-front").setAttribute("aria-hidden", "true"); c.querySelector(".fp-back").removeAttribute("aria-hidden"); });
+    stopClock();
+    const gained = MATCH_POINTS + bonus;
+    score += gained; found++;
+    let said = `Match, ${gained} points: ${x.querySelector(".fp-name").textContent}. ${x.querySelector(".fp-definition").textContent}`;
+    if (found === total) { score += ROUND_POINTS; next.disabled = false; said += ` Round cleared, ${ROUND_POINTS} more points. Choose Next round to go on.`; }
+    paintBar(); status.textContent = said;
+  }
+
+  function miss(x, y) {
+    locked = true; lives--; paintBar();
+    [x, y].forEach(c => c.classList.add("fp-miss"));
+    status.textContent = lives > 0 ? `Not the same fallacy. ${lives} ${lives === 1 ? "life" : "lives"} left.` : "Not the same fallacy. No lives left.";
+    setTimeout(() => {
+      [x, y].forEach(c => { c.classList.remove("fp-miss"); setPicked(c, false); });
+      locked = false;
+      if (lives === 0) gameOver();
+    }, MISS_HOLD);
+  }
+
+  // One round: PAIRS fallacies that have not come up yet in this game; two of each one's examples become cards.
+  function deal() {
+    if (queue.length < PAIRS) queue = shuffle(all.slice());
+    const dealt = queue.splice(0, PAIRS), cards = [];
+    dealt.forEach(f => shuffle(f.examples.slice()).slice(0, 2).forEach(e => cards.push([f, e])));
+    shuffle(cards); list.textContent = ""; cards.forEach(([f, e], i) => list.appendChild(card(f, e, i)));
+    round++; picked = []; found = 0; total = dealt.length; locked = false; bonus = BONUS_START; next.disabled = true;
+    paintBar(); status.textContent = `Round ${round}. Choose two cards.`;
+    startClock();
+  }
+
+  function newGame() {
+    stopClock(); over = false; score = 0; lives = LIVES; round = 0; queue = [];
+    showCards(); deal();
+  }
+
+  // ---------- Scores ----------
+  // The board is one JSON list: [{ "name": "megaman69", "score": 1250, "date": "2026-11-14" }, ...]
+  const tidy = entries => (Array.isArray(entries) ? entries : [])
+    .filter(e => e && typeof e.name === "string" && Number.isFinite(e.score) && typeof e.date === "string")
+    .map(e => ({ name: e.name.slice(0, NAME_MAX), score: Math.floor(e.score), date: e.date.slice(0, 10) }))
+    .sort((a, b) => b.score - a.score).slice(0, BOARD_SIZE);
+
+  // Reads the shared board. Without a server it falls back to the copy kept in this browser.
+  async function loadScores() {
+    try {
+      const r = await fetch(SCORES_URL, { cache: "no-store" });
+      if (r.ok) return { scores: tidy(await r.json()), shared: true };
+    } catch (e) {}
+    return { scores: tidy(recall("fallacy-top10")), shared: false };
+  }
+
+  // Adds one entry: read the latest board, insert, keep the best BOARD_SIZE, write it back.
+  async function saveScore(entry) {
+    const scores = tidy((await loadScores()).scores.concat(entry));
+    let shared = false;
+    try {
+      const r = await fetch(SCORES_URL, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(scores) });
+      shared = r.ok;
+    } catch (e) {}
+    remember("fallacy-top10", scores);
+    return { scores, shared };
+  }
+
+  const makesBoard = (scores, n) => n > 0 && (scores.length < BOARD_SIZE || n > scores[scores.length - 1].score);
+
+  // Fills the table. "mine" is the entry just saved; without it, every row with the player's name is marked.
+  function paintBoard({ scores, shared }, mine) {
+    const body = $("scores").tBodies[0]; body.textContent = "";
+    const player = recall("fallacy-player");
+    scores.forEach((e, i) => {
+      const own = mine ? e === mine : e.name === player;
+      const tr = body.insertRow(); if (own) tr.className = "fp-own";
+      const cells = [i + 1, e.name + (own ? " (you)" : ""), day(e.date), points(e.score)];
+      cells.forEach((text, c) => { const td = tr.insertCell(); td.textContent = text; if (c === 3) td.className = "wg-num"; });
+    });
+    $("board-note").textContent = (scores.length ? "" : "No scores yet. ") + (shared ? "" : "The shared board could not be reached, so these scores are kept on this device only.");
+    const best = recall("fallacy-best");
+    const rank = scores.findIndex(e => e.name === player) + 1;
+    $("best").textContent = !best ? "" :
+      `Your best: ${points(best.score)} points on ${day(best.date)}. ` + (rank ? `You are ${ordinal(rank)} on the board.` : "You are not in the top 10.");
+  }
+
+  function showCards() { board.hidden = true; list.hidden = false; main.classList.remove("fp-open"); }
+
+  // Opens the board. During a game the countdown waits until the player comes back.
+  async function showBoard() {
+    stopClock();
+    list.hidden = true; board.hidden = false; main.classList.add("fp-open");
+    $("board-title").textContent = over ? "Game over" : "Scores";
+    $("result").textContent = over ? `You scored ${points(score)} points in ${round} ${round === 1 ? "round" : "rounds"}.` : "The game waits while you look.";
+    $("resume").textContent = over ? "Play again" : "Back to the game";
+    $("name-form").hidden = true;
+    const latest = await loadScores();
+    paintBoard(latest);
+    if (over && makesBoard(latest.scores, score)) {
+      $("result").textContent += " That is a top 10 score.";
+      $("name").value = recall("fallacy-player") || "";
+      $("name-form").hidden = false; $("resume").className = "wg-btn wg-btn--ghost"; $("name").focus();
+    } else { $("resume").className = "wg-btn"; $("board-title").focus(); }
+  }
+
+  function gameOver() {
+    over = true; stopClock(); next.disabled = true;
+    const best = recall("fallacy-best");
+    if (score > 0 && (!best || score > best.score)) remember("fallacy-best", { score, date: today() });
+    status.textContent = `Game over. ${points(score)} points.`;
+    showBoard();
+  }
+
+  $("name-form").addEventListener("submit", async event => {
+    event.preventDefault();
+    const name = $("name").value.trim().slice(0, NAME_MAX); if (!name) return;
+    remember("fallacy-player", name);
+    const entry = { name, score, date: today() };
+    const saved = await saveScore(entry);
+    $("name-form").hidden = true; $("resume").className = "wg-btn";
+    paintBoard(saved, saved.scores.find(e => e.name === entry.name && e.score === entry.score && e.date === entry.date));
+    status.textContent = "Score saved."; $("board-title").focus();
+  });
+
+  $("resume").addEventListener("click", () => { if (over) newGame(); else { showCards(); list.focus(); } });
+  $("show-board").addEventListener("click", () => { if (board.hidden) showBoard(); else if (!over) { showCards(); list.focus(); } });
+  next.addEventListener("click", () => { deal(); list.focus(); });
+
+  // A fallacy needs at least two examples to be dealt; extra examples are drawn at random.
+  fetch("fallacies.json").then(r => r.json())
+    .then(data => { all = data.filter(f => f.examples.length >= 2); newGame(); })
+    .catch(() => { status.textContent = "The fallacies could not be loaded."; count.textContent = "The fallacies could not be loaded."; });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brewery 2032 — in-class exercise</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main id="app">
+
+    <nav class="progress" id="progress" aria-label="Progress">
+      <span class="dot" data-step="welcome"></span>
+      <span class="dot" data-step="round1"></span>
+      <span class="dot" data-step="outcome1"></span>
+      <span class="dot" data-step="event"></span>
+      <span class="dot" data-step="round2"></span>
+      <span class="dot" data-step="final"></span>
+      <span class="dot" data-step="stakes"></span>
+      <span class="dot" data-step="reflection"></span>
+      <span class="dot" data-step="summary"></span>
+    </nav>
+
+    <!-- 0. Setup (brewery name + session code) -->
+    <section class="screen" data-screen="setup">
+      <h1 id="setup-heading"></h1>
+      <p id="setup-intro" class="situation"></p>
+
+      <label class="reflection">
+        <span id="setup-brewery-label"></span>
+        <input type="text" id="brewery-input" autocomplete="off" maxlength="40" />
+        <small id="setup-brewery-hint" class="hint"></small>
+      </label>
+
+      <label class="reflection">
+        <span id="setup-code-label"></span>
+        <input type="text" id="session-input" autocomplete="off" maxlength="40" />
+        <small id="setup-code-hint" class="hint"></small>
+      </label>
+
+      <div class="actions">
+        <button class="primary" data-action="join">Continue</button>
+        <button class="ghost" data-action="new-session"></button>
+      </div>
+
+      <div id="setup-error" class="error" hidden></div>
+      <div id="setup-status" class="status" hidden></div>
+    </section>
+
+    <!-- 0b. Session created (instructor view) -->
+    <section class="screen" data-screen="session-created">
+      <h2 id="session-created-heading"></h2>
+      <p id="session-created-hint" class="situation"></p>
+      <div class="big-code" id="big-session-code"></div>
+      <div class="actions">
+        <button class="primary" data-action="copy-code">Copy code</button>
+        <button class="ghost" data-action="back-to-setup">Back</button>
+      </div>
+    </section>
+
+    <!-- 0c. QR for officers -->
+    <section class="screen" data-screen="qr">
+      <h2 id="qr-heading"></h2>
+      <p id="qr-intro" class="situation"></p>
+
+      <div class="qr-block">
+        <div id="qr-canvas" aria-label="Officer URL QR code"></div>
+        <div class="qr-meta">
+          <p><strong id="qr-session-label"></strong> <span id="qr-session-value"></span></p>
+          <p><strong id="qr-brewery-label"></strong> <span id="qr-brewery-value"></span></p>
+          <p id="qr-fallback-label"></p>
+          <p class="url" id="qr-url"></p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="primary" data-action="next-from-qr"></button>
+      </div>
+    </section>
+
+    <!-- 1. Welcome / scenario brief -->
+    <section class="screen" data-screen="welcome">
+      <h1 id="welcome-title"></h1>
+      <div id="welcome-body"></div>
+      <div class="actions">
+        <button class="primary" data-action="start"></button>
+      </div>
+    </section>
+
+    <!-- 2. Round 1 decision -->
+    <section class="screen" data-screen="round1">
+      <h2 id="r1-heading"></h2>
+      <p id="r1-situation" class="situation"></p>
+      <p id="r1-question" class="question"></p>
+      <fieldset class="options" id="r1-options"></fieldset>
+      <label class="reflection">
+        <span id="r1-discussion-label"></span>
+        <textarea data-field="r1_discussion" rows="3" placeholder="share your group's thinking"></textarea>
+      </label>
+      <label class="reflection">
+        <span id="r1-reasoning-label"></span>
+        <textarea data-field="r1_reasoning" rows="3" placeholder="one or two sentences"></textarea>
+      </label>
+      <div class="actions">
+        <button class="primary" data-action="next-from-r1" disabled>Continue</button>
+      </div>
+    </section>
+
+    <!-- 3. Outcome 1 -->
+    <section class="screen" data-screen="outcome1">
+      <h2 id="o1-heading"></h2>
+      <div class="cards" id="o1-cards"></div>
+      <label class="reflection">
+        <span id="o1-prompt"></span>
+        <textarea data-field="o1" rows="3" placeholder="one or two sentences"></textarea>
+      </label>
+      <div class="actions">
+        <button class="primary" data-action="next-from-o1">Continue</button>
+      </div>
+    </section>
+
+    <!-- 4. Event reveal -->
+    <section class="screen" data-screen="event">
+      <h2>Industry event — Year 5 to 7</h2>
+      <article class="event-card" id="event-card"></article>
+      <label class="reflection">
+        <span id="event-prompt"></span>
+        <textarea data-field="event" rows="3" placeholder="share your group's thinking"></textarea>
+      </label>
+      <div class="actions">
+        <button class="primary" data-action="next-from-event">Continue</button>
+      </div>
+    </section>
+
+    <!-- 5. Round 2 decision -->
+    <section class="screen" data-screen="round2">
+      <h2 id="r2-heading"></h2>
+      <p id="r2-situation" class="situation"></p>
+      <fieldset class="options" id="r2-options"></fieldset>
+      <label class="reflection">
+        <span id="r2-discussion-label"></span>
+        <textarea data-field="r2_discussion" rows="3" placeholder="share your group's thinking"></textarea>
+      </label>
+      <label class="reflection">
+        <span id="r2-reasoning-label"></span>
+        <textarea data-field="r2_reasoning" rows="3" placeholder="one or two sentences"></textarea>
+      </label>
+      <div class="actions">
+        <button class="primary" data-action="next-from-r2" disabled>Continue</button>
+      </div>
+    </section>
+
+    <!-- 6. Final outcome -->
+    <section class="screen" data-screen="final">
+      <h2 id="final-heading"></h2>
+      <div class="cards" id="final-cards"></div>
+      <label class="reflection">
+        <span id="final-prompt"></span>
+        <textarea data-field="final" rows="3" placeholder="one or two sentences"></textarea>
+      </label>
+      <div class="actions">
+        <button class="primary" data-action="next-from-final">Continue</button>
+      </div>
+    </section>
+
+    <!-- 7. Stake check -->
+    <section class="screen" data-screen="stakes">
+      <h2 id="stakes-heading"></h2>
+      <p id="stakes-intro"></p>
+      <div class="recap" id="stakes-recap"></div>
+      <div class="stakes" id="stakes-list"></div>
+      <div class="ceo-score" id="ceo-score"></div>
+      <div class="actions">
+        <button class="primary" data-action="next-from-stakes">Continue</button>
+      </div>
+    </section>
+
+    <!-- 8. Reflection -->
+    <section class="screen" data-screen="reflection">
+      <h2 id="reflection-heading"></h2>
+      <div id="reflection-prompts"></div>
+      <div class="actions">
+        <button class="primary" data-action="next-from-reflection">Continue</button>
+      </div>
+    </section>
+
+    <!-- 9. Summary -->
+    <section class="screen" data-screen="summary">
+      <h2 id="summary-heading"></h2>
+      <div class="summary-block">
+        <h3 id="summary-path-label"></h3>
+        <p id="summary-path" class="path"></p>
+      </div>
+      <div class="summary-block">
+        <h3 id="summary-stakes-label"></h3>
+        <div class="stakes" id="summary-stakes"></div>
+      </div>
+      <div class="summary-block">
+        <h3 id="summary-final-label">Final outcome</h3>
+        <div class="cards" id="summary-final-cards"></div>
+      </div>
+      <div class="summary-block">
+        <h3 id="summary-reflections-label"></h3>
+        <div id="summary-reflections"></div>
+      </div>
+      <div class="actions" id="summary-actions">
+        <button class="primary" data-action="print">Save as PDF or print</button>
+        <button class="ghost" data-action="export-json">Download team JSON</button>
+        <button class="ghost" data-action="goto-compare"></button>
+        <button class="ghost" data-action="reset">Start over</button>
+      </div>
+    </section>
+
+    <!-- Comparison view -->
+    <section class="screen" data-screen="compare">
+      <h2 id="compare-heading"></h2>
+      <p class="situation"><span id="compare-session-label">Session</span> <span id="compare-session-value"></span></p>
+      <div class="actions" id="compare-actions">
+        <button class="primary" data-action="open-report">Open printable report</button>
+        <button class="ghost" data-action="refresh-compare">Refresh</button>
+        <button class="ghost" data-action="export-all">Download session JSON</button>
+        <button class="ghost" data-action="back-to-summary">Back</button>
+      </div>
+      <div id="compare-table-wrap"></div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+  <script src="content.js"></script>
+  <script src="storage.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

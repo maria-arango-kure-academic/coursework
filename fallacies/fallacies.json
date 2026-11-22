@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "name": "Strawman / Strawperson",
+    "type": "Fallacies of Attack and Distraction",
+    "definition": "Misrepresenting an argument to make it easier to attack by exaggerating, distorting, or simplifying it. This is a fallacy because it avoids engaging with the real issue.",
+    "examples": [
+      "You support private identity verification, so you want everyone's legal name displayed publicly.",
+      "You want a person to check the tool's rejections, so you want us to go back to reading 4,000 applications by hand."
+    ]
+  },
+  {
+    "n": 2,
+    "name": "Ad Hominem (Character attack)",
+    "type": "Fallacies of Attack and Distraction",
+    "definition": "Attacking the person making the argument instead of addressing the argument itself. This is a fallacy because personal traits do not determine the validity of a claim.",
+    "examples": [
+      "You only support this regulation because you dislike technology.",
+      "You only defend the hiring tool because you have never been rejected by one."
+    ]
+  },
+  {
+    "n": 3,
+    "name": "Red Herring",
+    "type": "Fallacies of Attack and Distraction",
+    "definition": "Introducing an irrelevant topic to divert attention from the actual issue being debated. It is a fallacy because it distracts from resolving the core problem.",
+    "examples": [
+      "Instead of debating anonymity, we should talk about how much time young people spend on their phones.",
+      "Before we discuss whether the tool is fair, think about how tired our three recruiters are."
+    ]
+  },
+  {
+    "n": 4,
+    "name": "Burden of Proof Shift",
+    "type": "Fallacies of Attack and Distraction",
+    "definition": "Demanding that others disprove your claim instead of providing evidence yourself. It is a fallacy because the responsibility to prove a claim lies with the one making it.",
+    "examples": [
+      "Prove to me that anonymous accounts do not cause harassment.",
+      "Show me evidence that the tool rejects good applicants. Until you do, we should assume it is fair."
+    ]
+  },
+  {
+    "n": 5,
+    "name": "Moving the Goalposts",
+    "type": "Fallacies of Attack and Distraction",
+    "definition": "Changing the criteria for success after they have been met. It is a fallacy because it creates an unfair standard that can never be satisfied.",
+    "examples": [
+      "Even if real-name rules reduce harassment, it doesn't count unless they also stop misinformation.",
+      "The tool passed the bias audit, but that doesn't count unless it can also explain every single decision."
+    ]
+  },
+  {
+    "n": 6,
+    "name": "Whataboutism",
+    "type": "Fallacies of Attack and Distraction",
+    "definition": "Responding to criticism by accusing the other party of hypocrisy. It is a fallacy because it evades addressing the argument itself.",
+    "examples": [
+      "You criticise anonymous accounts, but your own team posts under pseudonyms, so you have no right to object.",
+      "You say the tool is biased, but your recruiters were biased too, so you cannot criticise it."
+    ]
+  },
+  {
+    "n": 7,
+    "name": "False Dilemma",
+    "type": "Faulty Logic and False Connections",
+    "definition": "Presenting two options as the only possibilities when others exist. This is a fallacy because it oversimplifies complex issues.",
+    "examples": [
+      "Either we ban anonymity or online harassment will continue unchecked.",
+      "Either we use the screening tool or we stop hiring altogether."
+    ]
+  },
+  {
+    "n": 8,
+    "name": "Slippery Slope",
+    "type": "Faulty Logic and False Connections",
+    "definition": "Arguing that a small first step will inevitably lead to extreme consequences without evidence. It is a fallacy because it assumes a chain reaction without justification.",
+    "examples": [
+      "Introducing identity verification will inevitably lead to governments monitoring everyone's private conversations.",
+      "If we let software sort applications, soon software will decide who gets promoted and who gets fired."
+    ]
+  },
+  {
+    "n": 9,
+    "name": "Circular Reasoning",
+    "type": "Faulty Logic and False Connections",
+    "definition": "Restating the claim instead of providing evidence. It is a fallacy because it assumes the conclusion within the premise.",
+    "examples": [
+      "Anonymity is harmful because posting anonymously does damage.",
+      "The tool selects the best applicants because the applicants it selects are the best."
+    ]
+  },
+  {
+    "n": 10,
+    "name": "Post Hoc (False Cause)",
+    "type": "Faulty Logic and False Connections",
+    "definition": "Assuming that because one event followed another, the first caused the second. This is a fallacy because correlation does not imply causation.",
+    "examples": [
+      "The platform introduced real names last year and harassment reports fell, so real names caused the drop.",
+      "We started using the tool in January and staff turnover fell, so the tool hires better people."
+    ]
+  },
+  {
+    "n": 11,
+    "name": "Composition/Division",
+    "type": "Faulty Logic and False Connections",
+    "definition": "Assuming that what is true for a part is true for the whole, or the reverse. It is a fallacy because parts and wholes can behave differently.",
+    "examples": [
+      "This one forum works well with real names, so every platform should require them.",
+      "The tool works well for our sales positions, so it will work well for every position in the company."
+    ]
+  },
+  {
+    "n": 12,
+    "name": "Faulty Analogy (Overgeneralization from Similarity)",
+    "type": "Faulty Logic and False Connections",
+    "definition": "Assuming that because two things share some traits, they are alike in all ways. It is a fallacy because surface similarities do not guarantee deeper equivalence.",
+    "examples": [
+      "Banks check their customers' identity, so social media platforms should check their users' identity too.",
+      "A spam filter sorts emails without problems, so a tool can sort job applicants the same way."
+    ]
+  },
+  {
+    "n": 13,
+    "name": "Cherry-Picking (Attack via Single Example)",
+    "type": "Faulty Logic and False Connections",
+    "definition": "Selecting only negative cases to imply an entire system is flawed. This is a fallacy because it ignores the full range of evidence.",
+    "examples": [
+      "This one case of an anonymous account harassing a journalist shows that anonymity is dangerous.",
+      "This one strong applicant that the tool rejected shows that the whole system is useless."
+    ]
+  },
+  {
+    "n": 14,
+    "name": "Appeal to Authority",
+    "type": "Appeals to Emotion or Authority",
+    "definition": "Claiming something is true because an authority figure says it is, without supporting evidence. It is a fallacy because authorities can be wrong.",
+    "examples": [
+      "A well-known tech CEO says anonymity must end, so it must.",
+      "The vendor says the tool is fair, so it is fair."
+    ]
+  },
+  {
+    "n": 15,
+    "name": "Bandwagon Appeal (Appeal to the Majority)",
+    "type": "Appeals to Emotion or Authority",
+    "definition": "Claiming something is right or better because many people believe or do it. It is a fallacy because popularity is not proof of truth.",
+    "examples": [
+      "Most large platforms ask for real names, so it must be the right approach.",
+      "Most companies our size use AI to screen applicants, so it must be the best way."
+    ]
+  },
+  {
+    "n": 16,
+    "name": "Appeal to Tradition",
+    "type": "Appeals to Emotion or Authority",
+    "definition": "Arguing that something is better simply because it has been traditionally done that way. It is a fallacy because longevity does not guarantee effectiveness.",
+    "examples": [
+      "People have always been able to post anonymously online, so we should keep it that way.",
+      "Recruiters have always read applications themselves, so we should keep doing it."
+    ]
+  },
+  {
+    "n": 17,
+    "name": "Appeal to Fear",
+    "type": "Appeals to Emotion or Authority",
+    "definition": "Using fear to persuade instead of logical reasoning. It is a fallacy because fear alone is not evidence.",
+    "examples": [
+      "If we keep anonymity, your children will be targeted by strangers and nobody will ever be caught.",
+      "If we don't adopt the tool, our competitors will hire all the talent and the company will fail."
+    ]
+  },
+  {
+    "n": 18,
+    "name": "Appeal to Nature",
+    "type": "Appeals to Emotion or Authority",
+    "definition": "Arguing that something is good or right because it is natural, or bad because it is unnatural. It is a fallacy because \"natural\" does not necessarily mean better.",
+    "examples": [
+      "Speaking under your own name is natural. Hiding behind a username is not how humans are meant to communicate.",
+      "Judging people is a naturally human task, so a machine should never do it."
+    ]
+  },
+  {
+    "n": 19,
+    "name": "Hasty Generalization",
+    "type": "Weak or Insufficient Evidence",
+    "definition": "Drawing a broad conclusion from a small or unrepresentative sample. It is a fallacy because the evidence is insufficient to support the generalization.",
+    "examples": [
+      "One platform had a data breach, so every identity-verification system will fail.",
+      "The tool rejected two good applicants last month, so it always rejects good applicants."
+    ]
+  },
+  {
+    "n": 20,
+    "name": "Anecdotal Evidence",
+    "type": "Weak or Insufficient Evidence",
+    "definition": "Using personal stories as proof instead of systematic evidence. It is a fallacy because personal experience does not represent broader reality.",
+    "examples": [
+      "I was harassed by an anonymous account once, so anonymity is what causes harassment.",
+      "My cousin was hired through an AI screening tool and she is excellent, so these tools work."
+    ]
+  },
+  {
+    "n": 21,
+    "name": "No True Scotsman (person)",
+    "type": "Weak or Insufficient Evidence",
+    "definition": "Dismissing counterexamples by redefining the group or standard. It is a fallacy because it avoids addressing legitimate contradictions.",
+    "examples": [
+      "If a real-name platform still has harassment, it was not really enforcing real names.",
+      "If the tool produced unfair results, it was not a real AI screening tool."
+    ]
+  },
+  {
+    "n": 22,
+    "name": "Genetic Fallacy",
+    "type": "Source or Origin Attacks",
+    "definition": "Judging a claim based on its origin rather than its merit. It is a fallacy because the truth of an idea is independent of its source.",
+    "examples": [
+      "The proposal to restrict anonymity came from a government ministry, so it cannot be about protecting users.",
+      "The tool was built by a start-up, so it cannot be good enough for a serious company."
+    ]
+  },
+  {
+    "n": 23,
+    "name": "Guilt by Association",
+    "type": "Source or Origin Attacks",
+    "definition": "Discrediting an idea by associating it with an unpopular group or person. It is a fallacy because an idea's value is not determined by who else believes it.",
+    "examples": [
+      "Authoritarian governments also want to end online anonymity, so we cannot take this proposal seriously.",
+      "A company known for mistreating its workers uses this tool, so the tool must be harmful."
+    ]
+  },
+  {
+    "n": 24,
+    "name": "Moral Licensing",
+    "type": "Source or Origin Attacks",
+    "definition": "Assuming that previous good actions justify current questionable decisions. It is a fallacy because past achievements do not guarantee good judgment in new situations.",
+    "examples": [
+      "Our platform has done so much for online safety that if we decide to keep anonymous accounts, it must be the right decision.",
+      "We have an excellent record on diversity, so if we choose this tool, it must be fair."
+    ]
+  }
+]
