@@ -180,6 +180,25 @@ def undo_power(server,company,role,teacher=False):
     company.setdefault('power_corrections',[]).append(dict(action='undo',activation=deepcopy(item),by='teacher' if teacher else role,at=time.time()))
     company['interventions'].remove(item);company['members'][role]['power_used']=False;company['version']+=1
 
+
+def catch_up(company,timeline):
+    """Most recent consecutive system-resolved years, from actual replay only.
+
+    These are public consequences, never student recommendations or private
+    intelligence. Current automatic decisions are included on outcome screens.
+    """
+    year=company['year']
+    if company['decisions'].get(str(year),{}).get('actor')!='system':year-=1
+    by_year={step['year']:step for step in timeline}
+    updates=[]
+    first_year=6 if company['year']>5 and company.get('checkpoint5') else 1
+    while year>=first_year and company['decisions'].get(str(year),{}).get('actor')=='system':
+        step=by_year.get(year)
+        if not step:break
+        updates.append(dict(year=year,title=step['scenario_title'],choice=step['option_title'],outcome=step['outcome'],source=company['decisions'][str(year)].get('resolution_mode'),external=deepcopy(step['external']),internal=deepcopy(step['internal']),cash=step['state']['cash']))
+        year-=1
+    return list(reversed(updates))
+
 def public_company(company):
     result=engine.replay(company)
     current=engine.scenario(company,company['year'])
@@ -196,6 +215,7 @@ def public_company(company):
         if company['year'] in (5,6,7,8,9,10) and str(company['year']) not in company['decisions']:safe['external_announcement']=deepcopy(engine.CONTENT['platform_shift']['external'] if company['year']==6 and company.get('platform_shift_version')==1 else engine.CONTENT['external'][str(company['year'])])
         blocked={item.get('option') for item in company['interventions'] if item['year']==company['year'] and item['role'] in ('cfo','cto')}
         safe['scenario']['options']=[dict(id=o['id'],title=o['title'],detail=o['detail'],cost=engine.cost(state,company['year'],o['id']),blocked_by=next((i['role'] for i in company['interventions'] if i['year']==company['year'] and i['role'] in ('cfo','cto') and i.get('option')==o['id']),None),unavailable=o['id'] in blocked or not engine.available(state,company['year'],o['id'])) for o in current['options']]
+    safe['catch_up']=catch_up(company,result['timeline'])
     safe['supplier_context']=platform.context(result['state'],company['year']) if company.get('platform_shift_version')==1 else ''
     safe['annual_notice']=result.get('annual_notices',{}).get(str(company['year']))
     safe['checkpoint_ready']=checkpoint_ready(company)
